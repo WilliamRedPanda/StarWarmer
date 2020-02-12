@@ -276,6 +276,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         }
     }
 
+    Vector3 pointerDirection;
     Vector2 mouseVelocity;
     void Aim()
     {
@@ -309,7 +310,10 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         }
 
         if (pointer)
-            pointer.rotation = Quaternion.LookRotation(aimDirection, Vector3.forward) * Quaternion.Euler(0, -90, 0);
+        {
+            pointerDirection = new Vector3(aimDirection.x, pointer.transform.position.y, aimDirection.z);
+            pointer.rotation = Quaternion.LookRotation(pointerDirection) * Quaternion.Euler(90, -90, 0);
+        }
     }
 
     bool shooted;
