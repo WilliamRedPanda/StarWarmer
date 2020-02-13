@@ -5,17 +5,19 @@ using Cinemachine;
 
 public static class RoomManager
 {
-    static CinemachineVirtualCameraBase currentVirtualCamera;
+    static RoomSwitch currentRoom;
 
-    public static void ChangeCamera(CinemachineVirtualCameraBase _virtualCamera)
+    public static void ChangeCamera(RoomSwitch _room)
     {
-        _virtualCamera.gameObject.SetActive(true);
-        if (currentVirtualCamera)
+        if (currentRoom)
+            if (currentRoom == _room)
+                return;
+
+        _room.cameraShake.virtualCamera.gameObject.SetActive(true);
+        if (currentRoom)
         {
-            currentVirtualCamera.gameObject.SetActive(false);
-            Debug.Log(currentVirtualCamera.name + currentVirtualCamera.gameObject.activeInHierarchy + " " + currentVirtualCamera.name);
+            currentRoom.cameraShake.virtualCamera.gameObject.SetActive(false);
         }
-        currentVirtualCamera = _virtualCamera;
-        Debug.Log(_virtualCamera.name + _virtualCamera.gameObject.activeInHierarchy + " " + currentVirtualCamera.name);
+        currentRoom = _room;
     }
 }

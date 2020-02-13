@@ -6,7 +6,7 @@ using Cinemachine;
 [RequireComponent(typeof(BoxCollider))]
 public class RoomSwitch : MonoBehaviour
 {
-    [SerializeField] CameraShake cameraShake;
+    public CameraShake cameraShake;
 
     private void OnTriggerEnter(Collider collision)
     {
@@ -14,7 +14,7 @@ public class RoomSwitch : MonoBehaviour
         if (player)
         {
             cameraShake.SetPlayer(player);
-            RoomManager.ChangeCamera(cameraShake.virtualCamera);
+            RoomManager.ChangeCamera(this);
         }
     }
 }
