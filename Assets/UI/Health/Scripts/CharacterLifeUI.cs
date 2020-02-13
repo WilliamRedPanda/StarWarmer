@@ -3,18 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EnemyLifeUI : MonoBehaviour
+public class CharacterLifeUI : MonoBehaviour
 {
-    [SerializeField] CharacterBase enemy;
+    [SerializeField] CharacterBase character;
     [SerializeField] Image slider;
 
     private void Start()
     {
-        enemy.OnDamage += FillSlider;
+        character.OnDamage += FillSlider;
     }
 
     void FillSlider(int _damage, CommandSequence _command)
     {
-        slider.fillAmount = (float)enemy.currentHealth / (float)enemy.maxHealth;
+        slider.fillAmount = (float)character.currentHealth / (float)character.maxHealth;
     }
 }
