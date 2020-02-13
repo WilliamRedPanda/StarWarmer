@@ -47,7 +47,7 @@ MonoBehaviour:
   ShakeDuration: 0.3
   ShakeAmplitude: 1.2
   ShakeFrequency: 2
-  VirtualCamera: {fileID: 8943595345079341337}
+  virtualCamera: {fileID: 8943595345079341337}
   player: {fileID: 0}
 --- !u!1 &8943595345079341351
 GameObject:

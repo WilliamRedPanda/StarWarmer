@@ -1,24 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
+[RequireComponent(typeof(BoxCollider))]
 public class RoomSwitch : MonoBehaviour
 {
-    public GameObject Room_1;
-    public GameObject Room_2;
+    [SerializeField] CameraShake cameraShake;
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (Room_1.active == true)
+        PlayerData player = collision.gameObject.GetComponentInParent<PlayerData>();
+        if (player)
         {
-            Room_1.SetActive(false);
-            Room_2.SetActive(true);
-        }else if (Room_1.active == false)
-        {
-            Room_1.SetActive(true);
-            Room_2.SetActive(false);
+            cameraShake.SetPlayer(player);
+            RoomManager.ChangeCamera(cameraShake.virtualCamera);
         }
     }
-
-
 }

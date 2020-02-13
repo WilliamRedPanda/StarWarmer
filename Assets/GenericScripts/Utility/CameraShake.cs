@@ -13,25 +13,21 @@ public class CameraShake : MonoBehaviour
 
     private float ShakeElapsedTime = 0f;
 
-    [SerializeField] CinemachineVirtualCamera VirtualCamera;
+    public CinemachineVirtualCamera virtualCamera;
     private CinemachineBasicMultiChannelPerlin virtualCameraNoise;
 
-    [SerializeField] PlayerData player;
+    PlayerData player;
 
     IEnumerator corutine;
 
-    // Use this for initialization
-    void Start()
+    public void SetPlayer(PlayerData _player)
     {
+        player = _player;
         corutine = Shake();
         // Get Virtual Camera Noise Profile
-        if (VirtualCamera != null)
+        if (virtualCamera != null)
         {
-            //TEMP:
-            if (player == null)
-                player = FindObjectOfType<PlayerData>();
-            //
-            virtualCameraNoise = VirtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
+            virtualCameraNoise = virtualCamera.GetCinemachineComponent<Cinemachine.CinemachineBasicMultiChannelPerlin>();
             virtualCameraNoise.m_AmplitudeGain = 0f;
         }
         if (player)
@@ -52,7 +48,7 @@ public class CameraShake : MonoBehaviour
         while (true)
         {
             // If the Cinemachine componet is not set, avoid update
-            if (VirtualCamera != null && virtualCameraNoise != null)
+            if (virtualCamera != null && virtualCameraNoise != null)
             {
                 // If Camera Shake effect is still playing
                 if (ShakeElapsedTime > 0)
