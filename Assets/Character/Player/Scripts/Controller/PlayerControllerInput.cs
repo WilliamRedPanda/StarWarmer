@@ -16,6 +16,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;
     [SerializeField] SpriteRenderer dxfR, dxbR, sxfR, sxbR;
+    //[SerializeField] Transform upLimit, downLimit, leftLimit, rightLimit;
 
     Rigidbody rb;
 
@@ -199,6 +200,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     Vector3 keyAxis;
     Vector3 stickDirection;
     Vector3 transformVelocity;
+    AnimDirection dir;
     void Movement()
     {
         stickAxis = new Vector3(Input.GetAxis("HorizontalStick"), 0, Input.GetAxis("VerticalStick"));
@@ -237,22 +239,38 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 {
                     if (transformVelocity.x < 0f)
                     {
-                        animator.SetTrigger("SXB");
+                        if (dir != AnimDirection.sxb)
+                        {
+                            animator.SetTrigger("SXB");
+                            dir = AnimDirection.sxb;
+                        }
                     }
                     else if (transformVelocity.x >= 0f)
                     {
-                        animator.SetTrigger("DXB");
+                        if (dir != AnimDirection.dxb)
+                        {
+                            animator.SetTrigger("DXB");
+                            dir = AnimDirection.dxb;
+                        }
                     }
                 }
                 else if (transformVelocity.z <= 0f)
                 {
                     if (transformVelocity.x < 0f)
                     {
-                        animator.SetTrigger("SXF");
+                        if (dir != AnimDirection.sxf)
+                        {
+                            animator.SetTrigger("SXF");
+                            dir = AnimDirection.sxf;
+                        }
                     }
                     else if (transformVelocity.x >= 0f)
                     {
-                        animator.SetTrigger("DXF");
+                        if (dir != AnimDirection.dxf)
+                        {
+                            animator.SetTrigger("DXF");
+                            dir = AnimDirection.dxf;
+                        }
                     }
                 }
             }
