@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class CharacterBase : MonoBehaviour, IDamageable
 {
-    const float KNOCKBACK_RATE = 1f;
+    const float KNOCKBACK_RATE = .5f;
 
     #region Serialized
     [Header("Health")]
@@ -79,6 +79,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     IEnumerator KnockbackCorutine()
     {
         yield return new WaitForSeconds(KNOCKBACK_RATE);
+        myRigidbody.velocity = Vector3.zero;
         knockbackState = false;
     }
 
