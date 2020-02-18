@@ -20,4 +20,5 @@ MonoBehaviour:
   - comboSection: {fileID: 11400000, guid: ceb20978cb317fa44866f11007cd5843, type: 2}
     NecessaryExp: 50
   startingExp: 100
-  cooldown: 6
+  cooldown: 3.5
+  icon: {fileID: 0}

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: -449896150452386736}
   - component: {fileID: 3361831739819431070}
   m_Layer: 0
-  m_Name: StandardSkill
+  m_Name: Basic_Attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   ID: 5
   vfx: {fileID: 5887181797019184148}
   _duration: 2
-  damage: 10
+  damage: 5
   friendlyFire: 0
 --- !u!114 &4088009166714423956
 MonoBehaviour:
