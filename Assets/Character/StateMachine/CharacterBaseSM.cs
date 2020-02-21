@@ -4,19 +4,18 @@ using UnityEngine;
 
 namespace StateMachine.Character
 {
-    public class CharacterBaseSM : StateMachineBase
+    public class CharacterBaseSM : StateMachineBase<CharacterBaseSMContext>
     {
         [SerializeField] CharacterBase character;
         [SerializeField] PlayerControllerInput playerInput;
 
-        protected override void Start()
+        protected override void SetContext()
         {
             currentContext = new CharacterBaseSMContext()
             {
                 character = character,
                 playerInput = playerInput,
             };
-            base.Start();
         }
     }
 

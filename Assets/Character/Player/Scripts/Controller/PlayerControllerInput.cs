@@ -84,21 +84,18 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         }
     }
 
-    private void Update()
+    #endregion
+
+    #region API
+    public void HandlePlayer()
     {
         HandleSequence();
         Aim();
         HandleFire();
         HandleDodge();
-    }
-
-    private void FixedUpdate()
-    {
         Movement();
     }
-    #endregion
 
-    #region API
     public void SetRendererActive(AnimDirection _anim)
     {
         dxfR.enabled = false; ; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
@@ -415,6 +412,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                     OnInputPressed?.Invoke(input);
                     buttonJustPressed = true;
                     sequenceRemainTime = Time.time + playerData.timeForSequence;
+                    break;
                 }
             }
         }

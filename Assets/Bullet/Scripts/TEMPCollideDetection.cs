@@ -15,4 +15,9 @@ public class TEMPCollideDetection : MonoBehaviour
     {
         bullet.OnEnter(other);
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        bullet.OnExit(other);
+    }
 }

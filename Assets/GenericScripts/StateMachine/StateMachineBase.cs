@@ -6,23 +6,26 @@ using UnityEngine;
 namespace StateMachine
 {
     [RequireComponent(typeof(Animator))]
-    public abstract class StateMachineBase : MonoBehaviour
+    public abstract class StateMachineBase<T> : MonoBehaviour
     {
         protected Animator SM;
 
-        protected IStateMachineContext currentContext;
+        protected T currentContext;
 
-        private void Awake()
+        protected virtual void Awake()
         {
             SM = GetComponent<Animator>();
         }
 
         protected virtual void Start()
         {
+            SetContext();
             foreach (StateMachineBehaviour smB in SM.GetBehaviours<StateMachineBehaviour>())
             {
-                (smB as StateBase).Setup(currentContext);
+                (smB as StateBase<T>).Setup(currentContext);
             }
         }
+
+        protected abstract void SetContext();
     }
 }

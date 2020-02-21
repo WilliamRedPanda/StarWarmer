@@ -23,12 +23,14 @@ public class Pause : MonoBehaviour
         panel.gameObject.SetActive(pause);
         if (pause)
         {
+            StateMachine.Gameplay.GameplaySM.instance.Go("Pause");
             currentTimeScale = Time.timeScale;
             Time.timeScale = 0;
         }
         else
         {
             Time.timeScale = currentTimeScale;
+            StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
         }
     }
 }

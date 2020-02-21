@@ -25,6 +25,7 @@ public class SceneSelector : MonoBehaviour
     #region API
     public void ChangeScene(string sceneName)
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
     }
 

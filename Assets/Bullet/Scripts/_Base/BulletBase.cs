@@ -90,6 +90,11 @@ public class BulletBase : MonoBehaviour
         OnEnter(other);
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        OnExit(other);
+    }
+
     public void OnEnter(Collider other)
     {
         if (state == State.Shooted)
@@ -105,6 +110,18 @@ public class BulletBase : MonoBehaviour
                 {
                     OnDamageableCollide(damageable);
                 }
+            }
+        }
+    }
+
+    public void OnExit(Collider other)
+    {
+        if (state == State.Shooted)
+        {
+            RoomSwitch roomSwitch = other.GetComponent<RoomSwitch>();
+            if (roomSwitch != null)
+            {
+                Return();
             }
         }
     }

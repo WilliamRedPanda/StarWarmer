@@ -4,9 +4,15 @@ using UnityEngine;
 
 namespace StateMachine
 {
-    public abstract class StateBase : StateMachineBehaviour, IState
+    public abstract class StateBase<T> : StateMachineBehaviour, IState
     {
-        public abstract IState Setup(IStateMachineContext _context);
+        protected T context;
+
+        public IState Setup(T _context)
+        {
+            context = _context;
+            return this;
+        }
 
         public virtual void Enter()
         {
