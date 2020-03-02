@@ -7,6 +7,8 @@ public class SpinnerController : MonoBehaviour
     ParticleSystem ps;
     ParticleSystemRenderer psr;
     ParticleSystem.VelocityOverLifetimeModule vel;
+    float yPositionOver = 1f;
+    float yPositionUnder = -0.02f;
     float speedVariation = 0.0f;
     public int acceleration = 1;
     void Start()
@@ -29,11 +31,13 @@ public class SpinnerController : MonoBehaviour
             speedVariation -= Time.deltaTime * acceleration;
             vel.orbitalY = new ParticleSystem.MinMaxCurve(speedVariation);
         }
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Vertical") > 0 && gameObject.transform.position.y < 0)
         {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, yPositionOver, gameObject.transform.position.z);
             psr.sortingOrder = 6;
-        }else if (Input.GetAxis("Vertical") < 0)
+        }else if (Input.GetAxis("Vertical") < 0 && gameObject.transform.position.y > 0)
         {
+            gameObject.transform.position = new Vector3(gameObject.transform.position.x, yPositionUnder, gameObject.transform.position.z);
             psr.sortingOrder = 4;
         }
     }
