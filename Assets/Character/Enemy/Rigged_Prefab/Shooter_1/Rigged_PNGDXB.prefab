@@ -117,7 +117,7 @@ Transform:
   m_GameObject: {fileID: 8310094253635990657}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.20000012, z: 0.20000012}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 3665497591036704669}
   m_Father: {fileID: 3432460429702827375}
@@ -237,7 +237,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3432460429702827375}
   m_Layer: 0
-  m_Name: Rigged_PNGBDX
+  m_Name: Rigged_PNGDXB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
