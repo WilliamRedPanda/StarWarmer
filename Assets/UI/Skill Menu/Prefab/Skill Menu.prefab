@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7474955955258444116}
   - component: {fileID: 9183745818503727939}
   m_Layer: 5
-  m_Name: SmallOrbOff
+  m_Name: Locked skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 7087208356157847841}
   - component: {fileID: 5441746879382420880}
   m_Layer: 5
-  m_Name: SmallOrbOff (3)
+  m_Name: Meteor skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -164,7 +164,7 @@ GameObject:
   - component: {fileID: 40162143606591349}
   - component: {fileID: 7976479842577380292}
   m_Layer: 5
-  m_Name: SmallOrbOff (2)
+  m_Name: Spear skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 561670300293688475}
   - component: {fileID: 8146240691058907527}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Meteor skill icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 2948942436756343343}
   - component: {fileID: 4484991179207465709}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Barrier skill icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -390,7 +390,7 @@ GameObject:
   - component: {fileID: 8538503535117593663}
   - component: {fileID: 7018481052980884198}
   m_Layer: 5
-  m_Name: SmallOrbOff (1)
+  m_Name: Crater skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 3048896146450188211}
   - component: {fileID: 5836970679353571295}
   m_Layer: 5
-  m_Name: Skills' Menu
+  m_Name: Skill Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 3425933746391770327}
   - component: {fileID: 6394639341421802328}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Locked skill icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -720,7 +720,7 @@ GameObject:
   - component: {fileID: 4078851185574638204}
   - component: {fileID: 2051443825441194581}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Spear skill icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 509004242882725102}
   - component: {fileID: 1483387846304769180}
   m_Layer: 5
-  m_Name: SmallOrbOff (4)
+  m_Name: Barrier skill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 2330087529109535793}
   - component: {fileID: 2513595955954616504}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Crater skill icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
