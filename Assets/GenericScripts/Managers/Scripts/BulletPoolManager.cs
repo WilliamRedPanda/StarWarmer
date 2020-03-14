@@ -46,6 +46,7 @@ public class BulletPoolManager : MonoBehaviour
         if (_bullet.created)
         {
             bullet = _bullet;
+            bullet.gameObject.SetActive(false);
             bullet.transform.position = BULLET_IN_POOL_POSITION;
         }
         else
@@ -72,7 +73,8 @@ public class BulletPoolManager : MonoBehaviour
 
     public void Shoot(BulletBase _bullet, Vector3 _shootPosition, Vector3 _direction, IShooter _shootable, CommandSequence _command)
     {
-        instance.TakeBullet(_bullet).Shoot(_shootPosition, _direction, _shootable, _command);
+        BulletBase bullet = instance.TakeBullet(_bullet);
+        bullet.Shoot(_shootPosition, _direction, _shootable, _command);
     }
     #endregion
 }

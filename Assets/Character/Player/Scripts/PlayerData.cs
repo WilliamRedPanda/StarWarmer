@@ -37,11 +37,19 @@ public class PlayerData : CharacterBase
     public System.Action OnSlowMoStarted;
     public System.Action<float> OnSlowMoUse;
     public System.Action OnRefilled;
+    public System.Action OnChangeSequences;
 
     protected override void Awake()
     {
         base.Awake();
         OnDeath += (ctx) => Restart();
+    }
+
+    public void ChangeSkill(List<SetSequencesData> datas)
+    {
+        sequences = new SetSequencesData[datas.Count];
+        sequences = datas.ToArray();
+        OnChangeSequences?.Invoke();
     }
 
     //TODO: TEMP

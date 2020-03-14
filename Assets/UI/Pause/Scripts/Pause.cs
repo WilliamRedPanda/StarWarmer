@@ -9,7 +9,7 @@ public class Pause : MonoBehaviour
     bool pause;
     float currentTimeScale;
 
-    private void Update()
+    public void HandleInput()
     {
         if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7))
         {
@@ -24,12 +24,9 @@ public class Pause : MonoBehaviour
         if (pause)
         {
             StateMachine.Gameplay.GameplaySM.instance.Go("Pause");
-            currentTimeScale = Time.timeScale;
-            Time.timeScale = 0;
         }
         else
         {
-            Time.timeScale = currentTimeScale;
             StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
         }
     }

@@ -1,7 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections.Generic;
 
 public class ComboUI : MonoBehaviour
 {
@@ -9,11 +9,16 @@ public class ComboUI : MonoBehaviour
     [SerializeField] Image cooldownBarImage;
     [SerializeField] Image expBarImage;
     [SerializeField] Transform comboListTransform;
-    [SerializeField] Image IconPrefab;
+    [SerializeField] TextMeshProUGUI nameText;
+    [SerializeField] TextMeshProUGUI descriptionText;
+    [SerializeField] Image[] levelIcon;
+    [SerializeField] Image iconPrefab;
     [SerializeField] inputDevice inputDevice;
 
-    SetSequences combo;
+    [HideInInspector] public SetSequences combo;
     float deltaCooldown, deltaExp;
+
+    List<Image> inputIcons = new List<Image>();
 
     void SubscribeEvent()
     {
@@ -44,15 +49,46 @@ public class ComboUI : MonoBehaviour
 
         if (comboListTransform)
         {
+            RemoveInputs();
+
             for (int i = 0; i < _combo.level; i++)
             {
                 foreach (var input in _combo.commands[i].data.inputDatas)
                 {
-                    Image inputImage = Instantiate(IconPrefab, comboListTransform);
+                    Image inputImage = Instantiate(iconPrefab, comboListTransform);
+                    inputIcons.Add(inputImage);
                     if (inputDevice == inputDevice.keyboard) inputImage.sprite = input.keySprite;
                     else if (inputDevice == inputDevice.xBox) inputImage.sprite = input.XboxSprite;
                     else if (inputDevice == inputDevice.playStation) inputImage.sprite = input.PSSprite;
                 }
+            }
+        }
+
+        if (nameText)
+            nameText.text = combo.data.name;
+
+        if (descriptionText)
+            descriptionText.text = combo.data.description;
+
+        for (int i = 0; i < levelIcon.Length; i++)
+        {
+            if (combo.level > i)
+                levelIcon[i].gameObject.SetActive(true);
+            else
+                levelIcon[i].gameObject.SetActive(false);
+        }
+    }
+
+    void RemoveInputs()
+    {
+        if (inputIcons.Count > 0)
+        {
+            Image _image;
+            for (int i = inputIcons.Count - 1; i >= 0; i--)
+            {
+                _image = inputIcons[i];
+                inputIcons.RemoveAt(i);
+                Destroy(_image.gameObject);
             }
         }
     }

@@ -10,6 +10,19 @@ public class SetSequencesData : ScriptableObject
     public int startingExp;
     public float cooldown;
     public Sprite icon;
+    public string comboName, description;
+
+    public SetSequences Instance { get; private set; }
+
+    public void SetupInstance(SetSequences _set)
+    {
+        Instance = _set;
+    }
+
+    private void OnDisable()
+    {
+        Instance = null;
+    }
 }
 
 [System.Serializable]

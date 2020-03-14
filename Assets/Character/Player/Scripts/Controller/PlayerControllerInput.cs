@@ -5,13 +5,17 @@ using UnityEngine;
 
 public class PlayerControllerInput : MonoBehaviour , IShooter
 {
+    [SerializeField] PlayerInputInstance instance;
     [SerializeField] InputContainer inputsData;
-    [SerializeField] PlayerData playerData;
+    public PlayerData playerData;
     [SerializeField] Transform _shootPosition;
     [SerializeField] SpriteRenderer spriteCharacter;
     [SerializeField] Transform pointer;
     [SerializeField] Animator animator;
     [SerializeField] Collider collider;
+    [Space]
+    [SerializeField] public Pause pause;
+    [SerializeField] public ComboFacility comboFacility;
     [Space]
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;
@@ -26,6 +30,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     public System.Action OnDestroy { get; set; }
     public System.Action<InputData> OnInputPressed { get; set; }
     public System.Action OnInputReset { get; set; }
+    public System.Action OnEndSetupSequence { get; set; }
 
     public List<SetSequences> sequences { get; private set; }
     public List<SetSequences> currentSequencesSet { get; private set; }
@@ -46,22 +51,10 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     {
         rb = GetComponent<Rigidbody>();
 
-        sequences = new List<SetSequences>(); 
-        currentSequencesSet = new List<SetSequences>();
-        currentInputSequence = new List<InputData>();
-        sequencesToRemove = new List<SetSequences>();
-        foreach (var sequenceData in playerData.sequences)
-        {
-            SetSequences sequence = new SetSequences(sequenceData, this, this);
-            sequence.onStartSequence    += StartSequence;
-            sequence.onCompletedSection += OnCorrectSequence;
-            sequence.onExecute          += Attack;
-            foreach (var section in sequence.commands)
-            {
-                section.onCorrectInput  += OnCorrectInput;
-            }
-            sequences.Add(sequence);
-        }
+        instance.SetInstance(this);
+        playerData.OnChangeSequences += ChangeSequences;
+
+        SetupSequences();
 
         animators = new Animator[] { dxb, dxf, sxb, sxf };
 
@@ -71,15 +64,42 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     private void OnDisable()
     {
         OnDestroy?.Invoke();
+        UnsubscribeSequences();
+        playerData.OnChangeSequences -= ChangeSequences;
+    }
+
+    void SetupSequences()
+    {
+        sequences = new List<SetSequences>();
+        currentSequencesSet = new List<SetSequences>();
+        currentInputSequence = new List<InputData>();
+        sequencesToRemove = new List<SetSequences>();
+        foreach (var sequenceData in playerData.sequences)
+        {
+            SetSequences sequence = new SetSequences(sequenceData, this, this);
+            sequence.onStartSequence += StartSequence;
+            sequence.onCompletedSection += OnCorrectSequence;
+            sequence.onExecute += Attack;
+            foreach (var section in sequence.commands)
+            {
+                section.onCorrectInput += OnCorrectInput;
+            }
+            sequences.Add(sequence);
+        }
+        OnEndSetupSequence?.Invoke();
+    }
+
+    void UnsubscribeSequences()
+    {
         foreach (var sequence in sequences)
         {
             sequence.ResetSequence();
-            sequence.onStartSequence    -= StartSequence;
+            sequence.onStartSequence -= StartSequence;
             sequence.onCompletedSection -= OnCorrectSequence;
-            sequence.onExecute          -= Attack;
+            sequence.onExecute -= Attack;
             foreach (var section in sequence.commands)
             {
-                section.onCorrectInput  -= OnCorrectInput;
+                section.onCorrectInput -= OnCorrectInput;
             }
         }
     }
@@ -94,6 +114,26 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         HandleFire();
         HandleDodge();
         Movement();
+    }
+
+    public void ChangeSequences()
+    {
+        UnsubscribeSequences();
+        SetupSequences();
+    }
+    
+    public void ChangeSequences(int index, SetSequencesData setData)
+    {
+        UnsubscribeSequences();
+        playerData.sequences[index] = setData;
+        SetupSequences();
+    }
+    
+    public void ChangeSequences(SetSequencesData[] _sequences)
+    {
+        UnsubscribeSequences();
+        playerData.sequences = _sequences;
+        SetupSequences();
     }
 
     public void SetRendererActive(AnimDirection _anim)
@@ -301,14 +341,12 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         {
             aimDirection = stickDirection;
             usingJoypad = true;
-            Debug.Log("joypad");
         }
 
         if ((mouseVelocity.x < -0.1f || mouseVelocity.x > 0.1f || mouseVelocity.y < -0.1f || mouseVelocity.y > 0.1f ||
             keyAxis.x < -0.1f || keyAxis.x > 0.1f || keyAxis.y < -0.1f || keyAxis.y > 0.1f || Input.GetKeyDown(KeyCode.Mouse0)) && usingJoypad == true)
         {
             usingJoypad = false;
-            Debug.Log("mouse");
         }
 
         if (usingJoypad == false)

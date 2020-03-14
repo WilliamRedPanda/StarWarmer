@@ -1188,7 +1188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2ea20a31f54d641abb6248d4809d06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  playerInstance: {fileID: 11400000, guid: 131f3788b3e73864d80a865846b470f6, type: 2}
   parentTransform: {fileID: 5713049012386416438}
   comboUIPrefab: {fileID: 8641552383381947972, guid: 585d5a386316b1949997ab013ced3f49,
     type: 3}

@@ -64,3 +64,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScene: 1
+  playerData: {fileID: 11400000, guid: 131f3788b3e73864d80a865846b470f6, type: 2}

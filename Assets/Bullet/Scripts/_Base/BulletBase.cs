@@ -39,6 +39,7 @@ public class BulletBase : MonoBehaviour
         shooter = _shooter;
         transform.position = shootPosition;
         transform.rotation = Quaternion.LookRotation(direction);
+        gameObject.SetActive(true);
         state = State.Shooted;
         command = _command;
         returnTime = Time.time + _duration;
@@ -104,7 +105,7 @@ public class BulletBase : MonoBehaviour
             {
                 if (!friendlyFire && ((damageable is GenericEnemy && shooter is GenericEnemy) || (damageable is PlayerData && shooter is PlayerControllerInput)))
                 {
-
+                    // Nothing
                 }
                 else if (damageable.gameObject != shooter.gameObject && damageable.invulnerable == false)
                 {

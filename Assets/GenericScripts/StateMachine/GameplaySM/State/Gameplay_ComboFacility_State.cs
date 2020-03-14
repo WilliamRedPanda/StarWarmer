@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace StateMachine.Gameplay
 {
-    public class Gameplay_Pause_State : Gameplay_Base_State
+    public class Gameplay_ComboFacility_State : Gameplay_Base_State
     {
         float currentTimeScale;
 
@@ -17,7 +17,7 @@ namespace StateMachine.Gameplay
         public override void Tick()
         {
             base.Tick();
-            context.playerController.pause.HandleInput();
+            context.playerController.comboFacility.HandleInput();
         }
 
         public override void Exit()

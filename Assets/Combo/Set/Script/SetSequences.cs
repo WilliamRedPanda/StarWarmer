@@ -62,6 +62,7 @@ public class SetSequences
         canExecute = true;
 
         cooldownCorutine = CooldownCorutine();
+        this.data.SetupInstance(this);
     }
 
     void CheckPressedInput(InputData input)

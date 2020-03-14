@@ -9,6 +9,7 @@ namespace StateMachine.Gameplay
     public class GameplaySM : StateMachineBase<GameplaySMContext>
     {
         [SerializeField] CurrentScene currentScene = CurrentScene.gameplay;
+        [SerializeField] PlayerInputInstance playerData;
 
         public static GameplaySM instance { get; private set; }
 
@@ -43,7 +44,7 @@ namespace StateMachine.Gameplay
         {
             currentContext = new GameplaySMContext()
             {
-                playerController = null,
+                playerController = playerData.instance,
                 BaseExit = GoNext,
                 Exit = Go,
             };
