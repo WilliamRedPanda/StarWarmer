@@ -13,7 +13,7 @@ namespace StateMachine.Gameplay
             {
                 context.playerController.HandlePlayer();
                 context.playerController.pause.HandleInput();
-                context.playerController.comboFacility.HandleInput();
+                //context.playerController.comboFacility.HandleInput();
             }
             else
                 context.playerController = FindObjectOfType<PlayerControllerInput>();

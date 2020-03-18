@@ -1100,7 +1100,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 1-NEWSequence
+          m_StringArgument: Linear Sequence
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
@@ -1500,6 +1500,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplaySM
       objectReference: {fileID: 0}
+    - target: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
+        type: 3}
+      propertyPath: currentScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1342683119552596031, guid: 056c76edf35dd7f48922a57f75e10818,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1553,11 +1558,6 @@ PrefabInstance:
     - target: {fileID: 1342683119552596031, guid: 056c76edf35dd7f48922a57f75e10818,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
-        type: 3}
-      propertyPath: currentScene
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

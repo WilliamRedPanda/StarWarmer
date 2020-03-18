@@ -16,16 +16,11 @@ public class ComboFacility : MonoBehaviour
     List<SetSequencesData> equippedSkills;
     SetSequencesData selectedSkill;
 
-    private void Awake()
+    private void Start()
     {
         playerData = playerInput.instance.playerData;
         equippedSkills = new List<SetSequencesData>();
         equippedSkills.AddRange(playerData.sequences);
-    }
-
-    private void Start()
-    {
-        playerData = playerInput.instance.playerData;
     }
 
     public void HandleInput()
