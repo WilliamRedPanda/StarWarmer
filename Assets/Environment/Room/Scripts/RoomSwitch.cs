@@ -9,7 +9,7 @@ public class RoomSwitch : MonoBehaviour
 {
     const float PLAYER_MOVEMENT_OFFSET = 5f;
     
-    public bool roomFinished;
+    [HideInInspector] public bool roomFinished;
 
     #region Serialized
     public CameraShake cameraShake;

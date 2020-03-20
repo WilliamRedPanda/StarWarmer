@@ -14,13 +14,22 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     #endregion
 
     #region Interface_Damageable
-    public int currentHealth { get => _currentHealth; set { _currentHealth = value; } }
+    public int currentHealth { 
+        get => _currentHealth; 
+        set 
+        { 
+            if (value >= maxHealth) _currentHealth = maxHealth;
+            else _currentHealth = value;
+            OnHealthChange?.Invoke(_currentHealth);
+        } 
+    }
     public int maxHealth { get => _maxHealth; set => _maxHealth = value; }
     public bool isDead { get; set; }
     public bool invulnerable { get; set; } 
     #endregion
 
-    public Action<int, CommandSequence> OnDamage { get; set; }
+    public Action<int> OnHealthChange { get; set; }
+    public Action<int, CommandSequence> OnTakeDamage { get; set; }
     public Action<IDamageable> OnDeath { get; set; }
 
     public Rigidbody myRigidbody { get; private set; }
@@ -43,10 +52,20 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
                 damageFeedbackCorutine = DamageFeedbackCorutine();
                 StartCoroutine(damageFeedbackCorutine);
             }
-            OnDamage?.Invoke(_damage, _command);
+            OnTakeDamage?.Invoke(_damage, _command);
             if (_currentHealth <= 0) 
                 OnDeath?.Invoke(this);
         }
+    }
+
+    public void Heal(int _heal)
+    {
+        currentHealth += _heal;
+    }
+
+    public void Heal()
+    {
+        Heal(maxHealth);
     }
 
     IEnumerator damageFeedbackCorutine;

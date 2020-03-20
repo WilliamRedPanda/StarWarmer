@@ -10,10 +10,10 @@ public class CharacterLifeUI : MonoBehaviour
 
     private void Start()
     {
-        character.OnDamage += FillSlider;
+        character.OnHealthChange += FillSlider;
     }
 
-    void FillSlider(int _damage, CommandSequence _command)
+    void FillSlider(int _health)
     {
         slider.fillAmount = (float)character.currentHealth / (float)character.maxHealth;
     }

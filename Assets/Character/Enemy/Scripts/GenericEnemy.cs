@@ -26,7 +26,7 @@ public class GenericEnemy : CharacterBase , IShooter
     protected override void Awake()
     {
         base.Awake();
-        OnDamage += Damage;
+        OnTakeDamage += Damage;
         OnDeath += Death;
     }
 

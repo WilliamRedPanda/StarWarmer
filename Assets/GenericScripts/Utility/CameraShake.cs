@@ -31,7 +31,7 @@ public class CameraShake : MonoBehaviour
             virtualCameraNoise.m_AmplitudeGain = 0f;
         }
         if (player)
-            player.OnDamage += StartShake;
+            player.OnTakeDamage += StartShake;
     }
 
     void StartShake(int playerDamage, CommandSequence _command)
