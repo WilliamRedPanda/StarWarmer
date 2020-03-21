@@ -23,6 +23,7 @@ public class BulletBase : MonoBehaviour
 
     public Action OnPreShoot;
     public Action OnShoot;
+    public Action<Collider> OnEnterCollider;
     public Action<IDamageable> OnDamage;
     public Action OnPostDamage;
     public Action OnReturn;
@@ -112,6 +113,7 @@ public class BulletBase : MonoBehaviour
                     OnDamageableCollide(damageable);
                 }
             }
+            OnEnterCollider?.Invoke(other);
         }
     }
 

@@ -17,9 +17,10 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public int currentHealth { 
         get => _currentHealth; 
         set 
-        { 
+        {
             if (value >= maxHealth) _currentHealth = maxHealth;
-            else _currentHealth = value;
+            else if (value < 0)     _currentHealth = 0;
+            else                    _currentHealth = value;
             OnHealthChange?.Invoke(_currentHealth);
         } 
     }
@@ -84,15 +85,15 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     IEnumerator knockbackCorutine;
     public virtual void KnockBack(float _force, Vector3 _hitPoint)
     {
-        if (!knockbackState)
-        {
+        //if (!knockbackState)
+        //{
             if (knockbackCorutine != null)
                 StopCoroutine(knockbackCorutine);
             knockbackState = true;
             knockbackCorutine = KnockbackCorutine();
             myRigidbody.AddExplosionForce(_force, _hitPoint, 1f, 0f, ForceMode.Impulse);
             StartCoroutine(knockbackCorutine);
-        }
+        //}
     }
 
     IEnumerator KnockbackCorutine()

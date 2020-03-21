@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 1928717708952263391}
   - component: {fileID: 8743769983632603072}
   - component: {fileID: 5766456046006205545}
+  - component: {fileID: 1488408782301193123}
   m_Layer: 0
   m_Name: _EsempioSkill
   m_TagString: Untagged
@@ -4981,3 +4982,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!54 &1488408782301193123
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2064250077824822763}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
