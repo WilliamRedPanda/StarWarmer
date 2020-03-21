@@ -36,11 +36,11 @@ public class Hp_Depleter : MonoBehaviour
             hp_damaged.fillAmount -= Time.deltaTime / 10;
         }
 
-        //if(hp_current.fillAmount < previousHp)
-        //{
-        //    previousHp = hp_current.fillAmount;
-        //    StartCoroutine(damageFeedback());
-        //}
+        if(hp_current.fillAmount < previousHp)
+        {
+            previousHp = hp_current.fillAmount;
+            StartCoroutine(damageFeedback());
+        }
 
         if (hp_current.fillAmount <= 0.5f && hp_current.fillAmount > 0.25f && activeEyes != eyes_50)
         {
