@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 8060138793940965226}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8910571, y: 0.6885576, z: -1.4700193}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3925568, y: 0.3925568, z: 0.3925568}
   m_Children:
   - {fileID: 1921233388060217269}
   - {fileID: 7565218028060267108}
@@ -39,11 +39,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4296000483972666239}
     m_Modifications:
-    - target: {fileID: 4755560539439663964, guid: 13886596608bdf041b824f0e4e4e7be1,
-        type: 3}
-      propertyPath: m_Name
-      value: Facility_Base
-      objectReference: {fileID: 0}
     - target: {fileID: 4755560539440003546, guid: 13886596608bdf041b824f0e4e4e7be1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,12 +47,12 @@ PrefabInstance:
     - target: {fileID: 4755560539440003546, guid: 13886596608bdf041b824f0e4e4e7be1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.6414424
+      value: 0.86
       objectReference: {fileID: 0}
     - target: {fileID: 4755560539440003546, guid: 13886596608bdf041b824f0e4e4e7be1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.5370193
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 4755560539440003546, guid: 13886596608bdf041b824f0e4e4e7be1,
         type: 3}
@@ -98,6 +93,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4755560539439663964, guid: 13886596608bdf041b824f0e4e4e7be1,
+        type: 3}
+      propertyPath: m_Name
+      value: Facility_Base
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13886596608bdf041b824f0e4e4e7be1, type: 3}
@@ -173,6 +173,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 221545272210196639, guid: 0450f862c0ed5064693dbc0f8e813bce,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.29411766
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0450f862c0ed5064693dbc0f8e813bce, type: 3}
