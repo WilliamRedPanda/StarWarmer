@@ -61,6 +61,17 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         SetRendererActive(AnimDirection.sxf);
     }
 
+    private void Start()
+    {
+        foreach (var sequence in sequences)
+        {
+            foreach (var command in sequence.commands)
+            {
+                BulletPoolManager.instance.TakeBullet(command.data.skillPrefab);
+            }
+        }
+    }
+
     private void OnDisable()
     {
         OnDestroy?.Invoke();
@@ -112,8 +123,11 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         HandleSequence();
         Aim();
         HandleFire();
-        HandleDodge();
-        Movement();
+        if (playerData.canMove)
+        {
+            HandleDodge();
+            Movement();
+        }
     }
 
     public void ChangeSequences()

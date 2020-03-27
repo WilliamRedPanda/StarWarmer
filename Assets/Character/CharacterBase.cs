@@ -59,6 +59,21 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         }
     }
 
+    public void Stop(float _timer)
+    {
+        if (stopCoroutine != null)
+            StopCoroutine(stopCoroutine);
+        stopCoroutine = StopCharacterCorutine(_timer);
+        StartCoroutine(stopCoroutine);
+    }
+    IEnumerator stopCoroutine;
+    IEnumerator StopCharacterCorutine(float timer)
+    {
+        canMove = false;
+        yield return new WaitForSeconds(timer);
+        canMove = true;
+    }
+
     public void Heal(int _heal)
     {
         currentHealth += _heal;
@@ -110,6 +125,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         if (renderer)
             originalMaterial = renderer.material;
         invulnerable = false;
+        canMove = true;
     }
 
     public void SetMaterial(Material newMaterial)

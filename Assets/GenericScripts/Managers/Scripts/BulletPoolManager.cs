@@ -52,6 +52,7 @@ public class BulletPoolManager : MonoBehaviour
         else
         {
             bullet = Instantiate(_bullet, BULLET_IN_POOL_POSITION, Quaternion.identity);
+            bullet.gameObject.SetActive(false);
             bullet.transform.SetParent(this.transform);
             bullet.created = true;
         }
