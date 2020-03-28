@@ -16,6 +16,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [Space]
     [SerializeField] public Pause pause;
     [SerializeField] public ComboFacility comboFacility;
+    [SerializeField] GameObject comboListUI;
     [Space]
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;

@@ -8,20 +8,34 @@ public class ComboUIInstantier : MonoBehaviour
     [SerializeField] Transform parentTransform;
     [Space]
     [SerializeField] ComboUI comboUIPrefab;
+    [SerializeField] bool allCombo = true;
+    [SerializeField][Range(0,2)] int index;
 
     List<ComboUI> combos;
 
     PlayerControllerInput player;
 
+    bool instantied = false;
     private void Start()
     {
-        player = playerInstance.instance;
-        combos = new List<ComboUI>();
-        foreach (var combo in player.sequences)
+        if (!instantied)
         {
-            InstantiateComboUI(combo);
+            player = playerInstance.instance;
+            combos = new List<ComboUI>();
+            if (allCombo)
+            {
+                foreach (var combo in player.sequences)
+                {
+                    InstantiateComboUI(combo);
+                }
+            }
+            else
+            {
+                InstantiateComboUI(player.sequences[index]);
+            }
+            player.OnEndSetupSequence += ChangeCombo;
+            instantied = true;
         }
-        player.OnEndSetupSequence += ChangeCombo;
     }
 
     void ChangeCombo()
@@ -33,9 +47,16 @@ public class ComboUIInstantier : MonoBehaviour
 
         combos = new List<ComboUI>();
 
-        foreach (var combo in player.sequences)
+        if (allCombo)
         {
-            InstantiateComboUI(combo);
+            foreach (var combo in player.sequences)
+            {
+                InstantiateComboUI(combo);
+            }
+        }
+        else
+        {
+            InstantiateComboUI(player.sequences[index]);
         }
     }
 
