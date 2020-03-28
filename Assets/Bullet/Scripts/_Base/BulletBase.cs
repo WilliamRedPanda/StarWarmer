@@ -20,6 +20,7 @@ public class BulletBase : MonoBehaviour
     float returnTime;
     [HideInInspector] public IShooter shooter;
     [HideInInspector] public CommandSequence command;
+    [HideInInspector] public Vector3 target;
 
     public Action OnPreShoot;
     public Action OnShoot;
