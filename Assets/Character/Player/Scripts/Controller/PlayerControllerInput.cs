@@ -12,11 +12,9 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [SerializeField] SpriteRenderer spriteCharacter;
     [SerializeField] Transform pointer;
     [SerializeField] Animator animator;
-    [SerializeField] Collider collider;
     [Space]
     [SerializeField] public Pause pause;
     [SerializeField] public ComboFacility comboFacility;
-    [SerializeField] GameObject comboListUI;
     [Space]
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;
@@ -24,6 +22,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     //[SerializeField] Transform upLimit, downLimit, leftLimit, rightLimit;
 
     Rigidbody rb;
+    Collider[] collider;
 
     public Vector3 shootPosition { get { return _shootPosition.position; } }
     public Vector3 aimDirection { get; private set; }
@@ -50,7 +49,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     #region Mono
     private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        rb = GetComponentInChildren<Rigidbody>();
+        collider = GetComponentsInChildren<Collider>();
 
         instance.SetInstance(this);
         playerData.OnChangeSequences += ChangeSequences;
@@ -78,6 +78,15 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         OnDestroy?.Invoke();
         UnsubscribeSequences();
         playerData.OnChangeSequences -= ChangeSequences;
+    }
+
+    private void FixedUpdate()
+    {
+        if (canMove)
+        {
+            rb.MovePosition(transform.position + transformVelocity);
+            //transform.Translate(transformVelocity, Space.World);
+        }
     }
 
     void SetupSequences()
@@ -209,7 +218,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         canDash = false;
         canMove = false;
         rb.useGravity = false;
-        collider.isTrigger = true;
+        SetTrigger(true);
         
         playerData.TempInvulnerability(playerData.dodgeDuration);
         Vector3 dodgeVelocity;
@@ -236,7 +245,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         dodgeTimer = 0;
 
         rb.useGravity = true;
-        collider.isTrigger = false;
+        SetTrigger(false);
         canMove = true;
 
         yield return new WaitForSeconds(playerData.dodgeCooldown - playerData.dodgeDuration);
@@ -263,10 +272,11 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         else
             transformVelocity = keyAxis.normalized * playerData.speed * Time.deltaTime;
 
-        if (canMove)
-        {
-            transform.Translate(transformVelocity, Space.World);
-        }
+        //if (canMove)
+        //{
+        //    rb.MovePosition(transform.position + transformVelocity);
+        //    //transform.Translate(transformVelocity, Space.World);
+        //}
         
         if (animator != null)
         {
@@ -525,6 +535,15 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         ResetSequences();
     }
     #endregion
+
+    void SetTrigger(bool _trigger)
+    {
+        int l = collider.Length;
+        for (int i = 0; i < collider.Length; i++)
+        {
+            collider[i].isTrigger = _trigger;
+        }
+    }
 
     public enum AnimDirection
     {
