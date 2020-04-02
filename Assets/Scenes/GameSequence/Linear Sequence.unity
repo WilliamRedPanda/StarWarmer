@@ -127,11 +127,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 2R
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -187,6 +182,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 2R
+      objectReference: {fileID: 0}
     - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -201,11 +201,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -261,6 +256,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (3)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &75221611 stripped
@@ -308,11 +308,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 2L
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -368,6 +363,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 2L
+      objectReference: {fileID: 0}
     - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -393,11 +393,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883938843}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -453,6 +448,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &156441339 stripped
@@ -468,11 +468,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 7
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -527,6 +522,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 7
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -615,11 +615,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,6 +670,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &229637327
@@ -684,11 +684,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -743,6 +738,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 5
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -849,6 +849,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086774245}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -924,16 +934,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 600
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!1001 &262258585
@@ -943,11 +943,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (6)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1003,6 +998,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (6)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &289102823 stripped
@@ -1018,6 +1018,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 706846867}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: canMove
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: fireRate
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -1093,26 +1113,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 650
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 650
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: canMove
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: fireRate
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &315343014 stripped
@@ -1128,11 +1128,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1602741620}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1188,6 +1183,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &360144308
@@ -1197,11 +1197,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1256,6 +1251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -1786,11 +1786,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1846,6 +1841,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &401366716 stripped
@@ -1861,11 +1861,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (10)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1921,6 +1916,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (10)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &423804276
@@ -1930,11 +1930,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1990,6 +1985,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &435207573
@@ -1999,11 +1999,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 8
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2058,6 +2053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 8
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -2178,11 +2178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room End
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2237,6 +2232,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room End
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -2307,6 +2307,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896464830}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -2377,16 +2387,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 250
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &475668880 stripped
@@ -2414,6 +2414,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665102142}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -2484,16 +2494,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!1001 &545777277
@@ -2503,11 +2503,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2563,6 +2558,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &554704254 stripped
@@ -2578,11 +2578,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (5)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2638,6 +2633,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (5)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &594028943
@@ -2647,11 +2647,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 6
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2706,6 +2701,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 6
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -2828,11 +2828,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2887,6 +2882,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -2969,6 +2969,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086774245}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -3039,16 +3049,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 300
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &774589744 stripped
@@ -3064,11 +3064,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3124,6 +3119,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (4)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &851819840 stripped
@@ -3139,11 +3139,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 1R
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3199,6 +3194,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 1R
+      objectReference: {fileID: 0}
     - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3245,6 +3245,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896464830}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -3315,16 +3325,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &932079492 stripped
@@ -3388,6 +3388,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086774245}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -3458,16 +3468,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 300
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &1054969817 stripped
@@ -3483,11 +3483,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 3R
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3543,6 +3538,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 3R
+      objectReference: {fileID: 0}
     - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -3569,11 +3569,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3629,6 +3624,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (7)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1129154390
@@ -3638,6 +3638,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 451169475}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: viewRadious
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -3708,21 +3723,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: viewRadious
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &1129154391 stripped
@@ -3744,11 +3744,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (8)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3804,6 +3799,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (8)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &1166108090 stripped
@@ -3825,11 +3825,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 4
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3885,6 +3880,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 4
+      objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3936,6 +3936,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665102142}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -4005,16 +4015,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
@@ -4221,11 +4221,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4281,6 +4276,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &1358710677 stripped
@@ -4296,11 +4296,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1602741620}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4356,6 +4351,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1379167127
@@ -4365,11 +4365,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883938843}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4425,6 +4420,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1381665757
@@ -4434,11 +4434,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 1L
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4494,6 +4489,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 1L
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4654386935470793125, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_IsActive
@@ -4502,11 +4507,6 @@ PrefabInstance:
     - target: {fileID: 8432001316320157946, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4566,6 +4566,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 97012255}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -4636,16 +4646,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &1502326969 stripped
@@ -4661,11 +4661,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (11)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4720,6 +4715,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (11)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -4843,11 +4843,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (9)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4903,6 +4898,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (9)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &1614078446 stripped
@@ -4930,11 +4930,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1602741620}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4990,6 +4985,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1680950533
@@ -4999,6 +4999,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896464830}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -5069,16 +5079,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!4 &1694602857 stripped
@@ -5100,6 +5100,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2086774245}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 300
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -5169,16 +5179,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
@@ -5695,15 +5695,15 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2643188370064914896, guid: 1126c1704778fb342a7b63660afe6b44,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -28.75
-      objectReference: {fileID: 0}
     - target: {fileID: 5280448740397950683, guid: 1126c1704778fb342a7b63660afe6b44,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2643188370064914896, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1126c1704778fb342a7b63660afe6b44, type: 3}
@@ -5714,6 +5714,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 97012255}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 150
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -5784,16 +5794,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 150
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 150
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!1001 &1847562625
@@ -5803,11 +5803,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1233145465}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5863,6 +5858,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (2)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1861511442
@@ -5872,11 +5872,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 245881056}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5932,6 +5927,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!1001 &1886956775
@@ -5941,11 +5941,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6000,6 +5995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 2
       objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -6074,11 +6074,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 3
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6134,6 +6129,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6173,11 +6173,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 948092681}
     m_Modifications:
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite 3L
-      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6233,6 +6228,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite 3L
+      objectReference: {fileID: 0}
     - target: {fileID: 4054446577550705318, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -6258,6 +6258,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896464830}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 250
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -6328,16 +6338,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 250
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 250
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!1001 &2049262878
@@ -6347,6 +6347,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 451169475}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: viewRadious
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -6416,21 +6431,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: viewRadious
-      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
@@ -6578,6 +6578,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 665102142}
     m_Modifications:
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _currentHealth
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: _maxHealth
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 2651407455878728736, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Name
@@ -6648,16 +6658,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0ebca2998e99654e894a26aeb83d727, type: 3}
 --- !u!1001 &2133964393
@@ -6667,11 +6667,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Name
-      value: Room 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1066906283703491431, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6727,6 +6722,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1066906283703491430, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Name
+      value: Room 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066906284479906517, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.2312
+      objectReference: {fileID: 0}
     - target: {fileID: 3283116369340425052, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6761,11 +6766,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.0112
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066906284479906517, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.2312
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d070ffc65daa714aa0c4f456978691f, type: 3}
@@ -6873,56 +6873,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.40999985
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.8000093
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5113522518224502035, guid: 12362bea3b5761041ad07d26b0c9907c,
         type: 3}
       propertyPath: m_IsActive
@@ -6987,56 +6937,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.000038606515
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.000022084947
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123970856052773499, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 3123970856052773499, guid: 12362bea3b5761041ad07d26b0c9907c,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8382189253865009076, guid: 12362bea3b5761041ad07d26b0c9907c,
         type: 3}
@@ -7133,6 +7033,106 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.z
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.40999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8000093
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3600282539706540337, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.38268343
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.000038606515
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.000022084947
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.92387956
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643174447334555557, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123970856052773499, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3123970856052773499, guid: 12362bea3b5761041ad07d26b0c9907c,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8238124589220840026, guid: 12362bea3b5761041ad07d26b0c9907c,
         type: 3}
