@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 08fded09622fa1c4982506bbf342a84a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  facilityProximityParticles: {fileID: 7251230038663478614}
 --- !u!1 &8511726545538614333
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,7 +88,7 @@ Transform:
   m_LocalScale: {x: 0.24647479, y: 0.24647479, z: 0.24647479}
   m_Children:
   - {fileID: 4655315856580190978}
-  - {fileID: 6243720413395725895}
+  - {fileID: 3505676606143155137}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -153,22 +154,27 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 14.475396, y: 6.9706125, z: 4}
   m_Center: {x: 0.08147881, y: -0.985554, z: 6.060275e-16}
---- !u!1001 &7611306347546354409
+--- !u!1001 &1125977035629184879
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 2472678181912283929}
     m_Modifications:
+    - target: {fileID: 6126994530010193903, guid: e88ed13600b166f479cd47d4e26d4602,
+        type: 3}
+      propertyPath: m_Name
+      value: LowerGlow (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.8
+      value: -3.85
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
@@ -178,7 +184,7 @@ PrefabInstance:
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
@@ -188,12 +194,12 @@ PrefabInstance:
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
@@ -218,28 +224,29 @@ PrefabInstance:
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.8317
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.1119
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.7255
-      objectReference: {fileID: 0}
-    - target: {fileID: 6126994530010193903, guid: e88ed13600b166f479cd47d4e26d4602,
-        type: 3}
-      propertyPath: m_Name
-      value: LowerGlow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e88ed13600b166f479cd47d4e26d4602, type: 3}
---- !u!4 &6243720413395725895 stripped
+--- !u!4 &3505676606143155137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4541577211431586990, guid: e88ed13600b166f479cd47d4e26d4602,
     type: 3}
-  m_PrefabInstance: {fileID: 7611306347546354409}
+  m_PrefabInstance: {fileID: 1125977035629184879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7251230038663478614 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7710669887332514361, guid: e88ed13600b166f479cd47d4e26d4602,
+    type: 3}
+  m_PrefabInstance: {fileID: 1125977035629184879}
   m_PrefabAsset: {fileID: 0}

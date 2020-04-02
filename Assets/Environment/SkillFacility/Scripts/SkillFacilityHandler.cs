@@ -5,6 +5,7 @@ using UnityEngine;
 public class SkillFacilityHandler : MonoBehaviour
 {
     ComboFacility comboFacility;
+    public ParticleSystem facilityProximityParticles;
 
     private void OnTriggerStay(Collider other)
     {
@@ -20,5 +21,21 @@ public class SkillFacilityHandler : MonoBehaviour
                 comboFacility.HandleInput();
             }
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+
+        PlayerControllerInput player = other.GetComponentInParent<PlayerControllerInput>();
+
+        facilityProximityParticles.Play();
+
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        PlayerControllerInput player = other.GetComponentInParent<PlayerControllerInput>();
+
+        facilityProximityParticles.Stop();
     }
 }
