@@ -5,7 +5,7 @@ using UnityEngine;
 namespace StateMachine
 {
     [RequireComponent(typeof(Animator))]
-    public abstract class StateMachineBase<T> : MonoBehaviour
+    public abstract class StateMachineBase<T> : MonoBehaviour where T : IStateMachineContext
     {
         protected Animator SM;
 

@@ -82,9 +82,9 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     private void FixedUpdate()
     {
-        if (canMove)
+        if (canMove || playerData.canMove)
         {
-            rb.MovePosition(transform.position + transformVelocity);
+            playerData.myRigidbody.MovePosition(transform.position + transformVelocity);
             //transform.Translate(transformVelocity, Space.World);
         }
     }
@@ -217,7 +217,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     {
         canDash = false;
         canMove = false;
-        rb.useGravity = false;
+        playerData.myRigidbody.useGravity = false;
         SetTrigger(true);
         
         playerData.TempInvulnerability(playerData.dodgeDuration);
@@ -244,7 +244,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         }
         dodgeTimer = 0;
 
-        rb.useGravity = true;
+        playerData.myRigidbody.useGravity = true;
         SetTrigger(false);
         canMove = true;
 
@@ -264,19 +264,22 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     AnimDirection dir;
     void Movement()
     {
+
         stickAxis = new Vector3(Input.GetAxis("HorizontalStick"), 0, Input.GetAxis("VerticalStick"));
         keyAxis = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         if (usingJoypad)
-            transformVelocity = stickAxis.normalized * playerData.speed * Time.deltaTime;
+            transformVelocity = stickAxis.normalized * playerData.speed;// * Time.deltaTime;
         else
-            transformVelocity = keyAxis.normalized * playerData.speed * Time.deltaTime;
+            transformVelocity = keyAxis.normalized * playerData.speed;// * Time.deltaTime;
 
         //if (canMove)
         //{
         //    rb.MovePosition(transform.position + transformVelocity);
         //    //transform.Translate(transformVelocity, Space.World);
         //}
+        if (playerData.canMove == false)
+            transformVelocity = Vector3.zero;
         
         if (animator != null)
         {

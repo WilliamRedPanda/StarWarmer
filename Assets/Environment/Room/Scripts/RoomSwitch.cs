@@ -21,7 +21,7 @@ public class RoomSwitch : MonoBehaviour
     #endregion
 
 
-    List<GenericEnemy> enemies;
+    public List<GenericEnemy> enemies;
 
     private void Awake()
     {
