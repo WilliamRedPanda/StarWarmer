@@ -70,10 +70,17 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         StartCoroutine(stopCoroutine);
     }
     IEnumerator stopCoroutine;
-    IEnumerator StopCharacterCorutine(float timer)
+    IEnumerator StopCharacterCorutine(float _timer)
     {
+        Vector3 currentPosition = transform.position;
         canMove = false;
-        yield return new WaitForSeconds(timer);
+        float t = _timer;
+        while (_timer > 0f)
+        {
+            transform.position = currentPosition;
+            _timer -= Time.deltaTime;
+            yield return null;
+        }
         canMove = true;
     }
 
@@ -124,7 +131,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
 
     protected virtual void Awake()
     {
-        myRigidbody = GetComponent<Rigidbody>();
+        myRigidbody = GetComponentInChildren<Rigidbody>();
         renderer = GetComponentInChildren<Renderer>();
         if (renderer)
             originalMaterial = renderer.material;
