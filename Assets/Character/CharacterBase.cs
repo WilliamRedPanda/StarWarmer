@@ -33,6 +33,9 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public Action<int, CommandSequence> OnTakeDamage { get; set; }
     public Action<IDamageable> OnDeath { get; set; }
 
+    public Action OnStun;
+    public Action OnStopStun;
+
     public Rigidbody myRigidbody { get; private set; }
 
     public bool knockbackState { get; protected set; }
@@ -94,6 +97,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
 
     public virtual void Stun(float _duration)
     {
+        OnStun?.Invoke();
         Debug.Log("Stunned");
     }
 

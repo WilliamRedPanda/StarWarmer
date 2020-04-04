@@ -82,7 +82,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     private void FixedUpdate()
     {
-        if (canMove)
+        if (canMove || playerData.canMove)
         {
             rb.MovePosition(transform.position + transformVelocity);
             //transform.Translate(transformVelocity, Space.World);
