@@ -260,6 +260,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     Vector3 stickAxis;
     Vector3 keyAxis;
     Vector3 stickDirection;
+    Vector3 direction;
     Vector3 transformVelocity;
     AnimDirection dir;
     void Movement()
@@ -269,9 +270,11 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         keyAxis = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         if (usingJoypad)
-            transformVelocity = stickAxis.normalized * playerData.speed * Time.fixedDeltaTime;
+            direction = stickAxis.normalized * playerData.speed;
         else
-            transformVelocity = keyAxis.normalized * playerData.speed * Time.fixedDeltaTime;
+            direction = keyAxis.normalized * playerData.speed;
+
+        transformVelocity += (direction - transformVelocity * playerData.friction) * Time.fixedDeltaTime;
 
         //if (canMove)
         //{

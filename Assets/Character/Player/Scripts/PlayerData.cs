@@ -9,6 +9,7 @@ public class PlayerData : CharacterBase
     #region serialize
     [Header("Movement")]
     public float speed;
+    public float friction;
     [Header("Dash")]
     public KeyCode dodgeKeyboard;
     public float dodgeDuration;
