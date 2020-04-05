@@ -162,7 +162,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     public void SetRendererActive(AnimDirection _anim)
     {
-        dxfR.enabled = false; ; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
+        dxfR.enabled = false; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
         switch (_anim)
         {
             case AnimDirection.dxf:
@@ -269,9 +269,9 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         keyAxis = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         if (usingJoypad)
-            transformVelocity = stickAxis.normalized * playerData.speed;// * Time.deltaTime;
+            transformVelocity = stickAxis.normalized * playerData.speed * Time.fixedDeltaTime;
         else
-            transformVelocity = keyAxis.normalized * playerData.speed;// * Time.deltaTime;
+            transformVelocity = keyAxis.normalized * playerData.speed * Time.fixedDeltaTime;
 
         //if (canMove)
         //{
@@ -548,8 +548,9 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         }
     }
 
-    public enum AnimDirection
-    {
-        dxf, dxb, sxf, sxb,
-    }
+}
+
+public enum AnimDirection
+{
+    dxf, dxb, sxf, sxb,
 }

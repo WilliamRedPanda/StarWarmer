@@ -21,8 +21,13 @@ public abstract class BaseEnemyBehaviour : MonoBehaviour
         enemy.OnPostAttack  += OnPostAttack;
         enemy.OnStartRest   += OnStartRest;
         enemy.OnRest        += RestTick;
+        enemy.OnTakeDamage  += OnDamage;
     }
 
+    protected virtual void OnDamage(int _damage, CommandSequence _command, IShooter _shooter)
+    {
+        
+    }
 
     protected virtual void OnStartPatrol()
     {
@@ -80,5 +85,6 @@ public abstract class BaseEnemyBehaviour : MonoBehaviour
         enemy.OnPostAttack  -= OnPostAttack;
         enemy.OnStartRest   -= OnStartRest;
         enemy.OnRest        -= RestTick;
+        enemy.OnTakeDamage  -= OnDamage;
     }
 }

@@ -8,10 +8,17 @@ public class GenericEnemy : CharacterBase , IShooter
     [SerializeField] int exp;
     public BulletBase bullet;
     [SerializeField] Transform _shootPosition;
-    [SerializeField] Animator logicSM, animationSM;
+    [SerializeField] Animator logicSM;
     public float restTimer;
     [SerializeField] GameObject stunObject;
+    [Space]
+    [SerializeField] Animator dxfSM;
+    [SerializeField] Animator dxbSM;
+    [SerializeField] Animator sxfSM;
+    [SerializeField] Animator sxbSM;
+    [SerializeField] SpriteRenderer dxfR, dxbR, sxfR, sxbR;
 
+    Animator[] animators;
     CommandSequence lastHitCommand;
 
     Transform targetTransform;
@@ -39,6 +46,9 @@ public class GenericEnemy : CharacterBase , IShooter
         OnTakeDamage += Damage;
         OnDeath += Death;
         stunObject.SetActive(false);
+        animators = new Animator[] { dxbSM, sxbSM, dxfSM, sxfSM };
+        SetRendererActive(AnimDirection.dxf);
+        OnPreAttack += Attack;
     }
 
     #region API
@@ -76,6 +86,34 @@ public class GenericEnemy : CharacterBase , IShooter
         OnRest?.Invoke();
     }
 
+    AnimDirection oldDir;
+    public void SetRendererActive(AnimDirection _anim)
+    {
+        if (oldDir != null)
+            if (oldDir == _anim)
+                return;
+
+        dxfR.enabled = false; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
+        switch (_anim)
+        {
+            case AnimDirection.dxf:
+                dxfR.enabled = true;
+                break;
+            case AnimDirection.dxb:
+                dxbR.enabled = true;
+                break;
+            case AnimDirection.sxf:
+                sxfR.enabled = true;
+                break;
+            case AnimDirection.sxb:
+                sxbR.enabled = true;
+                break;
+            default:
+                break;
+        }
+        oldDir = _anim;
+    }
+
     public void ChangeStateLogicSM(string _state)
     {
         logicSM.SetTrigger(_state);
@@ -83,18 +121,90 @@ public class GenericEnemy : CharacterBase , IShooter
 
     public void ChangeStateAnimationSM(string _state)
     {
-        animationSM.SetTrigger(_state);
+        foreach (var anim in animators)
+        {
+            anim.SetTrigger(_state);
+        }
+    }
+    
+    public void ChangeStateAnimationSM(string _state, bool _bool)
+    {
+        foreach (var anim in animators)
+        {
+            anim.SetBool(_state, _bool);
+        }
     }
 
+    bool isMove = false;
+    AnimDirection dir;
+    Vector3 movementDirection;
+    [SerializeField] bool debug;
     public void Move(Vector3 _pos)
     {
         myRigidbody.MovePosition(_pos);
+
+        movementDirection =  (_pos - transform.position).normalized;
+        if (debug)
+            Debug.Log(movementDirection);
+
+        if (_pos == Vector3.zero)
+        {
+            if (isMove == true)
+            {
+                isMove = false;
+                ChangeStateAnimationSM("Move", isMove);
+            }
+        }
+        else
+        {
+            if (isMove == false)
+            {
+                isMove = true;
+                ChangeStateAnimationSM("Move", isMove);
+            }
+
+            if (movementDirection.z > 0.1f)
+            {
+                if (movementDirection.x < 0f)
+                {
+                    if (dir != AnimDirection.sxb)
+                    {
+                        dir = AnimDirection.sxb;
+                    }
+                }
+                else if (movementDirection.x >= 0f)
+                {
+                    if (dir != AnimDirection.dxb)
+                    {
+                        dir = AnimDirection.dxb;
+                    }
+                }
+            }
+            else if (movementDirection.z <= 0.1f)
+            {
+                if (movementDirection.x < 0f)
+                {
+                    if (dir != AnimDirection.sxf)
+                    {
+                        dir = AnimDirection.sxf;
+                    }
+                }
+                else if (movementDirection.x >= 0f)
+                {
+                    if (dir != AnimDirection.dxf)
+                    {
+                        dir = AnimDirection.dxf;
+                    }
+                }
+            }
+        }
+
+        SetRendererActive(dir);
     }
 
     public void Attack()
     {
-        timer = 0f;
-        BulletPoolManager.instance.Shoot(bullet, shootPosition, aimDirection, this, null);
+        ChangeStateAnimationSM("Attack");
     }
     #endregion
 
@@ -106,7 +216,7 @@ public class GenericEnemy : CharacterBase , IShooter
         Destroy(gameObject);
     }
 
-    void Damage(int _damage, CommandSequence _command)
+    void Damage(int _damage, CommandSequence _command, IShooter _shooter)
     {
         lastHitCommand = _command;
         if (lastHitCommand != null)

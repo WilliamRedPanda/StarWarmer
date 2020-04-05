@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1997846022561079734}
+  - component: {fileID: 3274841638226666909}
   m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
@@ -33,6 +34,19 @@ Transform:
   m_Father: {fileID: 2651407455878728740}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!65 &3274841638226666909
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144568659956771301}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3812189, y: 1.7800379, z: 0.026911242}
+  m_Center: {x: -0.076070786, y: 0.17137372, z: 0.0011191424}
 --- !u!1 &1172380177634615358
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +326,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1404763595948541464}
   - component: {fileID: 8091410291822166865}
-  - component: {fileID: 3949769591424466752}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -383,19 +396,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &3949769591424466752
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8613078977028163971}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 13.522998, y: 16.971716, z: 0.20000005}
-  m_Center: {x: 0.23437768, y: 0.5861197, z: 2.0492268e-16}
 --- !u!1001 &6497783111337431181
 PrefabInstance:
   m_ObjectHideFlags: 0

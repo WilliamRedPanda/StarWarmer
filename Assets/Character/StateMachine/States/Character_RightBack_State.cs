@@ -12,7 +12,7 @@ namespace StateMachine.Character
         {
             base.Enter();
             context.character.SetMaterial(right);
-            context.playerInput.SetRendererActive(PlayerControllerInput.AnimDirection.dxb);
+            context.playerInput.SetRendererActive(AnimDirection.dxb);
         }
     }
 }

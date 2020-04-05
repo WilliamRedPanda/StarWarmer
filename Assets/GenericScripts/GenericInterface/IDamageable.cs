@@ -14,10 +14,10 @@ public interface IDamageable
     bool invulnerable { get; set; }
 
     System.Action<int> OnHealthChange { get; set; }
-    System.Action<int, CommandSequence> OnTakeDamage { get; set; }
+    System.Action<int, CommandSequence, IShooter> OnTakeDamage { get; set; }
     System.Action<IDamageable> OnDeath { get; set; }
 
-    void TakeDamage(int _damage, CommandSequence _command);
+    void TakeDamage(int _damage, CommandSequence _command, IShooter _shooter);
     void Heal(int _heal);
     void Heal();
     void Stun(float _duration);

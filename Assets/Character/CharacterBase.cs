@@ -30,7 +30,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     #endregion
 
     public Action<int> OnHealthChange { get; set; }
-    public Action<int, CommandSequence> OnTakeDamage { get; set; }
+    public Action<int, CommandSequence, IShooter> OnTakeDamage { get; set; }
     public Action<IDamageable> OnDeath { get; set; }
 
     public Action OnStun;
@@ -44,7 +44,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public Renderer renderer { get; protected set; }
     public Material originalMaterial { get; protected set; }
 
-    public virtual void TakeDamage(int _damage, CommandSequence _command)
+    public virtual void TakeDamage(int _damage, CommandSequence _command, IShooter _shooter)
     {
         if (!invulnerable)
         {
@@ -56,7 +56,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
                 damageFeedbackCorutine = DamageFeedbackCorutine();
                 StartCoroutine(damageFeedbackCorutine);
             }
-            OnTakeDamage?.Invoke(_damage, _command);
+            OnTakeDamage?.Invoke(_damage, _command, _shooter);
             if (_currentHealth <= 0) 
                 OnDeath?.Invoke(this);
         }

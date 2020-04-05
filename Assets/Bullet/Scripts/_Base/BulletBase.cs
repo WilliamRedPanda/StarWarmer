@@ -66,7 +66,7 @@ public class BulletBase : MonoBehaviour
     public virtual void OnDamageableCollide(IDamageable damageable)
     {
         OnDamage?.Invoke(damageable);
-        damageable.TakeDamage(damage, command);
+        damageable.TakeDamage(damage, command, shooter);
         OnPostDamage?.Invoke();
     }
 

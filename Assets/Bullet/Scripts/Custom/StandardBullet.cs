@@ -36,7 +36,7 @@ public class StandardBullet : BulletBase
                 if (_damageable.gameObject == shooter.gameObject)
                     continue;
         
-                _damageable.TakeDamage(explosionDamage, null);
+                _damageable.TakeDamage(explosionDamage, null, shooter);
                 _damageable.KnockBack(explosionKnockbackForce, transform.position);
             }
         }
