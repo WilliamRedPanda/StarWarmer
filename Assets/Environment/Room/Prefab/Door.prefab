@@ -45,7 +45,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 4.0183268, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!114 &950757170237942048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +257,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7822431279919194636, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_Sprite
@@ -266,11 +271,6 @@ PrefabInstance:
     - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7822431279919194636, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
