@@ -21,6 +21,6 @@ public interface IDamageable
     void Heal(int _heal);
     void Heal();
     void Stun(float _duration);
-    void KnockBack(float _force, Vector3 _hitPoint);
+    void KnockBack(float _force, Vector3 _hitPoint, float _radius);
     void TempInvulnerability(float _duration);
 }

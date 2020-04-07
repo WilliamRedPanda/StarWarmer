@@ -25,7 +25,7 @@ public class StandardBullet : BulletBase
     public override void OnDamageableCollide(IDamageable damageable)
     {
         base.OnDamageableCollide(damageable);
-        damageable.KnockBack(knockbackForce, transform.position);
+        damageable.KnockBack(knockbackForce, transform.position, 1f);
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, explosionRadius);
         for (int i = 0; i < colliders.Length; i++)
@@ -37,7 +37,7 @@ public class StandardBullet : BulletBase
                     continue;
         
                 _damageable.TakeDamage(explosionDamage, null, shooter);
-                _damageable.KnockBack(explosionKnockbackForce, transform.position);
+                _damageable.KnockBack(explosionKnockbackForce, transform.position,1f);
             }
         }
         Return();

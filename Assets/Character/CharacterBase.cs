@@ -109,7 +109,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     }
 
     IEnumerator knockbackCorutine;
-    public virtual void KnockBack(float _force, Vector3 _hitPoint)
+    public virtual void KnockBack(float _force, Vector3 _hitPoint, float _radius)
     {
         //if (!knockbackState)
         //{
@@ -117,7 +117,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
                 StopCoroutine(knockbackCorutine);
             knockbackState = true;
             knockbackCorutine = KnockbackCorutine();
-            myRigidbody.AddExplosionForce(_force, _hitPoint, 1f, 0f, ForceMode.Impulse);
+            myRigidbody.AddExplosionForce(_force, _hitPoint, _radius, 0f, ForceMode.Impulse);
             StartCoroutine(knockbackCorutine);
         //}
     }

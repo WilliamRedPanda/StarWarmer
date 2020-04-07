@@ -22,7 +22,7 @@ public class Attack_ExplosionOnDamage_SkillBehaviour : BaseSkillBehaviour
                     continue;
 
                 damageable.TakeDamage(damage, skill.command, skill.shooter);
-                damageable.KnockBack(knockbackForce, transform.position);
+                damageable.KnockBack(knockbackForce, transform.position, 1f);
             }
         }
     }
