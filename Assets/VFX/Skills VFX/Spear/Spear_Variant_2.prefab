@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 883294978301443111, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
       propertyPath: damage
-      value: 300
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 883294978301443111, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
@@ -80,27 +80,12 @@ PrefabInstance:
     - target: {fileID: 2288481902968269234, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
       propertyPath: speed
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 711134022508132280, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
       propertyPath: knockbackForce
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 493290873302546730, guid: f04edaafe138d66439de9dae31621a58,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.8679245
-      objectReference: {fileID: 0}
-    - target: {fileID: 493290873302546730, guid: f04edaafe138d66439de9dae31621a58,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493290873302546730, guid: f04edaafe138d66439de9dae31621a58,
-        type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0.04845995
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f04edaafe138d66439de9dae31621a58, type: 3}
