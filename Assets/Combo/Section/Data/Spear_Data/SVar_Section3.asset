@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4926925b2a3948a4b9b0142bf41b913a, type: 3}
-  m_Name: S_Section2
+  m_Name: SVar_Section3
   m_EditorClassIdentifier: 
   inputDatas:
-  - {fileID: 11400000, guid: 7955f2b022df0fd4195defee1e0f6450, type: 2}
-  - {fileID: 11400000, guid: d25ccdd777154654c8dfa5969a15bc0d, type: 2}
-  skillPrefab: {fileID: 4963405259736311799, guid: 59a1fca985a85984ba40dcac1d2e387b,
+  - {fileID: 11400000, guid: b3adf4fad296f8949854c205ba734953, type: 2}
+  - {fileID: 11400000, guid: b3adf4fad296f8949854c205ba734953, type: 2}
+  skillPrefab: {fileID: 5851049770443131945, guid: 5c2e2fc35ccad5c49908765c79b11e18,
     type: 3}
