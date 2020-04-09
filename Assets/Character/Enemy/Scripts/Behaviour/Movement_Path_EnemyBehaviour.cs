@@ -49,9 +49,9 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
             return;
         }
 
-        moving = true;
+        enemy.moving = true;
 
-        newPos = enemy.transform.position + ((path[index].position - enemy.transform.position).normalized * speed * Time.deltaTime);
+        enemy.transformVelocity = (path[index].position - enemy.transform.position).normalized * speed * Time.fixedDeltaTime;
 
         colliders = Physics.OverlapSphere(path[index].position, 0.05f);
 
@@ -77,15 +77,5 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
         index++;
         if (index >= path.Length)
             index = 0;
-    }
-
-    private void FixedUpdate()
-    {
-        if (moving == true)
-        {
-            enemy.Move(newPos);
-            newPos = enemy.transform.position;
-            moving = false;
-        }
     }
 }

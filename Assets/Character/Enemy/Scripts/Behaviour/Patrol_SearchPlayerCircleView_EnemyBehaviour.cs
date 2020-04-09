@@ -20,6 +20,7 @@ public class Patrol_SearchPlayerCircleView_EnemyBehaviour : BaseEnemyBehaviour
             {
                 enemy.target = player;
                 enemy.ChangeStateLogicSM("Aggro");
+                enemy.ChangeStateAnimationSM("Aware", true);
             }
         }
     }

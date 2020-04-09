@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class GenericEnemy : CharacterBase , IShooter
 {
+    [Header("Enemy")]
     [SerializeField] int exp;
     public BulletBase bullet;
+    public float restTimer;
     [SerializeField] Transform _shootPosition;
     [SerializeField] Animator logicSM;
-    public float restTimer;
     [SerializeField] GameObject stunObject;
     [Space]
     [SerializeField] Animator dxfSM;
@@ -29,16 +30,22 @@ public class GenericEnemy : CharacterBase , IShooter
     public Vector3 shootPosition { get { return _shootPosition.position; } }
     public Vector3 aimDirection { get; set; }
 
+    [HideInInspector] public bool moving;
+    [HideInInspector] public Vector3 transformVelocity;
+
     public Action OnDestroy { get; set; }
     public Action OnStartPatrol;
     public Action OnPatrol;
     public Action OnStartAggro;
     public Action OnAggro;
+    public Action OnStartPhaseAttack;
     public Action OnPreAttack;
     public Action OnAttack;
     public Action OnPostAttack;
     public Action OnStartRest;
     public Action OnRest;
+    public Action<Collision> OnCollide;
+    public Action<PlayerData> OnPlayerCollide;
 
     protected override void Awake()
     {
@@ -49,6 +56,16 @@ public class GenericEnemy : CharacterBase , IShooter
         animators = new Animator[] { dxbSM, sxbSM, dxfSM, sxfSM };
         SetRendererActive(AnimDirection.dxf);
         OnPreAttack += Attack;
+    }
+
+    private void FixedUpdate()
+    {
+        if (moving == true)
+        {
+            Move(transform.position + transformVelocity);
+            transformVelocity = transform.position;
+            moving = false;
+        }
     }
 
     #region API
@@ -137,17 +154,20 @@ public class GenericEnemy : CharacterBase , IShooter
 
     bool isMove = false;
     AnimDirection dir;
-    Vector3 movementDirection;
-    [SerializeField] bool debug;
+    Vector3 movementDirection; 
     public void Move(Vector3 _pos)
     {
+        //if (transform.position == _pos)
+        //{
+        //    return;
+        //    ChangeStateAnimationSM("Move", isMove);
+        //}
+
         myRigidbody.MovePosition(_pos);
 
         movementDirection =  (_pos - transform.position).normalized;
-        if (debug)
-            Debug.Log(movementDirection);
 
-        if (_pos == Vector3.zero)
+        if (_pos == transform.position)
         {
             if (isMove == true)
             {
@@ -222,5 +242,16 @@ public class GenericEnemy : CharacterBase , IShooter
         if (lastHitCommand != null)
             lastHitCommand.AddExp(1);
         timer = 0;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        PlayerData playerData = collision.gameObject.GetComponentInParent<PlayerData>();
+        if (playerData)
+        {
+            OnPlayerCollide?.Invoke(playerData);
+        }
+
+        OnCollide?.Invoke(collision);
     }
 }
