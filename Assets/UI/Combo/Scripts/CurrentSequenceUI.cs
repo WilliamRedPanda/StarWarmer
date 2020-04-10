@@ -8,33 +8,33 @@ public class CurrentSequenceUI : MonoBehaviour
     [SerializeField] PlayerControllerInput controller;
 
     [SerializeField] Transform box;
-    [SerializeField] Image iconPrefab;
+    [SerializeField] ButtonSpriteControl iconPrefab;
 
     [SerializeField] inputDevice inputDevice;
 
-    Queue<Image> inputImage;
+    Queue<ButtonSpriteControl> inputImage;
 
     private void Start()
     {
-        inputImage = new Queue<Image>();
+        inputImage = new Queue<ButtonSpriteControl>();
         controller.OnInputPressed += UpdateInput;
         controller.OnInputReset += ResetInputView;
     }
 
     void UpdateInput(InputData _input)
     {
-        Image image;
+        ButtonSpriteControl image;
         image = Instantiate(iconPrefab, box);
         switch (inputDevice)
         {
             case inputDevice.keyboard:
-                image.sprite = _input.keySprite;
+                image.SetSprite(_input.keySprite);
                 break;
             case inputDevice.playStation:
-                image.sprite = _input.PSSprite;
+                image.SetSprite(_input.PSSprite);
                 break;
             case inputDevice.xBox:
-                image.sprite = _input.XboxSprite;
+                image.SetSprite(_input.XboxSprite);
                 break;
             default:
                 break;

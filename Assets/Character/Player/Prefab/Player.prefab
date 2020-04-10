@@ -450,7 +450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 8412846717692124059}
   box: {fileID: 3262756872117202508}
-  iconPrefab: {fileID: 623935497659173275, guid: 828e09888de915e47bce82b7948764dc,
+  iconPrefab: {fileID: 3253805463939726536, guid: 828e09888de915e47bce82b7948764dc,
     type: 3}
   inputDevice: 0
 --- !u!1 &2046124817936940293
@@ -1339,21 +1339,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
+    - target: {fileID: 4664279729897607684, guid: cbc09eed30542944b955ae0e537d692b,
         type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -548
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 375
-      objectReference: {fileID: 0}
-    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 420
-      objectReference: {fileID: 0}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 8412846717692124059}
     - target: {fileID: 8779700250317222830, guid: cbc09eed30542944b955ae0e537d692b,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1436,11 +1426,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4664279729897607684, guid: cbc09eed30542944b955ae0e537d692b,
-        type: 3}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 8412846717692124059}
     - target: {fileID: 1155946761104560063, guid: cbc09eed30542944b955ae0e537d692b,
         type: 3}
       propertyPath: m_Spacing

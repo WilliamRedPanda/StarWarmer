@@ -9,7 +9,7 @@ public class SetSequences
     [HideInInspector] public int level;
 
     IShooter controller;
-    PlayerControllerInput playerController;
+    public PlayerControllerInput playerController { get; private set; }
 
     public IEnumerator cooldownCorutine;
 
