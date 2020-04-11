@@ -39,7 +39,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e07e427659880478cb8f4f4d8a0de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadious: 2.5
+  viewRadious: 3.5
 --- !u!114 &7906189559265586690
 MonoBehaviour:
   m_ObjectHideFlags: 0
