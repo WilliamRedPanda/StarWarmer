@@ -144,11 +144,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9488e0f67f65b6c45b8d62a62bb7cf38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  ID: 555
   vfx: {fileID: 0}
   _duration: 1
   damage: 20
   friendlyFire: 0
+  target: {x: 0, y: 0, z: 0}
 --- !u!114 &4602398419954075930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockbackForce: 3
+  knockbackRadius: 0
 --- !u!114 &1624102721921729856
 MonoBehaviour:
   m_ObjectHideFlags: 0
