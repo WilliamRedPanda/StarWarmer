@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ba962d5db305d44b5149e8d4c88830, type: 3}
+  m_Name: Easier_Spear_Variant
+  m_EditorClassIdentifier: 
+  combosData:
+  - comboSection: {fileID: 11400000, guid: 935c27efde1784e4abc125cfa97188d5, type: 2}
+    NecessaryExp: 0
+  - comboSection: {fileID: 11400000, guid: 6bfd9672d74cb6549be94be61d5c7a26, type: 2}
+    NecessaryExp: 30
+  - comboSection: {fileID: 11400000, guid: 56e84e51570ab294dbadb044486a7f41, type: 2}
+    NecessaryExp: 50
+  startingExp: 50
+  cooldown: 0
+  icon: {fileID: 21300000, guid: c708bc4748fcb2b4c9ebb8b66cb631e7, type: 3}
+  comboName: Spear
+  description: PEEEEEEEW
