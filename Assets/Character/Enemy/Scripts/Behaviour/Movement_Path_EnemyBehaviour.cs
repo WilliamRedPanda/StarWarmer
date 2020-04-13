@@ -9,12 +9,11 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
     [SerializeField] bool patrol, aggro;
 
     int index = 0;
-    Vector3 newPos;
 
     protected override void OnEnable()
     {
         base.OnEnable();
-        newPos = enemy.transform.position;
+        index = 0;
     }
 
     protected override void PatrolTick()
@@ -37,6 +36,7 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
 
     Collider[] colliders;
     bool moving;
+    Vector3 collidePos = Vector3.zero;
 
     void Handler()
     {
@@ -51,9 +51,11 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
 
         enemy.moving = true;
 
+        
         enemy.transformVelocity = (path[index].position - enemy.transform.position).normalized * speed * Time.fixedDeltaTime;
 
-        colliders = Physics.OverlapSphere(path[index].position, 0.05f);
+        collidePos = new Vector3(path[index].position.x, enemy.transform.position.y, path[index].position.z);
+        colliders = Physics.OverlapSphere(collidePos, 0.05f);
 
         foreach (var item in colliders)
         {
