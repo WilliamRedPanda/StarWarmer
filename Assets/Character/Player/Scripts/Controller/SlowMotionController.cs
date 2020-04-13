@@ -71,7 +71,7 @@ public class SlowMotionController : MonoBehaviour
 
     void HandleSlowMo()
     {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Joystick1Button4) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Joystick1Button5))
         {
             if (fakedHold == false)
             {
