@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Life_DestroyOnDamage_Behaviour : BaseSkillBehaviour
+public class Life_DestroyOnDamage_SkillBehaviour : BaseSkillBehaviour
 {
     protected override void OnPostDamage()
     {

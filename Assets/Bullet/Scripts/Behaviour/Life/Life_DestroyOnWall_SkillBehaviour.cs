@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Life_DestroyOnWall_Behaviour : BaseSkillBehaviour
+public class Life_DestroyOnWall_SkillBehaviour : BaseSkillBehaviour
 {
     protected override void OnEnterCollider(Collider other)
     {

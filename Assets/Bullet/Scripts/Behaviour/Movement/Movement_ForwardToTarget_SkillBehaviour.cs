@@ -13,7 +13,8 @@ public class Movement_ForwardToTarget_SkillBehaviour : BaseSkillBehaviour
     {
         base.OnShoot();
         direction = skill.target - skill.transform.position;
-    }
+        skill.transform.rotation = Quaternion.LookRotation(skill.target - skill.transform.position);
+    } 
 
     protected override void Tick()
     {

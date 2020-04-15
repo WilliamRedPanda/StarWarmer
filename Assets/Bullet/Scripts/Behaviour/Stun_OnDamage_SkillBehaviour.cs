@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Stun_OnDamage_Behaviour : BaseSkillBehaviour
+public class Stun_OnDamage_SkillBehaviour : BaseSkillBehaviour
 {
     [SerializeField] float time;
 

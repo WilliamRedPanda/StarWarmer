@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class ShooterStopWhenShoot_Behaviour : BaseSkillBehaviour
+public class ShooterStopWhenShoot_SkillBehaviour : BaseSkillBehaviour
 {
     [SerializeField] float time;
 

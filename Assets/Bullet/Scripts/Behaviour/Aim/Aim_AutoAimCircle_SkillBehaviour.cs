@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aim_AutoAimCircle_Behaviour : BaseSkillBehaviour
+public class Aim_AutoAimCircle_SkillBehaviour : BaseSkillBehaviour
 {
     [SerializeField] float range;
 
