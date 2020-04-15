@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 4963405259736311798, guid: 59a1fca985a85984ba40dcac1d2e387b,
         type: 3}
       propertyPath: m_Name
-      value: Spear_Variant_1.1
+      value: Spear_Variant_Lv1
       objectReference: {fileID: 0}
     - target: {fileID: 4963405259736311799, guid: 59a1fca985a85984ba40dcac1d2e387b,
         type: 3}
@@ -82,10 +82,40 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.399
       objectReference: {fileID: 0}
+    - target: {fileID: 5160657417177078020, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657417177078020, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.8602133
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657417177078020, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.6650944
+      objectReference: {fileID: 0}
     - target: {fileID: 5655135457572004596, guid: 59a1fca985a85984ba40dcac1d2e387b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 781569949366889799, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 781569949366889799, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.g
+      value: 0.8562756
+      objectReference: {fileID: 0}
+    - target: {fileID: 781569949366889799, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: TrailModule.colorOverTrail.maxColor.b
+      value: 0.6556604
       objectReference: {fileID: 0}
     - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
         type: 3}
@@ -101,6 +131,46 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.g
+      value: 0.64099556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key0.b
+      value: 0.0039215684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.g
+      value: 0.64099556
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key1.b
+      value: 0.0039215684
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.ctime1
+      value: 65535
+      objectReference: {fileID: 0}
+    - target: {fileID: 5160657418571040675, guid: 59a1fca985a85984ba40dcac1d2e387b,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.ctime0
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59a1fca985a85984ba40dcac1d2e387b, type: 3}
