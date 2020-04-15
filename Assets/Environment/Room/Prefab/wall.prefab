@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2540471565303158061}
   - component: {fileID: 4038092237390475300}
-  - component: {fileID: 7822431279919194636}
   m_Layer: 0
   m_Name: wall
   m_TagString: Wall
@@ -78,19 +77,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1.488806}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &7822431279919194636
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8578966874044897801}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0.5, y: 0.5, z: 0}
