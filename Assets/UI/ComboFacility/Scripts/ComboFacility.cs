@@ -11,6 +11,10 @@ public class ComboFacility : MonoBehaviour
     [SerializeField] ComboUI comboUISelected;
     [SerializeField] Button defaultComboSelection;
     [SerializeField] Button defaultComboSlot;
+    [SerializeField] SlotComboManager slotComboManager;
+    [SerializeField] SelectableComboManager selectableComboManager;
+
+    [HideInInspector] public int currentSlot;
 
     PlayerData playerData;
     List<SetSequencesData> equippedSkills;
@@ -25,45 +29,56 @@ public class ComboFacility : MonoBehaviour
 
     public void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton7))
-            Confirmed();
-
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton0))
+        if (open)
         {
-            OpenClose();
+            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton1))
+            {
+                Confirmed();
+                Close();
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
+            {
+                Open();
+            }
         }
     }
 
     bool pause;
+    bool open;
     public void OpenClose()
     {
-        bool open = canvas.activeSelf;
+        open = canvas.activeSelf;
         canvas.SetActive(!open);
         if (open)
         {
+            Confirmed();
             StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
         }
         else
         {
+            slotComboManager.gameObject.SetActive(true);
+            selectableComboManager.gameObject.SetActive(false);
             StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
             defaultComboSelection.Select();
         }
+    }
 
-        //pause = !pause;
-        //canvas.gameObject.SetActive(pause);
-        //if (pause)
-        //{
-        //    StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
-        //    defaultComboSelection.Select();
-        //}
-        //else
-        //{
-        //    StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
-        //}
+    public void Open()
+    {
+        open = true;
+        canvas.SetActive(true);
+        slotComboManager.gameObject.SetActive(true);
+        selectableComboManager.gameObject.SetActive(false);
+        StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
     }
 
     public void Close()
     {
+        Confirmed();
+        open = false;
         StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
         canvas.SetActive(false);
     }
@@ -76,16 +91,18 @@ public class ComboFacility : MonoBehaviour
     public void ChangeEquipSkill(int slotIndex, SetSequencesData set)
     {
         equippedSkills[slotIndex] = set;
+        ChangeEquipSkillConfirmed();
     }
 
     public void SelectSkill(SetSequencesData _skill)
     {
         selectedSkill = _skill;
-        if (selectedSkill != null)
-        {
-            comboUISelected.SetCombo(_skill.Instance);
-        }
         defaultComboSlot.Select();
+    }
+
+    public void ChangeCurrentSkillView (SetSequencesData _skill)
+    {
+        comboUISelected.SetCombo(_skill.Instance);
     }
 
     public SetSequencesData GetSelectedSkill()
@@ -96,13 +113,21 @@ public class ComboFacility : MonoBehaviour
     public void ResetSelectedSkill()
     {
         selectedSkill = null;
-        defaultComboSelection.Select();
+        selectableComboManager.ResetSet();
+        selectableComboManager.gameObject.SetActive(false);
+        slotComboManager.gameObject.SetActive(true);
     }
-
 
     public void Confirmed()
     {
         ChangeEquipSkillConfirmed();
-        OpenClose();
+        //OpenClose();
+    }
+
+    public void OpenSelectable()
+    {
+        selectableComboManager.gameObject.SetActive(true);
+        selectableComboManager.Reposition();
+        defaultComboSelection.Select();
     }
 }

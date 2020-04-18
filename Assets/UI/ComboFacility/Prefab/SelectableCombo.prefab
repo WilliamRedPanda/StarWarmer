@@ -55,6 +55,7 @@ MonoBehaviour:
   comboFacility: {fileID: 0}
   dataCombo: {fileID: 11400000, guid: 8bb5706985b53be4398e72946e52fdf1, type: 2}
   comboUI: {fileID: 8706597018810482058}
+  button: {fileID: 5450737098919984593}
 --- !u!222 &5450737098919984595
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -136,18 +137,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5450737098919984592}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5450737098919984598}
-        m_MethodName: SelectSkill
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1001 &5450737099383286768
@@ -157,11 +147,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5450737098919984599}
     m_Modifications:
-    - target: {fileID: 3598964647893450423, guid: 34964b2e590ee4643866f9fb98bf8539,
-        type: 3}
-      propertyPath: m_Name
-      value: ComboUI
-      objectReference: {fileID: 0}
     - target: {fileID: 1617171045831378056, guid: 34964b2e590ee4643866f9fb98bf8539,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -267,7 +252,17 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 7557239548894551376, guid: 34964b2e590ee4643866f9fb98bf8539,
+    - target: {fileID: 3598964647893450423, guid: 34964b2e590ee4643866f9fb98bf8539,
+        type: 3}
+      propertyPath: m_Name
+      value: ComboUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7043091766468018502, guid: 34964b2e590ee4643866f9fb98bf8539,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4145238488025436066, guid: 34964b2e590ee4643866f9fb98bf8539,
         type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -277,17 +272,12 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7043091766468018502, guid: 34964b2e590ee4643866f9fb98bf8539,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1485159190138652153, guid: 34964b2e590ee4643866f9fb98bf8539,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4145238488025436066, guid: 34964b2e590ee4643866f9fb98bf8539,
+    - target: {fileID: 7557239548894551376, guid: 34964b2e590ee4643866f9fb98bf8539,
         type: 3}
       propertyPath: m_Enabled
       value: 0

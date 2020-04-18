@@ -106,29 +106,32 @@ public class GenericEnemy : CharacterBase , IShooter
     AnimDirection oldDir;
     public void SetRendererActive(AnimDirection _anim)
     {
-        if (oldDir != null)
-            if (oldDir == _anim)
-                return;
-
-        dxfR.enabled = false; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
-        switch (_anim)
+        if (dxbR && dxfR && sxbR && sxfR)
         {
-            case AnimDirection.dxf:
-                dxfR.enabled = true;
-                break;
-            case AnimDirection.dxb:
-                dxbR.enabled = true;
-                break;
-            case AnimDirection.sxf:
-                sxfR.enabled = true;
-                break;
-            case AnimDirection.sxb:
-                sxbR.enabled = true;
-                break;
-            default:
-                break;
+            if (oldDir != null)
+                if (oldDir == _anim)
+                    return;
+
+            dxfR.enabled = false; dxbR.enabled = false; sxbR.enabled = false; sxfR.enabled = false;
+            switch (_anim)
+            {
+                case AnimDirection.dxf:
+                    dxfR.enabled = true;
+                    break;
+                case AnimDirection.dxb:
+                    dxbR.enabled = true;
+                    break;
+                case AnimDirection.sxf:
+                    sxfR.enabled = true;
+                    break;
+                case AnimDirection.sxb:
+                    sxbR.enabled = true;
+                    break;
+                default:
+                    break;
+            }
+            oldDir = _anim;
         }
-        oldDir = _anim;
     }
 
     public void ChangeStateLogicSM(string _state)
@@ -138,17 +141,23 @@ public class GenericEnemy : CharacterBase , IShooter
 
     public void ChangeStateAnimationSM(string _state)
     {
-        foreach (var anim in animators)
+        if (dxbSM && dxfSM && sxbSM && sxfSM)
         {
-            anim.SetTrigger(_state);
+            foreach (var anim in animators)
+            {
+                anim.SetTrigger(_state);
+            }
         }
     }
     
     public void ChangeStateAnimationSM(string _state, bool _bool)
     {
-        foreach (var anim in animators)
+        if (dxbR && dxfR && sxbR && sxfR)
         {
-            anim.SetBool(_state, _bool);
+            foreach (var anim in animators)
+            {
+                anim.SetBool(_state, _bool);
+            }
         }
     }
 

@@ -403,23 +403,26 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     bool shooted;
     void HandleFire()
     {
-        if (BulletPoolManager.instance != null)
+        if (playerData.bullet != null)
         {
-            if (Input.GetAxis("Fire1") > 0 && shooted == false)
+            if (BulletPoolManager.instance != null)
             {
-                shooted = true;
-                BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
-                Attack();
-            }
-            else if (Input.GetAxis("Fire1") <= 0 && shooted == true)
-            {
-                shooted = false;
-            }
+                if (Input.GetAxis("Fire1") > 0 && shooted == false)
+                {
+                    shooted = true;
+                    BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                    Attack();
+                }
+                else if (Input.GetAxis("Fire1") <= 0 && shooted == true)
+                {
+                    shooted = false;
+                }
 
-            if (Input.GetButtonDown("Fire2"))
-            {
-                BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
-                Attack();
+                if (Input.GetButtonDown("Fire2"))
+                {
+                    BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                    Attack();
+                }
             }
         }
     } 
