@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: SVar_Section3
   m_EditorClassIdentifier: 
   inputDatas:
-  - {fileID: 11400000, guid: b3adf4fad296f8949854c205ba734953, type: 2}
-  - {fileID: 11400000, guid: b3adf4fad296f8949854c205ba734953, type: 2}
+  - {fileID: 11400000, guid: d25ccdd777154654c8dfa5969a15bc0d, type: 2}
   skillPrefab: {fileID: 5851049770443131945, guid: 5c2e2fc35ccad5c49908765c79b11e18,
     type: 3}
