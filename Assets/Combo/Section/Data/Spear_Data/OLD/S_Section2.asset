@@ -15,5 +15,6 @@ MonoBehaviour:
   inputDatas:
   - {fileID: 11400000, guid: 7955f2b022df0fd4195defee1e0f6450, type: 2}
   - {fileID: 11400000, guid: d25ccdd777154654c8dfa5969a15bc0d, type: 2}
+  - {fileID: 11400000, guid: b3adf4fad296f8949854c205ba734953, type: 2}
   skillPrefab: {fileID: 4963405259736311799, guid: 59a1fca985a85984ba40dcac1d2e387b,
     type: 3}
