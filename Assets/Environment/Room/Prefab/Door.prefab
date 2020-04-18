@@ -69,6 +69,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8066945190272571677}
+  - component: {fileID: 8289170637892810123}
   m_Layer: 0
   m_Name: doors
   m_TagString: Untagged
@@ -94,6 +95,19 @@ Transform:
   m_Father: {fileID: 3272420440091255291}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8289170637892810123
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460891650826797781}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.9295945, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0.07747769}
 --- !u!1001 &258199662941176523
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -257,11 +271,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7822431279919194636, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_Sprite
@@ -271,6 +280,11 @@ PrefabInstance:
     - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7822431279919194636, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
