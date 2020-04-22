@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Unlit_Meteor Galaxy
+  m_Name: Meteor Aura
   m_Shader: {fileID: 4800000, guid: 0cc0eda5140cade41a50e21387f594af, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
