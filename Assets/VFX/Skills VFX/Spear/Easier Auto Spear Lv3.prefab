@@ -67,8 +67,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 50352
   vfx: {fileID: 0}
-  _duration: 2
-  damage: 75
+  _duration: 5
+  damage: 125
   friendlyFire: 0
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &7233860124608787717
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9853f51c696934195d4318a9db9cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 3
+  knockbackForce: 5
   knockbackRadius: 0
 --- !u!114 &2723055080598513360
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2c045da4b24f54795e59eb4ec1a7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 20
 --- !u!114 &4750417248488890851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676135e027fe344783f25e4c16d1a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 30
 --- !u!1 &974484692973489159
 GameObject:
   m_ObjectHideFlags: 0

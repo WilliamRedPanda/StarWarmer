@@ -67,7 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 50350
   vfx: {fileID: 0}
-  _duration: 2
+  _duration: 5
   damage: 75
   friendlyFire: 0
   target: {x: 0, y: 0, z: 0}
@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676135e027fe344783f25e4c16d1a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 15
+  range: 30
 --- !u!1 &4218839498710987594
 GameObject:
   m_ObjectHideFlags: 0

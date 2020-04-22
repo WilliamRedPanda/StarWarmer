@@ -268,8 +268,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e22d280920dc6d643892d49c75807c92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _currentHealth: 10
-  _maxHealth: 10
+  _currentHealth: 5000
+  _maxHealth: 5000
   damageMaterial: {fileID: 2100000, guid: 406bd1b145d995b4bbc8a8e493004151, type: 2}
   canMove: 0
 --- !u!1001 &497648845214496085

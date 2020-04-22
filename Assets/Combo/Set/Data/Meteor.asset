@@ -20,7 +20,7 @@ MonoBehaviour:
   - comboSection: {fileID: 11400000, guid: ceb20978cb317fa44866f11007cd5843, type: 2}
     NecessaryExp: 50
   startingExp: 5
-  cooldown: 3.5
+  cooldown: 4
   icon: {fileID: 21300000, guid: 9dd170bb2ffa60a41a8f3498e3ab03bc, type: 3}
   comboName: Meteor
   description: SE-PHI-ROTH!!!

@@ -20,7 +20,7 @@ MonoBehaviour:
   - comboSection: {fileID: 11400000, guid: 3ba6fff1557f707469de9a320d581b33, type: 2}
     NecessaryExp: 60
   startingExp: 5
-  cooldown: 1
+  cooldown: 3
   icon: {fileID: 21300000, guid: 387434e75de907848a8e00289d512345, type: 3}
   comboName: Crater
-  description: Ti spacca la faccia
+  description: EX - PLOOOOJON

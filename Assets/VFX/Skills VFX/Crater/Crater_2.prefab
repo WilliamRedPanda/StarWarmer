@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Crater_2
       objectReference: {fileID: 0}
+    - target: {fileID: 8402194493737060766, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: damage
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 3657446066151590348, guid: c00b08a11f89e6948a285e01d1b73135,
         type: 3}
       propertyPath: looping
@@ -71,6 +76,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679626778742336476, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: time
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 62298364441494028, guid: c00b08a11f89e6948a285e01d1b73135,
         type: 3}
