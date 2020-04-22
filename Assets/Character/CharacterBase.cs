@@ -105,7 +105,6 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public virtual void Stun(float _duration)
     {
         OnStun?.Invoke();
-        Debug.Log("Stunned");
     }
 
     IEnumerator knockbackCorutine;
@@ -113,12 +112,13 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     {
         //if (!knockbackState)
         //{
-            if (knockbackCorutine != null)
-                StopCoroutine(knockbackCorutine);
-            knockbackState = true;
-            knockbackCorutine = KnockbackCorutine();
-            myRigidbody.AddExplosionForce(_force, _hitPoint, _radius, 0f, ForceMode.Impulse);
-            StartCoroutine(knockbackCorutine);
+        if (knockbackCorutine != null)
+            StopCoroutine(knockbackCorutine);
+        knockbackState = true;
+        knockbackCorutine = KnockbackCorutine();
+        //myRigidbody.AddExplosionForce(_force, _hitPoint, _radius, 0f, ForceMode.Impulse);
+        myRigidbody.AddForce((transform.position - _hitPoint).normalized * _force, ForceMode.VelocityChange);
+        StartCoroutine(knockbackCorutine);
         //}
     }
 

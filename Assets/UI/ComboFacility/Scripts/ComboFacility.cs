@@ -25,6 +25,9 @@ public class ComboFacility : MonoBehaviour
         playerData = playerInput.instance.playerData;
         equippedSkills = new List<SetSequencesData>();
         equippedSkills.AddRange(playerData.sequences);
+        slotComboManager.gameObject.SetActive(false);
+        selectableComboManager.gameObject.SetActive(false);
+        slotComboManager.InteractiveButtons(false);
     }
 
     public void HandleInput()
@@ -62,17 +65,26 @@ public class ComboFacility : MonoBehaviour
             slotComboManager.gameObject.SetActive(true);
             selectableComboManager.gameObject.SetActive(false);
             StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
-            defaultComboSelection.Select();
         }
     }
 
     public void Open()
     {
+        slotComboManager.InteractiveButtons(false);
         open = true;
         canvas.SetActive(true);
         slotComboManager.gameObject.SetActive(true);
         selectableComboManager.gameObject.SetActive(false);
         StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
+        StartCoroutine(ActiveButton());
+    }
+
+    IEnumerator ActiveButton()
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        defaultComboSelection.interactable = true;
+        slotComboManager.InteractiveButtons(true);
+        defaultComboSelection.Select();
     }
 
     public void Close()
@@ -91,6 +103,7 @@ public class ComboFacility : MonoBehaviour
     public void ChangeEquipSkill(int slotIndex, SetSequencesData set)
     {
         equippedSkills[slotIndex] = set;
+        slotComboManager.ChangeSlotView(slotIndex, set.Instance);
         ChangeEquipSkillConfirmed();
     }
 

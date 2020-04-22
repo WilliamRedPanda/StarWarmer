@@ -27,20 +27,15 @@ public class ComboSlot : MonoBehaviour
         if (slotIndex == 0)
             GetComponent<Button>().Select();
     }
-    //public void ChangeSkill()
-    //{
-    //    if (comboFacility.GetSelectedSkill() != null)
-    //    {
-    //        SetSequences set = comboFacility.GetSelectedSkill().Instance;
-    //        comboUI.SetCombo(set);
-    //        //player.instance.ChangeSequences(slotIndex, set.data);
-    //        comboFacility.ChangeEquipSkill(slotIndex, set.data);
-    //        comboFacility.ResetSelectedSkill();
-    //    }
-    //}
+
+    public void ChangeSkill(SetSequences set)
+    {
+        comboUI.SetCombo(set);
+    }
 
     public void SelectSlot()
     {
+        Debug.Log("pressed Slot");
         manager.Select(slotIndex);
     }
 }

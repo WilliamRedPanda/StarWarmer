@@ -18,22 +18,48 @@ public class SelectableComboManager : MonoBehaviour
 
     bool b;
     Vector3 positionFirstCombo;
+    bool pushed;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.W) || Input.GetAxis("HorizontalStick") < -0.1f)
+        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetAxis("HorizontalStick") < -0.1f) && pushed == false)
         {
+            pushed = true;
             Rotate(false);
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.S) || Input.GetAxis("HorizontalStick") > 0.1f)
+        else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetAxis("HorizontalStick") > 0.1f) && pushed == false)
         {
+            pushed = true;
             Rotate(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) ||
+            Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.S))
+        {
+            pushed = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
         {
             currentCombo.ChangeSkill();
         }
+    }
+
+    void StartRotationCheck()
+    {
+        if (corutineRotationCheck != null)
+        {
+            StopCoroutine(corutineRotationCheck);
+        }
+        corutineRotationCheck = CorutineRotationCheck();
+        StartCoroutine(corutineRotationCheck);
+    }
+
+    IEnumerator corutineRotationCheck;
+    IEnumerator CorutineRotationCheck()
+    {
+        yield return new WaitForSecondsRealtime(0.5f);
+        pushed = false;
     }
 
     public void Reposition()
@@ -60,6 +86,7 @@ public class SelectableComboManager : MonoBehaviour
 
     public void Rotate(bool _right)
     {
+        StartRotationCheck();
         if (!inverseRotation)
         {
             ChangeSKillView(!_right);
