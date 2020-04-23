@@ -1968,6 +1968,12 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3914501718541687401, guid: e8e042fededa4fe498a51effaf3622bd,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 12b0046746929c049a86c2452f88f334,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8e042fededa4fe498a51effaf3622bd, type: 3}
 --- !u!4 &2320162672404866343 stripped
@@ -6452,11 +6458,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
-    - target: {fileID: 1460891650826797781, guid: e8e042fededa4fe498a51effaf3622bd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3272420440091255291, guid: e8e042fededa4fe498a51effaf3622bd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6517,6 +6518,11 @@ PrefabInstance:
       propertyPath: room
       value: 
       objectReference: {fileID: 4791008598807946267}
+    - target: {fileID: 1460891650826797781, guid: e8e042fededa4fe498a51effaf3622bd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4296258428405040669, guid: e8e042fededa4fe498a51effaf3622bd,
         type: 3}
       propertyPath: m_Sprite
