@@ -14,11 +14,15 @@ public class Movement_ForwardToTarget_SkillBehaviour : BaseSkillBehaviour
         base.OnShoot();
         direction = skill.target - skill.transform.position;
         skill.transform.rotation = Quaternion.LookRotation(skill.target - skill.transform.position);
-    } 
+    }
+
+    Vector3 v3;
 
     protected override void Tick()
     {
         base.Tick();
-        skill.transform.position += direction.normalized * Time.deltaTime * speed;
+        v3 = direction.normalized * Time.fixedDeltaTime * speed;
+        //skill.transform.position += direction.normalized * Time.deltaTime * speed;
+        skill.SetMove(v3, Space.Self);
     }
 }

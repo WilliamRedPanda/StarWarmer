@@ -17,8 +17,9 @@ public class Movement_OneDirection_SkillBehaviour : BaseSkillBehaviour
     protected override void Tick()
     {
         base.Tick();
-        Vector3 velocity = speedVector * Time.deltaTime;
-        skill.transform.position += velocity;
+        Vector3 velocity = speedVector * Time.fixedDeltaTime;
+        //skill.transform.position += velocity;
+        skill.SetMove(velocity, Space.World);
     }
 
     private void OnDrawGizmos()

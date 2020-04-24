@@ -13,6 +13,9 @@ public class BulletBase : MonoBehaviour
     //
     [SerializeField] bool friendlyFire;
 
+    [Header("Component")]
+    [SerializeField] Rigidbody rb;
+
     public float duration { get { return _duration; } }
 
     public State state { get; set; }
@@ -28,6 +31,39 @@ public class BulletBase : MonoBehaviour
     public Action<IDamageable> OnDamage;
     public Action OnPostDamage;
     public Action OnReturn;
+
+    Vector3 transformVelocity;
+    public bool reflect { get; private set; }
+
+    public void SetMove(Vector3 v3, Space space)
+    {
+        if (space == Space.World)
+        {
+            transformVelocity += (v3 - transform.position);
+        }
+        else
+        {
+            transformVelocity += v3;
+        }
+    }
+
+    public void Reflect()
+    {
+        reflect = !reflect;
+    }
+
+    void ApplyMovement()
+    {
+        if (reflect)
+            transformVelocity *= -1;
+
+        if (rb != null)
+            rb.MovePosition(transformVelocity + transform.position);
+        else
+            transform.Translate(transformVelocity, Space.World);
+
+        transformVelocity = Vector3.zero;
+    }
 
     protected virtual void Tick()
     {
@@ -53,6 +89,7 @@ public class BulletBase : MonoBehaviour
 
     public virtual void Return()
     {
+        reflect = false;
         if (vfx != null)
         {
             vfx.Stop();
@@ -76,10 +113,26 @@ public class BulletBase : MonoBehaviour
             created = true;
     }
 
+    //private void FixedUpdate()
+    //{
+    //    if (state == State.Shooted)
+    //        ApplyMovement();
+    //}
+
     private void Update()
     {
         if (state == State.Shooted)
+        {
             Tick();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (state == State.Shooted)
+        {
+            ApplyMovement();
+        }
     }
 
     public enum State

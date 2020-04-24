@@ -15,9 +15,14 @@ public class Movement_ForwardToAimPoint_SkillBehaviour : BaseSkillBehaviour
         direction = skill.shooter.aimDirection;
     }
 
+    Vector3 v3;
+
     protected override void Tick()
     {
         base.Tick();
-        skill.transform.position += direction.normalized * Time.deltaTime * speed;
+        
+        v3 = direction.normalized * Time.fixedDeltaTime * speed;
+        //skill.transform.position += v3;
+        skill.SetMove(v3, Space.Self);
     }
 }

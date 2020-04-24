@@ -13,11 +13,13 @@ public class Attack_ReflectBullet_SkillBehaviour : BaseSkillBehaviour
 
         otherBullet = other.gameObject.GetComponentInParent<BulletBase>();
 
-        genericEnemy = other.gameObject.GetComponentInParent<GenericEnemy>();
-
         if (otherBullet)
         {
-
+            if (otherBullet.shooter != skill.shooter)
+            {
+                otherBullet.Return();
+                //otherBullet.Reflect();
+            }
         }
     }
 }
