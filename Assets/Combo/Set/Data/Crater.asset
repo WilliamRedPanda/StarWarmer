@@ -23,4 +23,4 @@ MonoBehaviour:
   cooldown: 3
   icon: {fileID: 21300000, guid: 387434e75de907848a8e00289d512345, type: 3}
   comboName: Crater
-  description: EX - PLOOOOJON
+  description: Form a ring of energy around yourself and stun your enemies.
