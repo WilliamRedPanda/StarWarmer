@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 8
-  rangeAttack: 0.62
+  rangeAttack: 0.7
   damage: 10
 --- !u!114 &4517254561304520942
 MonoBehaviour:
