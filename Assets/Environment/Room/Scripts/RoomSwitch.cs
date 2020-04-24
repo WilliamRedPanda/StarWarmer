@@ -7,7 +7,7 @@ using DG.Tweening;
 [RequireComponent(typeof(BoxCollider))]
 public class RoomSwitch : MonoBehaviour
 {
-    const float PLAYER_MOVEMENT_OFFSET = 2.5f;
+    const float PLAYER_MOVEMENT_OFFSET = 3f;
     
     [HideInInspector] public bool roomFinished;
 

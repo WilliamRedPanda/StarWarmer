@@ -76,7 +76,7 @@ public class SelectableComboManager : MonoBehaviour
         delta = 360f / (float)l;
         for (int i = 1; i < l; i++)
         {
-            Vector3 newPos = ((Quaternion.Euler(0, 0, (delta * (float)i)) * combos[0].transform.localPosition) + center.position);
+            Vector3 newPos = ((Quaternion.Euler(0, 0, (delta * (float)i)) * (combos[0].transform.position - center.position)) + center.position);
             combos[i].transform.SetPositionAndRotation(newPos, (Quaternion.Euler(0, 0, (delta * (float)i))));
         }
         combos[index].button.Select();
