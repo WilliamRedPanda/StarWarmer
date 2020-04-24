@@ -6,7 +6,7 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
 {
     [SerializeField] Transform[] path;
     [SerializeField] float speed;
-    [SerializeField] bool patrol, aggro;
+    [SerializeField] bool patrol, aggro, rest;
 
     int index = 0;
 
@@ -30,6 +30,15 @@ public class Movement_Path_EnemyBehaviour : BaseEnemyBehaviour
         if (aggro)
         {
             base.AggroTick();
+            Handler();
+        }
+    }
+
+    protected override void RestTick()
+    {
+        if (rest)
+        {
+            base.RestTick();
             Handler();
         }
     }
