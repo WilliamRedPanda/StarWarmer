@@ -622,6 +622,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4288499651219133458, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288499651279852911, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4288499652160130797, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 549000787916504389, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8963350615504837933, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6902465291608440281, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8405674757578798596, guid: c1db41a55cc1e154ab39b54d8335a077,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c1db41a55cc1e154ab39b54d8335a077, type: 3}
 --- !u!1 &584006612
@@ -2284,16 +2319,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413975834394972080, guid: b237464f1c3163745b18da6e7b020048,
-        type: 3}
-      propertyPath: _maxHealth
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 4413975834394972080, guid: b237464f1c3163745b18da6e7b020048,
-        type: 3}
-      propertyPath: _currentHealth
-      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b237464f1c3163745b18da6e7b020048, type: 3}
