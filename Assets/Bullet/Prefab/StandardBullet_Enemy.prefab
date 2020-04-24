@@ -147,7 +147,7 @@ MonoBehaviour:
   ID: 555
   vfx: {fileID: 0}
   _duration: 1
-  damage: 20
+  damage: 10
   friendlyFire: 0
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &4602398419954075930
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ce2e854ae3f794587bfb2a8ae25e59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 12
+  speed: 8
 --- !u!114 &8905947455092619994
 MonoBehaviour:
   m_ObjectHideFlags: 0

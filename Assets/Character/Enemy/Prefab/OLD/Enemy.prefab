@@ -179,11 +179,11 @@ MonoBehaviour:
   _maxHealth: 100
   damageMaterial: {fileID: 2100000, guid: 406bd1b145d995b4bbc8a8e493004151, type: 2}
   canMove: 0
-  exp: 2
+  exp: 15
   bullet: {fileID: 6082933605966657830, guid: ca449563069c1924eab05bf3a2f74deb, type: 3}
+  restTimer: 1.5
   _shootPosition: {fileID: 2651407455878728740}
   logicSM: {fileID: 8816815371164267636}
-  restTimer: 2
   stunObject: {fileID: 1172380177634615358}
   dxfSM: {fileID: 0}
   dxbSM: {fileID: 0}
@@ -194,7 +194,8 @@ MonoBehaviour:
   sxfR: {fileID: 0}
   sxbR: {fileID: 0}
   target: {fileID: 0}
-  debug: 0
+  moving: 0
+  transformVelocity: {x: 0, y: 0, z: 0}
 --- !u!54 &471873229
 Rigidbody:
   m_ObjectHideFlags: 0

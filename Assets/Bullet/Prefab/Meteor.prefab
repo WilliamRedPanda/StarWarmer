@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d676135e027fe344783f25e4c16d1a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 20
+  range: 10
 --- !u!114 &2742880900517043139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,11 +161,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3629543975178410406}
     m_Modifications:
-    - target: {fileID: 3281314440855708316, guid: d79160f0bae1cfe4b929fed86abefbbe,
-        type: 3}
-      propertyPath: m_Name
-      value: Icosphere
-      objectReference: {fileID: 0}
     - target: {fileID: 3281314440855708307, guid: d79160f0bae1cfe4b929fed86abefbbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -221,12 +216,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3281314440855708304, guid: d79160f0bae1cfe4b929fed86abefbbe,
+    - target: {fileID: 3281314440855708316, guid: d79160f0bae1cfe4b929fed86abefbbe,
+        type: 3}
+      propertyPath: m_Name
+      value: Icosphere
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281314440855708319, guid: d79160f0bae1cfe4b929fed86abefbbe,
         type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
-    - target: {fileID: 3281314440855708319, guid: d79160f0bae1cfe4b929fed86abefbbe,
+    - target: {fileID: 3281314440855708304, guid: d79160f0bae1cfe4b929fed86abefbbe,
         type: 3}
       propertyPath: m_Mesh
       value: 

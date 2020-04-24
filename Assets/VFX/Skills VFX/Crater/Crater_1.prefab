@@ -9691,7 +9691,7 @@ MonoBehaviour:
   ID: 15346
   vfx: {fileID: 3657446066151590348}
   _duration: 1
-  damage: 100
+  damage: 70
   friendlyFire: 0
   target: {x: 0, y: 0, z: 0}
 --- !u!135 &1525190671496174960
@@ -9719,7 +9719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b23e79b1511ad243836a3438803a373, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 1
+  time: 1.5
 --- !u!114 &4790763463842409847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9745,8 +9745,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9853f51c696934195d4318a9db9cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 1
-  knockbackRadius: 0
+  knockbackForce: 4
+  knockbackRadius: 1
 --- !u!1 &5641418147405883060
 GameObject:
   m_ObjectHideFlags: 0
