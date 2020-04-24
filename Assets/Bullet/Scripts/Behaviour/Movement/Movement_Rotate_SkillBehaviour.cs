@@ -11,9 +11,19 @@ public class Movement_Rotate_SkillBehaviour : BaseSkillBehaviour
     protected override void Tick()
     {
         base.Tick();
-        if (counterclockwise)
-            skill.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+        if (skill.reflect)
+        {
+            if (counterclockwise)
+                skill.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+            else
+                skill.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        }
         else
-            skill.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+        {
+            if (counterclockwise)
+                skill.transform.Rotate(0, rotationSpeed * Time.deltaTime, 0);
+            else
+                skill.transform.Rotate(0, -rotationSpeed * Time.deltaTime, 0);
+        }
     }
 }

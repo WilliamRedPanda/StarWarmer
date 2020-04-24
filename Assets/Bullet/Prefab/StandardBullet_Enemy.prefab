@@ -149,6 +149,7 @@ MonoBehaviour:
   _duration: 1
   damage: 10
   friendlyFire: 0
+  rb: {fileID: -1655113387078351121}
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &4602398419954075930
 MonoBehaviour:

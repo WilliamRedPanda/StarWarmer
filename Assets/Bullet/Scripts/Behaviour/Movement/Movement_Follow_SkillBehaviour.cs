@@ -17,7 +17,8 @@ public class Movement_Follow_SkillBehaviour : BaseSkillBehaviour
     {
         base.Tick();
         newPos = skill.shooter.transform.position;
-        skill.transform.position += newPos - oldPos;
+        //skill.transform.position += newPos - oldPos;
+        skill.SetMove(newPos - oldPos, Space.Self);
         oldPos = newPos;
     }
 }
