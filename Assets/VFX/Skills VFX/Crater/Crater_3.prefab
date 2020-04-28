@@ -30,7 +30,7 @@ PrefabInstance:
     - target: {fileID: 1221022394205082266, guid: c00b08a11f89e6948a285e01d1b73135,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.93697447
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1221022394205082266, guid: c00b08a11f89e6948a285e01d1b73135,
         type: 3}
@@ -81,6 +81,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Radius
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4679626778742336476, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: time
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4790763463842409847, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: time
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -229989938227315835, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: knockbackForce
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: -229989938227315835, guid: c00b08a11f89e6948a285e01d1b73135,
+        type: 3}
+      propertyPath: knockbackRadius
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6304326824705683210, guid: c00b08a11f89e6948a285e01d1b73135,
         type: 3}

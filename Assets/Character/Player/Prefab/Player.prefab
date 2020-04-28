@@ -927,12 +927,12 @@ MonoBehaviour:
   _maxHealth: 300
   damageMaterial: {fileID: 2100000, guid: 406bd1b145d995b4bbc8a8e493004151, type: 2}
   canMove: 0
-  speed: 1
-  friction: 10
+  speed: 0.9
+  friction: 8
   dodgeKeyboard: 304
   dodgeDuration: 0.3
-  dodgeSpeed: 15
-  dodgeCooldown: 1.5
+  dodgeSpeed: 7
+  dodgeCooldown: 0.8
   slowMoPercent: 0.5
   timeForSlowMo: 5
   bullet: {fileID: 3115308544829923073, guid: 14d27922935ae944bbe3df411b99452b, type: 3}
