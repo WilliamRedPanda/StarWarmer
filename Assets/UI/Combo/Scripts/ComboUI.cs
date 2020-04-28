@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class ComboUI : MonoBehaviour
 {
+    [SerializeField] CurrentControllerManager controllerManager;
     [SerializeField] Image comboIconImage;
     [SerializeField] Image cooldownBarImage;
     [SerializeField] Image expBarImage;
@@ -14,7 +15,6 @@ public class ComboUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI descriptionText;
     [SerializeField] Image[] levelIcon;
     [SerializeField] ButtonSpriteControl iconPrefab;
-    [SerializeField] inputDevice inputDevice;
 
     [HideInInspector] public SetSequences combo;
     float deltaCooldown, deltaExp;
@@ -32,6 +32,7 @@ public class ComboUI : MonoBehaviour
         {
             if (comboListTransform) combo.playerController.OnInputReset += RemoveHighlight;
         }
+        if (comboListTransform) controllerManager.OnChangeController += ChangeSprite;
     }
 
     void UnsubscribeEvent()
@@ -49,6 +50,7 @@ public class ComboUI : MonoBehaviour
                 }
             }
         }
+        if (comboListTransform) controllerManager.OnChangeController -= ChangeSprite;
     }
 
     bool b;
@@ -79,11 +81,11 @@ public class ComboUI : MonoBehaviour
                 foreach (var input in _combo.commands[i].data.inputDatas)
                 {
                     ButtonSpriteControl inputImage = Instantiate(iconPrefab, comboListTransform);
+                    inputImage.Set(input);
                     inputIcons.Add(inputImage);
-                    if (inputDevice == inputDevice.keyboard) inputImage.SetSprite(input.keySprite);
-                    else if (inputDevice == inputDevice.xBox) inputImage.SetSprite(input.XboxSprite);
-                    else if (inputDevice == inputDevice.playStation) inputImage.SetSprite(input.PSSprite);
-
+                    if (controllerManager.currentController == inputDevice.keyboard) inputImage.SetSprite(input.keySprite);
+                    else if (controllerManager.currentController == inputDevice.xBox) inputImage.SetSprite(input.XboxSprite);
+                    else if (controllerManager.currentController == inputDevice.playStation) inputImage.SetSprite(input.PSSprite);
                 }
             }
         }
@@ -103,6 +105,17 @@ public class ComboUI : MonoBehaviour
         }
 
         SubscribeEvent();
+    }
+
+    void ChangeSprite(inputDevice inputDevice)
+    {
+        if (comboListTransform)
+        {
+            for (int i = 0; i < inputIcons.Count; i++)
+            {
+                inputIcons[i].SetSprite(inputDevice);
+            }
+        }
     }
 
     void RemoveInputs()

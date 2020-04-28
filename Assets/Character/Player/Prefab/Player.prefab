@@ -449,6 +449,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 8412846717692124059}
+  controllerManager: {fileID: 11400000, guid: d5213a0e4632b49458eabee615579ed8, type: 2}
   box: {fileID: 3262756872117202508}
   iconPrefab: {fileID: 3253805463939726536, guid: 828e09888de915e47bce82b7948764dc,
     type: 3}
@@ -955,6 +956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   instance: {fileID: 11400000, guid: 131f3788b3e73864d80a865846b470f6, type: 2}
   inputsData: {fileID: 11400000, guid: b73fb18749c5ea84a9aa50a71fdc0ea3, type: 2}
+  controllerManager: {fileID: 11400000, guid: d5213a0e4632b49458eabee615579ed8, type: 2}
   playerData: {fileID: 453915585178577469}
   _shootPosition: {fileID: 9057343488219251839}
   spriteCharacter: {fileID: 8580767265055460269}
