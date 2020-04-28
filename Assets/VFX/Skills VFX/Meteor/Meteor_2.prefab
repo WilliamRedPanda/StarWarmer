@@ -10,12 +10,17 @@ PrefabInstance:
     - target: {fileID: 4713170339200267104, guid: d97083410d7b4314681d4853b45486fc,
         type: 3}
       propertyPath: m_Name
-      value: Meteor Variant
+      value: Meteor_2
       objectReference: {fileID: 0}
     - target: {fileID: 7714976774217573157, guid: d97083410d7b4314681d4853b45486fc,
         type: 3}
       propertyPath: ID
-      value: 2147483647
+      value: 214748364
+      objectReference: {fileID: 0}
+    - target: {fileID: 7714976774217573157, guid: d97083410d7b4314681d4853b45486fc,
+        type: 3}
+      propertyPath: damage
+      value: 160
       objectReference: {fileID: 0}
     - target: {fileID: 3629543975178410406, guid: d97083410d7b4314681d4853b45486fc,
         type: 3}

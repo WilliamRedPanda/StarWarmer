@@ -148,16 +148,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0cd63732fc6df449be560386eaa4a73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controllerManager: {fileID: 11400000, guid: d5213a0e4632b49458eabee615579ed8, type: 2}
   comboIconImage: {fileID: 2913586970486282237}
   cooldownBarImage: {fileID: 2053762491818355377}
   expBarImage: {fileID: 0}
   comboListTransform: {fileID: 0}
+  highlighted: 0
   nameText: {fileID: 0}
   descriptionText: {fileID: 0}
   levelIcon: []
   iconPrefab: {fileID: 3253805463939726536, guid: 828e09888de915e47bce82b7948764dc,
     type: 3}
-  inputDevice: 2
 --- !u!1 &5995799086131198297
 GameObject:
   m_ObjectHideFlags: 0

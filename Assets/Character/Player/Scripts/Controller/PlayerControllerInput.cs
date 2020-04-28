@@ -7,6 +7,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 {
     [SerializeField] PlayerInputInstance instance;
     [SerializeField] InputContainer inputsData;
+    [SerializeField] CurrentControllerManager controllerManager;
     public PlayerData playerData;
     [SerializeField] Transform _shootPosition;
     [SerializeField] SpriteRenderer spriteCharacter;
@@ -39,6 +40,20 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     public List<InputData> currentInputSequence { get; private set; }
 
     public InputData currentInput { get; private set; }
+
+    bool _usingJoypad;
+    bool usingJoypad 
+    {
+        get { return _usingJoypad; }
+        set 
+        {
+            _usingJoypad = value;
+            if (_usingJoypad == false)
+                controllerManager.ChangeController(inputDevice.keyboard);
+            else
+                controllerManager.ChangeController(inputDevice.xBox);
+        }
+    }
 
     bool sequenceStarted = false;
     int consecutiveButtonPressed = -1;
@@ -253,7 +268,6 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         yield return null;
     }
 
-    bool usingJoypad = false;
     bool canMove = true;
     bool isMove = false;
 

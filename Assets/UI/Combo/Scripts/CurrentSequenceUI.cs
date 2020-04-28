@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CurrentSequenceUI : MonoBehaviour
 {
     [SerializeField] PlayerControllerInput controller;
+    [SerializeField] CurrentControllerManager controllerManager;
 
     [SerializeField] Transform box;
     [SerializeField] ButtonSpriteControl iconPrefab;
@@ -19,6 +20,19 @@ public class CurrentSequenceUI : MonoBehaviour
         inputImage = new Queue<ButtonSpriteControl>();
         controller.OnInputPressed += UpdateInput;
         controller.OnInputReset += ResetInputView;
+        controllerManager.OnChangeController += ChangeDevice;
+    }
+
+    private void OnDisable()
+    {
+        controller.OnInputPressed -= UpdateInput;
+        controller.OnInputReset -= ResetInputView;
+        controllerManager.OnChangeController -= ChangeDevice;
+    }
+
+    void ChangeDevice(inputDevice _inputDevice)
+    {
+        inputDevice = _inputDevice;
     }
 
     void UpdateInput(InputData _input)
