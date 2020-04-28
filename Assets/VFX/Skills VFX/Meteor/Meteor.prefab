@@ -162,6 +162,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3629543975178410406}
     m_Modifications:
+    - target: {fileID: 3281314440855708316, guid: d79160f0bae1cfe4b929fed86abefbbe,
+        type: 3}
+      propertyPath: m_Name
+      value: Icosphere
+      objectReference: {fileID: 0}
     - target: {fileID: 3281314440855708307, guid: d79160f0bae1cfe4b929fed86abefbbe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,11 +221,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3281314440855708316, guid: d79160f0bae1cfe4b929fed86abefbbe,
-        type: 3}
-      propertyPath: m_Name
-      value: Icosphere
       objectReference: {fileID: 0}
     - target: {fileID: 3281314440855708319, guid: d79160f0bae1cfe4b929fed86abefbbe,
         type: 3}
