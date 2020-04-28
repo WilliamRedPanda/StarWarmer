@@ -42,6 +42,7 @@ public class GenericEnemy : CharacterBase , IShooter
     public Action OnPreAttack;
     public Action OnAttack;
     public Action OnPostAttack;
+    public Action OnEndPhaseAttack;
     public Action OnStartRest;
     public Action OnRest;
     public Action<Collision> OnCollide;

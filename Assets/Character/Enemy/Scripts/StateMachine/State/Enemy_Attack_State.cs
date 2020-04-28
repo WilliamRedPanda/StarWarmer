@@ -20,6 +20,7 @@
         public override void Exit()
         {
             base.Exit();
+            context.enemy.OnEndPhaseAttack?.Invoke();
             context.enemy.ChangeStateAnimationSM("Attack", false);
             context.enemy.ChangeStateAnimationSM("Move", false);
         }

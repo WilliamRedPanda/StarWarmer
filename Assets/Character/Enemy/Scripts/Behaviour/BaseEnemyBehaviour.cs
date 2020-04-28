@@ -20,6 +20,7 @@ public abstract class BaseEnemyBehaviour : MonoBehaviour
         enemy.OnPreAttack        += OnPreAttack;
         enemy.OnAttack           += Attack;
         enemy.OnPostAttack       += OnPostAttack;
+        enemy.OnEndPhaseAttack   += OnEndPhaseAttack;
         enemy.OnStartRest        += OnStartRest;
         enemy.OnRest             += RestTick;
         enemy.OnTakeDamage       += OnDamage;
@@ -45,6 +46,8 @@ public abstract class BaseEnemyBehaviour : MonoBehaviour
 
     protected virtual void OnPostAttack() { }
 
+    protected virtual void OnEndPhaseAttack() { }
+
     protected virtual void OnStartRest() { }
 
     protected virtual void RestTick() { }
@@ -63,6 +66,7 @@ public abstract class BaseEnemyBehaviour : MonoBehaviour
         enemy.OnPreAttack        -= OnPreAttack;
         enemy.OnAttack           -= Attack;
         enemy.OnPostAttack       -= OnPostAttack;
+        enemy.OnEndPhaseAttack   -= OnEndPhaseAttack;
         enemy.OnStartRest        -= OnStartRest;
         enemy.OnRest             -= RestTick;
         enemy.OnTakeDamage       -= OnDamage;
