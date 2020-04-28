@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5ba962d5db305d44b5149e8d4c88830, type: 3}
+  m_Name: Barrier
+  m_EditorClassIdentifier: 
+  combosData:
+  - comboSection: {fileID: 11400000, guid: 85768d0256c6a2f4faa200c932a1202c, type: 2}
+    NecessaryExp: 0
+  - comboSection: {fileID: 11400000, guid: 9ae4fa8c8a34c7c4d92b90a5dfa0398c, type: 2}
+    NecessaryExp: 25
+  - comboSection: {fileID: 11400000, guid: f12412b70aafba94ebbe3ea3b856471e, type: 2}
+    NecessaryExp: 70
+  startingExp: 75
+  cooldown: 3
+  icon: {fileID: 21300000, guid: 4d4c180efc5c8094ea8c78eaba93c79b, type: 3}
+  comboName: Barrier
+  description: Great Shield
