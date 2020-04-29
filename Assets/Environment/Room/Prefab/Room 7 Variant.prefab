@@ -203,6 +203,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -257,11 +262,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (8)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -353,6 +353,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
+        type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
+        type: 3}
+      propertyPath: damage
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6770019844083096047, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: viewRadious
@@ -388,25 +398,15 @@ PrefabInstance:
       propertyPath: path.Array.data[1]
       value: 
       objectReference: {fileID: 4655734328087496104}
-    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
-        type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
-        type: 3}
-      propertyPath: damage
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8463134718009277967, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: _currentHealth
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 8463134718009277967, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: _maxHealth
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ac2391334f7b846a056d385b855728, type: 3}
@@ -423,6 +423,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,11 +483,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (2)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &758077742143306883 stripped
@@ -498,6 +498,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -553,11 +558,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (3)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &812697066853329145 stripped
@@ -573,6 +573,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -627,11 +632,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -708,21 +708,45 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6456103541633520298, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1916329595946006689, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3946357111667768641, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 6456103541633520298, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946357111492393802, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1ee46b6c37b55ae4a88df347ca1b66bf,
+      objectReference: {fileID: 21300000, guid: 2e90a1751a153b745be859b65fe7423a,
+        type: 3}
+    - target: {fileID: 3946357111244292768, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d6d21a14d7ffec24386a5a18447d0ee1,
+        type: 3}
+    - target: {fileID: 3946357111292834831, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c2118b66b78aff40a56ca21c96b92f5,
+        type: 3}
+    - target: {fileID: 3946357111199131977, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 391914718f12c5f4396b05dfb4b38af8,
+        type: 3}
+    - target: {fileID: 3946357111924408228, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3681c56bd780084091ae53a32d01773,
         type: 3}
     - target: {fileID: 3946357111851308387, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -742,59 +766,59 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: dbdb0962ea830694fa237add0217362c,
         type: 3}
-    - target: {fileID: 3946357111924408228, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357111667768641, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f3681c56bd780084091ae53a32d01773,
+      objectReference: {fileID: 21300000, guid: 1ee46b6c37b55ae4a88df347ca1b66bf,
         type: 3}
-    - target: {fileID: 3946357111199131977, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 391914718f12c5f4396b05dfb4b38af8,
-        type: 3}
-    - target: {fileID: 3946357111244292768, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110471375646, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d6d21a14d7ffec24386a5a18447d0ee1,
+      objectReference: {fileID: 21300000, guid: 24b7be75b2109ad45b558077312b9209,
         type: 3}
-    - target: {fileID: 3946357111292834831, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 3c2118b66b78aff40a56ca21c96b92f5,
-        type: 3}
-    - target: {fileID: 3946357111492393802, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110404031123, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 2e90a1751a153b745be859b65fe7423a,
+      objectReference: {fileID: 21300000, guid: 630d57138cd24844883af2910abc7828,
         type: 3}
-    - target: {fileID: 3946357110667399687, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 4981314eac505954b82bafc0df22d331,
-        type: 3}
-    - target: {fileID: 3946357110605679469, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bf34657f8ff735448af69ee3baf3a516,
-        type: 3}
-    - target: {fileID: 3946357110914500000, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110267808775, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f7147baee825afc4f996747dfd37cfd0,
         type: 3}
-    - target: {fileID: 3946357110924356489, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110268632865, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d6d21a14d7ffec24386a5a18447d0ee1,
+      objectReference: {fileID: 21300000, guid: 630d57138cd24844883af2910abc7828,
+        type: 3}
+    - target: {fileID: 3946357110284661777, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f7147baee825afc4f996747dfd37cfd0,
+        type: 3}
+    - target: {fileID: 3946357110207776341, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1d38e306cf590ef4db63df5b9397dbfc,
+        type: 3}
+    - target: {fileID: 3946357110073235538, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5d8edf72e66f63249b3dd1c2179868ca,
+        type: 3}
+    - target: {fileID: 3946357109983584392, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ba48b20069fee0b4cb8065181cf93b58,
         type: 3}
     - target: {fileID: 3946357110978756010, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -808,53 +832,29 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 23bc026c4840860418e88d93f954bc41,
         type: 3}
-    - target: {fileID: 3946357110207776341, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 1d38e306cf590ef4db63df5b9397dbfc,
-        type: 3}
-    - target: {fileID: 3946357109983584392, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ba48b20069fee0b4cb8065181cf93b58,
-        type: 3}
-    - target: {fileID: 3946357110073235538, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 5d8edf72e66f63249b3dd1c2179868ca,
-        type: 3}
-    - target: {fileID: 3946357110404031123, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 630d57138cd24844883af2910abc7828,
-        type: 3}
-    - target: {fileID: 3946357110471375646, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 24b7be75b2109ad45b558077312b9209,
-        type: 3}
-    - target: {fileID: 3946357110268632865, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 630d57138cd24844883af2910abc7828,
-        type: 3}
-    - target: {fileID: 3946357110267808775, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110914500000, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f7147baee825afc4f996747dfd37cfd0,
         type: 3}
-    - target: {fileID: 3946357110284661777, guid: 0d070ffc65daa714aa0c4f456978691f,
+    - target: {fileID: 3946357110924356489, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: f7147baee825afc4f996747dfd37cfd0,
+      objectReference: {fileID: 21300000, guid: d6d21a14d7ffec24386a5a18447d0ee1,
+        type: 3}
+    - target: {fileID: 3946357110667399687, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4981314eac505954b82bafc0df22d331,
+        type: 3}
+    - target: {fileID: 3946357110605679469, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bf34657f8ff735448af69ee3baf3a516,
         type: 3}
     - target: {fileID: 6662955056847824492, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
@@ -901,6 +901,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (10)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -955,11 +960,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (10)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
@@ -1051,6 +1051,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
+        type: 3}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
+        type: 3}
+      propertyPath: damage
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 6770019844083096047, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: viewRadious
@@ -1086,25 +1096,15 @@ PrefabInstance:
       propertyPath: path.Array.data[1]
       value: 
       objectReference: {fileID: 8340218158127779035}
-    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
-        type: 3}
-      propertyPath: speed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1387625549507781722, guid: 22ac2391334f7b846a056d385b855728,
-        type: 3}
-      propertyPath: damage
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 8463134718009277967, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: _currentHealth
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     - target: {fileID: 8463134718009277967, guid: 22ac2391334f7b846a056d385b855728,
         type: 3}
       propertyPath: _maxHealth
-      value: 200
+      value: 230
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ac2391334f7b846a056d385b855728, type: 3}
@@ -1121,6 +1121,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1176,11 +1181,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (5)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &7010472129959098327 stripped
@@ -1196,6 +1196,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1251,11 +1256,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (9)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &7246143506062560274 stripped
@@ -1271,6 +1271,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1326,11 +1331,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (1)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &7766326032014019781 stripped
@@ -1346,6 +1346,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1401,11 +1406,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (4)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
 --- !u!4 &8043144459576663870 stripped
@@ -1421,6 +1421,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 101183366}
     m_Modifications:
+    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
+        type: 3}
+      propertyPath: m_Name
+      value: Ice Stalagmite (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 1313189603744989768, guid: 5da36b7e49cb5e047aac2d5b72331e20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1475,11 +1480,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7557248921749252519, guid: 5da36b7e49cb5e047aac2d5b72331e20,
-        type: 3}
-      propertyPath: m_Name
-      value: Ice Stalagmite (6)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da36b7e49cb5e047aac2d5b72331e20, type: 3}
