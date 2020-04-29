@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 1114335957702887809}
   - component: {fileID: -1655113387078351121}
   - component: {fileID: -4527314336442884593}
-  - component: {fileID: 4765009045994468686}
   m_Layer: 0
   m_Name: StandardBullet_Enemy
   m_TagString: Untagged
@@ -49,7 +48,7 @@ SphereCollider:
   m_GameObject: {fileID: 6636763792544498978}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 1.2169055
   m_Center: {x: 0, y: 0, z: 0}
@@ -155,19 +154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dac3712d35c7b04da3840bbe4496975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &4765009045994468686
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6636763792544498978}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.6, y: 0.4, z: 5.5}
-  m_Center: {x: 0, y: 0, z: 0.4}
 --- !u!1001 &8185128259866228272
 PrefabInstance:
   m_ObjectHideFlags: 0
