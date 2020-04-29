@@ -849,7 +849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957424558, guid: 53b69f5dfa4cd17479baef53843bae63, type: 3}
       propertyPath: viewRadious
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3311853287525694210, guid: 53b69f5dfa4cd17479baef53843bae63,
         type: 3}
@@ -958,7 +958,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 957424558, guid: 53b69f5dfa4cd17479baef53843bae63, type: 3}
       propertyPath: viewRadious
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3311853287525694210, guid: 53b69f5dfa4cd17479baef53843bae63,
         type: 3}

@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6636763792544498978, guid: ca449563069c1924eab05bf3a2f74deb,
+        type: 3}
+      propertyPath: m_Name
+      value: Master_Projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 6082933605966657830, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}
       propertyPath: damage
@@ -21,11 +26,6 @@ PrefabInstance:
         type: 3}
       propertyPath: _duration
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6636763792544498978, guid: ca449563069c1924eab05bf3a2f74deb,
-        type: 3}
-      propertyPath: m_Name
-      value: Master_Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 1850486846370112356, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}
@@ -105,7 +105,7 @@ PrefabInstance:
     - target: {fileID: 8905947455092619994, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}
       propertyPath: knockbackForce
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca449563069c1924eab05bf3a2f74deb, type: 3}
