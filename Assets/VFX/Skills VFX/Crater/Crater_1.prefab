@@ -9691,7 +9691,7 @@ MonoBehaviour:
   ID: 15346
   vfx: {fileID: 3657446066151590348}
   _duration: 1
-  damage: 70
+  damage: 80
   friendlyFire: 0
   rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}

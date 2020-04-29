@@ -112,7 +112,7 @@ MonoBehaviour:
   ID: 789456124
   vfx: {fileID: 0}
   _duration: 7
-  damage: 120
+  damage: 100
   friendlyFire: 0
   rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}

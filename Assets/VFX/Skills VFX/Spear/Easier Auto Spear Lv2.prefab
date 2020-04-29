@@ -68,8 +68,9 @@ MonoBehaviour:
   ID: 50351
   vfx: {fileID: 0}
   _duration: 5
-  damage: 60
+  damage: 50
   friendlyFire: 0
+  rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
 --- !u!114 &7233860124608787717
 MonoBehaviour:
@@ -9681,6 +9682,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5908173149589782669}
     m_Modifications:
+    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
+        type: 3}
+      propertyPath: m_Name
+      value: projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 4096116737560424336, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9735,11 +9741,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
-        type: 3}
-      propertyPath: m_Name
-      value: projectile
       objectReference: {fileID: 0}
     - target: {fileID: 4096116735800275254, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
@@ -10571,6 +10572,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3950659934792332886}
     m_Modifications:
+    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
+        type: 3}
+      propertyPath: m_Name
+      value: circle_dusty
+      objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138368, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10625,11 +10631,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
-        type: 3}
-      propertyPath: m_Name
-      value: circle_dusty
       objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138382, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
