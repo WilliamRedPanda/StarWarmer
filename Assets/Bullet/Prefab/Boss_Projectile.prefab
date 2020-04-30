@@ -10,12 +10,12 @@ PrefabInstance:
     - target: {fileID: 6636763792544498978, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}
       propertyPath: m_Name
-      value: Master_Projectile
+      value: Boss_Projectile
       objectReference: {fileID: 0}
     - target: {fileID: 6082933605966657830, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}
       propertyPath: damage
-      value: 30
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 6082933605966657830, guid: ca449563069c1924eab05bf3a2f74deb,
         type: 3}

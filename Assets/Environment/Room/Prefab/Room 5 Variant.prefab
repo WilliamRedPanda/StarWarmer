@@ -378,6 +378,12 @@ PrefabInstance:
       propertyPath: _maxHealth
       value: 130
       objectReference: {fileID: 0}
+    - target: {fileID: 3311853287525694210, guid: 53b69f5dfa4cd17479baef53843bae63,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2504309710964497128, guid: f610186adfc7b794fab9c650b498788f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b69f5dfa4cd17479baef53843bae63, type: 3}
 --- !u!4 &8554734634694826439 stripped
@@ -487,6 +493,12 @@ PrefabInstance:
       propertyPath: _maxHealth
       value: 130
       objectReference: {fileID: 0}
+    - target: {fileID: 3311853287525694210, guid: 53b69f5dfa4cd17479baef53843bae63,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 2504309710964497128, guid: f610186adfc7b794fab9c650b498788f,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b69f5dfa4cd17479baef53843bae63, type: 3}
 --- !u!4 &8554734634880342380 stripped

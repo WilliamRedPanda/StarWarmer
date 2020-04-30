@@ -833,6 +833,11 @@ PrefabInstance:
       propertyPath: exp
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 8463134718009277967, guid: 22ac2391334f7b846a056d385b855728,
+        type: 3}
+      propertyPath: restTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ac2391334f7b846a056d385b855728, type: 3}
 --- !u!4 &1720020855458300344 stripped
