@@ -43,4 +43,108 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e36b29696e42ee43824881a2cca19f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Menubgm
+    clip: {fileID: 8300000, guid: ac45b3d04ba05fd4e8d489af3b19caa7, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Dungeonbgm
+    clip: {fileID: 8300000, guid: 786b2146b984bdf4ba1cf03756ddcef6, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: SpearCast
+    clip: {fileID: 8300000, guid: 0e9f501aa42caae46adbbf8a617a1994, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Barriersfx
+    clip: {fileID: 8300000, guid: 9945796c85b73ae498df8729a3b1eab9, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Meteorsfx
+    clip: {fileID: 8300000, guid: 5ff5c28e3c7a239458f66406e622d1e5, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Spearsfx
+    clip: {fileID: 8300000, guid: 6cf9a2e7d27d7de4b832a06196e8a465, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ComboFailed
+    clip: {fileID: 8300000, guid: 2504d58296d34ac4f8614f1b07209c28, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SkillLevelup
+    clip: {fileID: 8300000, guid: 2dcc3eca36966c54abbe1b66750a4103, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: FacilityAccess
+    clip: {fileID: 8300000, guid: 995836716b89f0a46a6290749e221d72, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ChargerImpact
+    clip: {fileID: 8300000, guid: a1d3924924c554e449a702192d06976f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ShooterProjectile
+    clip: {fileID: 8300000, guid: abeb875bcb810774c95ca8335463e09b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ShooterProjectileImpact
+    clip: {fileID: 8300000, guid: 91fa28c19b7d3aa438aa3f93cbe72d44, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: MenuScrolling
+    clip: {fileID: 8300000, guid: eff3dc51a045c2a4096eb1d2a6fbf9ae, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
