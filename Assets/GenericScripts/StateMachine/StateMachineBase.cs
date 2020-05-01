@@ -16,7 +16,7 @@ namespace StateMachine
             SM = GetComponent<Animator>();
         }
 
-        protected virtual void Start()
+        protected virtual void OnEnable()
         {
             SetContext();
             foreach (StateMachineBehaviour smB in SM.GetBehaviours<StateMachineBehaviour>())

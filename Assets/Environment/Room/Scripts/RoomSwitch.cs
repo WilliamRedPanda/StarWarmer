@@ -13,6 +13,8 @@ public class RoomSwitch : MonoBehaviour
 
     #region Serialized
     public CameraShake cameraShake;
+    //[Space]
+    //[SerializeField] GameObject objectToActive;
     [Space]
     [SerializeField] GameObject doorNorth;
     [SerializeField] GameObject doorSouth;
@@ -27,6 +29,13 @@ public class RoomSwitch : MonoBehaviour
     {
         enemies = new List<GenericEnemy>();
         roomFinished = true;
+        //objectToActive.SetActive(false);
+    }
+
+    private IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SetEnemy(false);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -46,10 +55,11 @@ public class RoomSwitch : MonoBehaviour
         PlayerData player = other.gameObject.GetComponentInParent<PlayerData>();
         if (player)
         {
+            //objectToActive.SetActive(true);
+            SetEnemy(true);
             cameraShake.SetPlayer(player);
-            RoomManager.ChangeCamera(this);
+            CameraManager.ChangeCamera(this);
         }
-
     }
 
     void CheckEnemies(IDamageable damageable)
@@ -107,8 +117,24 @@ public class RoomSwitch : MonoBehaviour
         }
     }
 
+    IEnumerator SetFalseRoom()
+    {
+        yield return new WaitForSeconds(2f);
+        //objectToActive.SetActive(false);
+        SetEnemy(false);
+    }
+
     void MovePlayer(Vector3 direction, PlayerData player)
     {
         player.transform.position += direction * PLAYER_MOVEMENT_OFFSET;
+    }
+
+    void SetEnemy(bool _active)
+    {
+        int l = enemies.Count;
+        for (int i = 0; i < l; i++)
+        {
+            enemies[i].gameObject.SetActive(_active);
+        }
     }
 }

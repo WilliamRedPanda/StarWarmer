@@ -1,23 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
-public static class RoomManager
+[CreateAssetMenu(fileName = "RoomManager", menuName = "Data/Manager/RoomManager")]
+public class RoomManager : ScriptableObject
 {
-    static RoomSwitch currentRoom;
-
-    public static void ChangeCamera(RoomSwitch _room)
+    public void ActiveRoom(RoomSwitch _roomSwitch, bool _active)
     {
-        if (currentRoom)
-            if (currentRoom == _room)
-                return;
-
-        _room.cameraShake.virtualCamera.gameObject.SetActive(true);
-        if (currentRoom)
-        {
-            currentRoom.cameraShake.virtualCamera.gameObject.SetActive(false);
-        }
-        currentRoom = _room;
+        _roomSwitch.gameObject.SetActive(_active);
     }
 }
