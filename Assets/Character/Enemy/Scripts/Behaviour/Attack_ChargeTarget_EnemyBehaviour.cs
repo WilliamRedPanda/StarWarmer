@@ -7,6 +7,7 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
     [SerializeField] float speed;
     [SerializeField] float rangeAttack;
     [SerializeField] int damage;
+    [SerializeField] float knockbackForce = 5f;
 
     Vector3 endPosition;
     Vector3 direction;
@@ -43,6 +44,7 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
             if (playerData)
             {
                 playerData.TakeDamage(damage, null, enemy);
+                playerData.KnockBack(knockbackForce, enemy.transform.position, 0);
                 enemy.ChangeStateLogicSM("Rest");
             }
         }

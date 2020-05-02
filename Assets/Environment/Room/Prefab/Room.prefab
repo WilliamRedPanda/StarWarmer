@@ -436,6 +436,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomFinished: 0
   cameraShake: {fileID: 5812796554951916389}
+  gameplaySM: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
+    type: 3}
+  finalRoom: 0
   doorNorth: {fileID: 6166954495043939962}
   doorSouth: {fileID: 1809610950602409481}
   enemies: []

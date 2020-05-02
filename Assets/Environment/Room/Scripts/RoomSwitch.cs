@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
+using StateMachine.Gameplay;
 
 [RequireComponent(typeof(BoxCollider))]
 public class RoomSwitch : MonoBehaviour
@@ -13,8 +14,11 @@ public class RoomSwitch : MonoBehaviour
 
     #region Serialized
     public CameraShake cameraShake;
+    [SerializeField] GameplaySM gameplaySM;
     //[Space]
     //[SerializeField] GameObject objectToActive;
+    [Space]
+    [SerializeField] bool finalRoom;
     [Space]
     [SerializeField] GameObject doorNorth;
     [SerializeField] GameObject doorSouth;
@@ -23,7 +27,7 @@ public class RoomSwitch : MonoBehaviour
     #endregion
 
 
-    public List<GenericEnemy> enemies;
+    [HideInInspector] public List<GenericEnemy> enemies;
 
     private void Awake()
     {
@@ -59,6 +63,10 @@ public class RoomSwitch : MonoBehaviour
             SetEnemy(true);
             cameraShake.SetPlayer(player);
             CameraManager.ChangeCamera(this);
+            if (finalRoom && enemies.Count == 0)
+            {
+                gameplaySM.Go("Win");
+            }
         }
     }
 
