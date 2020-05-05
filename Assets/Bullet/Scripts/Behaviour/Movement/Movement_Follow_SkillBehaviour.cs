@@ -13,9 +13,18 @@ public class Movement_Follow_SkillBehaviour : BaseSkillBehaviour
         oldPos = skill.shooter.transform.position;
     }
 
-    protected override void Tick()
+    //protected override void Tick()
+    //{
+    //    base.Tick();
+    //    newPos = skill.shooter.transform.position;
+    //    //skill.transform.position += newPos - oldPos;
+    //    skill.SetMove(newPos - oldPos, Space.Self);
+    //    oldPos = newPos;
+    //}
+
+    protected override void FixedTick()
     {
-        base.Tick();
+        base.FixedTick();
         newPos = skill.shooter.transform.position;
         //skill.transform.position += newPos - oldPos;
         skill.SetMove(newPos - oldPos, Space.Self);

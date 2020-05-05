@@ -17,10 +17,18 @@ public class Movement_ForwardToAimPoint_SkillBehaviour : BaseSkillBehaviour
 
     Vector3 v3;
 
-    protected override void Tick()
-    {
-        base.Tick();
+    //protected override void Tick()
+    //{
+    //    base.Tick();
         
+    //    v3 = direction.normalized * Time.fixedDeltaTime * speed;
+    //    //skill.transform.position += v3;
+    //    skill.SetMove(v3, Space.Self);
+    //}
+
+    protected override void FixedTick()
+    {
+        base.FixedTick();
         v3 = direction.normalized * Time.fixedDeltaTime * speed;
         //skill.transform.position += v3;
         skill.SetMove(v3, Space.Self);

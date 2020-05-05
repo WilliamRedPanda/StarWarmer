@@ -17,6 +17,7 @@ public abstract class BaseSkillBehaviour : MonoBehaviour
         skill.OnDamage          += OnDamage;
         skill.OnPostDamage      += OnPostDamage;
         skill.OnReturn          += OnReturn;
+        skill.OnFixedUpdate     += FixedTick;
     }
 
     protected virtual void OnPreShoot()
@@ -62,12 +63,18 @@ public abstract class BaseSkillBehaviour : MonoBehaviour
 
     }
 
+    protected virtual void FixedTick()
+    {
+
+    }
+
     private void OnDisable()
     {
-        skill.OnPreShoot   -= OnPreShoot;
-        skill.OnShoot      -= OnShoot;
-        skill.OnDamage     -= OnDamage;
-        skill.OnPostDamage -= OnPostDamage;
-        skill.OnReturn     -= OnReturn;
+        skill.OnPreShoot    -= OnPreShoot;
+        skill.OnShoot       -= OnShoot;
+        skill.OnDamage      -= OnDamage;
+        skill.OnPostDamage  -= OnPostDamage;
+        skill.OnReturn      -= OnReturn;
+        skill.OnFixedUpdate -= FixedTick;
     }
 }

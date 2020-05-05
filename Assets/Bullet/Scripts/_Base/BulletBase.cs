@@ -31,6 +31,7 @@ public class BulletBase : MonoBehaviour
     public Action<IDamageable> OnDamage;
     public Action OnPostDamage;
     public Action OnReturn;
+    public Action OnFixedUpdate;
 
     Vector3 transformVelocity;
     public bool reflect { get; private set; }
@@ -131,6 +132,7 @@ public class BulletBase : MonoBehaviour
     {
         if (state == State.Shooted)
         {
+            OnFixedUpdate?.Invoke();
             ApplyMovement();
         }
     }

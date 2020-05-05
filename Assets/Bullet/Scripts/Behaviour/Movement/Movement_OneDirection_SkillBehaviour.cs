@@ -14,9 +14,17 @@ public class Movement_OneDirection_SkillBehaviour : BaseSkillBehaviour
         speedVector = direction.normalized * speed;
     }
 
-    protected override void Tick()
+    //protected override void Tick()
+    //{
+    //    base.Tick();
+    //    Vector3 velocity = speedVector * Time.fixedDeltaTime;
+    //    //skill.transform.position += velocity;
+    //    skill.SetMove(velocity, Space.World);
+    //}
+
+    protected override void FixedTick()
     {
-        base.Tick();
+        base.FixedTick();
         Vector3 velocity = speedVector * Time.fixedDeltaTime;
         //skill.transform.position += velocity;
         skill.SetMove(velocity, Space.World);
