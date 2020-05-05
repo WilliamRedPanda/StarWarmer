@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 
 public abstract class CharacterBase : MonoBehaviour, IDamageable
 {
@@ -11,6 +12,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     [SerializeField] int _currentHealth;
     [SerializeField] int _maxHealth;
     [SerializeField] Material damageMaterial;
+    [SerializeField] UnityEvent onDeathUE;
     #endregion
 
     #region Interface_Damageable
@@ -57,8 +59,11 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
                 StartCoroutine(damageFeedbackCorutine);
             }
             OnTakeDamage?.Invoke(_damage, _command, _shooter);
-            if (_currentHealth <= 0) 
+            if (_currentHealth <= 0)
+            {
                 OnDeath?.Invoke(this);
+                onDeathUE?.Invoke();
+            }
         }
     }
 
