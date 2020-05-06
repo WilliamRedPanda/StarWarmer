@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Life_SpawnOffset_SkillBehaviour : BaseSkillBehaviour
+public class Life_SpawnOffsetFromPlayer_SkillBehaviour : BaseSkillBehaviour
 {
     [SerializeField]
     [Tooltip("Sposta la posizione di spawn (valore di 0,0,0 equivale alla posizione del shootPosition del Player)")]

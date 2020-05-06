@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 1228671373050303412}
   - component: {fileID: 2694772570423896838}
   - component: {fileID: 7714976774217573157}
-  - component: {fileID: 1604705541818665957}
   - component: {fileID: 5626422936777013941}
   - component: {fileID: 2742880900517043139}
   - component: {fileID: 3009590347095624282}
+  - component: {fileID: 7844455836535940688}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -117,19 +117,6 @@ MonoBehaviour:
   friendlyFire: 0
   rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
---- !u!114 &1604705541818665957
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4713170339200267104}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2f0e71ac00e67b429ee4ed9aefb13b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  offsetPositionOnShoot: {x: 0, y: 2, z: 0}
 --- !u!114 &5626422936777013941
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,6 +157,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackRadius: 1
+--- !u!114 &7844455836535940688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713170339200267104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cbb707d24454b5449377619b93d53e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offsetPositionOnShoot: {x: 0, y: 2, z: 5}
 --- !u!1001 &2976607472925152347
 PrefabInstance:
   m_ObjectHideFlags: 0

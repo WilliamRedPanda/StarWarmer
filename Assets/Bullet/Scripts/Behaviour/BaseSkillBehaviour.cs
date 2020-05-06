@@ -12,6 +12,7 @@ public abstract class BaseSkillBehaviour : MonoBehaviour
     {
         skill = GetComponentInParent<BulletBase>();
         skill.OnPreShoot        += OnPreShoot;
+        skill.OnMiddleShoot     += OnMiddleShoot;
         skill.OnShoot           += OnShoot;
         skill.OnEnterCollider   += OnEnterCollider;
         skill.OnDamage          += OnDamage;
@@ -21,6 +22,11 @@ public abstract class BaseSkillBehaviour : MonoBehaviour
     }
 
     protected virtual void OnPreShoot()
+    {
+
+    }
+
+    protected virtual void OnMiddleShoot()
     {
 
     }
@@ -71,6 +77,7 @@ public abstract class BaseSkillBehaviour : MonoBehaviour
     private void OnDisable()
     {
         skill.OnPreShoot    -= OnPreShoot;
+        skill.OnMiddleShoot -= OnMiddleShoot;
         skill.OnShoot       -= OnShoot;
         skill.OnDamage      -= OnDamage;
         skill.OnPostDamage  -= OnPostDamage;

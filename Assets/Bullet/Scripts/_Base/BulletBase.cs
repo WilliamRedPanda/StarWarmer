@@ -26,6 +26,7 @@ public class BulletBase : MonoBehaviour
     [HideInInspector] public Vector3 target;
 
     public Action OnPreShoot;
+    public Action OnMiddleShoot;
     public Action OnShoot;
     public Action<Collider> OnEnterCollider;
     public Action<IDamageable> OnDamage;
@@ -83,6 +84,7 @@ public class BulletBase : MonoBehaviour
         command = _command;
         returnTime = Time.time + _duration;
         OnPreShoot?.Invoke();
+        OnMiddleShoot?.Invoke();
         OnShoot?.Invoke();
         if (vfx != null)
             vfx.Play();
