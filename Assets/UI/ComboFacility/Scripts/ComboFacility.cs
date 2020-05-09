@@ -93,6 +93,7 @@ public class ComboFacility : MonoBehaviour
         open = false;
         StateMachine.Gameplay.GameplaySM.instance.Go("Gameplay");
         canvas.SetActive(false);
+        SoundManager.instance.Play("MenuBack");
     }
 
     public void ChangeEquipSkillConfirmed()

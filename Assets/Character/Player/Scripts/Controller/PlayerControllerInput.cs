@@ -17,6 +17,10 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [SerializeField] public Pause pause;
     [SerializeField] public ComboFacility comboFacility;
     [Space]
+    [Header("Audio")]
+    [SerializeField] AudioClip dodgeClip;
+    [SerializeField] AudioClip playerAtkClip;
+    [Space]
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;
     [SerializeField] SpriteRenderer dxfR, dxbR, sxfR, sxbR;
@@ -242,6 +246,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         else
             dodgeVelocity = keyAxis.normalized * playerData.dodgeSpeed * Time.deltaTime;
 
+        SoundManager.instance.Play(dodgeClip);
+
         RaycastHit hit;
         while (dodgeTimer < playerData.dodgeDuration)
         {
@@ -443,6 +449,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     void Attack(SetSequences set = null)
     {
+        SoundManager.instance.Play(playerAtkClip);
         SetAnim("Attack");
     }
     #endregion
@@ -554,6 +561,10 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 StartCoroutine(executedSequence.cooldownCorutine);
                 executedSequence = null;
             }
+        }
+        else
+        {
+            SoundManager.instance.Play("ComboFailed");
         }
         ResetSequences();
     }

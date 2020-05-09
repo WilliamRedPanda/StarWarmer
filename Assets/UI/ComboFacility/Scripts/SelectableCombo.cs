@@ -32,5 +32,6 @@ public class SelectableCombo : MonoBehaviour
         //player.instance.ChangeSequences(slotIndex, set.data);
         comboFacility.ChangeEquipSkill(comboFacility.currentSlot, set.data);
         comboFacility.ResetSelectedSkill();
+        SoundManager.instance.Play("MenuSelection");
     }
 }

@@ -15,6 +15,7 @@ public class SlotComboManager : MonoBehaviour
         selectableManager.gameObject.SetActive(true);
         comboFacility.currentSlot = slotIndex;
         OpenSelectable();
+        SoundManager.instance.Play("MenuSelection");
     }
 
     void OpenSelectable()

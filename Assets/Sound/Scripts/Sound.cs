@@ -1,5 +1,4 @@
-﻿using UnityEngine.Audio;
-using UnityEngine;
+﻿using UnityEngine;
 
 [System.Serializable]
 public class Sound
@@ -20,6 +19,6 @@ public class Sound
 
     public bool loop = false;
 
-    [HideInInspector]
+    //[HideInInspector]
     public AudioSource source;
 }

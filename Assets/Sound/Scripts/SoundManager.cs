@@ -9,6 +9,7 @@ public class SoundManager : MonoBehaviour
     //public AudioMixerGroup mixerGroup;
 
     public Sound[] sounds;
+    int l;
 
     void Awake()
     {
@@ -22,37 +23,87 @@ public class SoundManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
 
-        foreach (Sound s in sounds)
+        l = instance.sounds.Length;
+        for (int i = 0; i < l; i++)
         {
-            s.source = gameObject.AddComponent<AudioSource>();
+            Sound s = instance.sounds[i];
+            GameObject go = new GameObject(s.name);
+            go.transform.SetParent(this.transform);
+            s.source = go.AddComponent<AudioSource>();
             s.source.clip = s.clip;
             s.source.loop = s.loop;
+            s.source.playOnAwake = false;
         }
+    }
+
+    public void Play(AudioClip clip)
+    {
+        Sound s;
+
+        if (clip == null)
+        {
+            Debug.Log("Sound: clip == null");
+            return;
+        }
+
+        for (int i = 0; i < l; i++)
+        {
+            s = instance.sounds[i];
+            if (s.clip == clip)
+            {
+                s.source.volume = s.volume;// * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+                s.source.pitch = s.pitch;// * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+
+                s.source.Play();
+                return;
+            }
+        }
+
+        Debug.LogWarning("Sound: " + clip.name + " not found!");
     }
 
     public void Play(string sound)
     {
+        Sound s = Array.Find(instance.sounds, item => item.name == sound);
 
-        Sound s = Array.Find(sounds, item => item.name == sound);
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
+            Debug.LogWarning("Sound: " + sound + " not found!");
         }
 
-        s.source.volume = s.volume * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
-        s.source.pitch = s.pitch * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
+        s.source.volume = s.volume;// * (1f + UnityEngine.Random.Range(-s.volumeVariance / 2f, s.volumeVariance / 2f));
+        s.source.pitch = s.pitch;// * (1f + UnityEngine.Random.Range(-s.pitchVariance / 2f, s.pitchVariance / 2f));
 
         s.source.Play();
     }
 
+    public void Pause(AudioClip clip)
+    {
+        Sound s;
+
+        if (clip == null)
+            return;
+
+        for (int i = 0; i < l; i++)
+        {
+            s = instance.sounds[i];
+            if (s.clip == clip)
+            {
+                s.source.Pause();
+                return;
+            }
+        }
+
+        Debug.LogWarning("Sound: " + clip.name + " not found!");
+    }
+
     public void Pause(string sound)
     {
-        Sound s = Array.Find(sounds, item => item.name == sound);
+        Sound s = Array.Find(instance.sounds, item => item.name == sound);
+
         if (s == null)
         {
-            Debug.LogWarning("Sound: " + name + " not found!");
-            return;
+            Debug.LogWarning("Sound: " + sound + " not found!");
         }
 
         s.source.Pause();
@@ -60,7 +111,7 @@ public class SoundManager : MonoBehaviour
 
     public void Pause()
     {
-        foreach (Sound sound in sounds)
+        foreach (Sound sound in instance.sounds)
         {
             sound.source.Stop();
         }

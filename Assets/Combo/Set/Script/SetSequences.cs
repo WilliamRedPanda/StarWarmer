@@ -163,10 +163,16 @@ public class SetSequences
             exp = 0;
         if (data.combosData[level - 1].NecessaryExp >= exp)
         {
-            level++;
-            if (level == data.combosData.Length)
-                levelMaxed = true;
+            LevelUp();
         }
         onAddExp?.Invoke();
+    }
+
+    void LevelUp()
+    {
+        level++;
+        if (level == data.combosData.Length)
+            levelMaxed = true;
+        SoundManager.instance.Play("SkillLvlUp");
     }
 }

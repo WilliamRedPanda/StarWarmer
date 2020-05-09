@@ -24,6 +24,7 @@ namespace StateMachine.Gameplay
         {
             base.Exit();
             Time.timeScale = currentTimeScale;
+            SoundManager.instance.Play("MenuBack");
         }
     }
 }

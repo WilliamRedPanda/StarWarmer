@@ -12,6 +12,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     [SerializeField] int _currentHealth;
     [SerializeField] int _maxHealth;
     [SerializeField] Material damageMaterial;
+    [SerializeField] UnityEvent onDamageUE;
     [SerializeField] UnityEvent onDeathUE;
     #endregion
 
@@ -51,8 +52,10 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
         if (!invulnerable)
         {
             currentHealth -= _damage;
+            
             if (renderer && damageMaterial)
             {
+                onDamageUE?.Invoke();
                 if (damageFeedbackCorutine != null)
                     StopCoroutine(damageFeedbackCorutine);
                 damageFeedbackCorutine = DamageFeedbackCorutine();
