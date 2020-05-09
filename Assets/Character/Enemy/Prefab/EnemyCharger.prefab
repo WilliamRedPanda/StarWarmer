@@ -4768,6 +4768,7 @@ MonoBehaviour:
   speed: 8
   rangeAttack: 0.7
   damage: 10
+  knockbackForce: 5
 --- !u!114 &2210786949620525821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28695,6 +28696,46 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyCharger
       objectReference: {fileID: 0}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: dxfSM
+      value: 
+      objectReference: {fileID: 5083117972926532913}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: dxbSM
+      value: 
+      objectReference: {fileID: 2948723289871691824}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: sxfSM
+      value: 
+      objectReference: {fileID: 2355257796636197651}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: sxbSM
+      value: 
+      objectReference: {fileID: 2702463601838994103}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: dxfR
+      value: 
+      objectReference: {fileID: 873079518585900370}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: dxbR
+      value: 
+      objectReference: {fileID: 8369992901919258273}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: sxfR
+      value: 
+      objectReference: {fileID: 7581488827633245927}
+    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
+        type: 3}
+      propertyPath: sxbR
+      value: 
+      objectReference: {fileID: 8202237194493799160}
     - target: {fileID: 2651407455878728740, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28750,46 +28791,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: dxfSM
-      value: 
-      objectReference: {fileID: 5083117972926532913}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: dxbSM
-      value: 
-      objectReference: {fileID: 2948723289871691824}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: sxfSM
-      value: 
-      objectReference: {fileID: 2355257796636197651}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: sxbSM
-      value: 
-      objectReference: {fileID: 2702463601838994103}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: dxfR
-      value: 
-      objectReference: {fileID: 873079518585900370}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: dxbR
-      value: 
-      objectReference: {fileID: 8369992901919258273}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: sxfR
-      value: 
-      objectReference: {fileID: 7581488827633245927}
-    - target: {fileID: 9188792256571101740, guid: f0ebca2998e99654e894a26aeb83d727,
-        type: 3}
-      propertyPath: sxbR
-      value: 
-      objectReference: {fileID: 8202237194493799160}
     - target: {fileID: 3274841638226666909, guid: f0ebca2998e99654e894a26aeb83d727,
         type: 3}
       propertyPath: m_Size.x
@@ -28851,6 +28852,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charger_DXF
       objectReference: {fileID: 0}
+    - target: {fileID: 1836642059379139838, guid: d21c23a5f8cd69c47ad19560f412c6d3,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8802c77cfcab64940aa1c91768037157, type: 2}
     - target: {fileID: 1836642059223178714, guid: d21c23a5f8cd69c47ad19560f412c6d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28998,6 +29004,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5664522830221798135, guid: 5d177ed86e9559b4198566dbee13f680,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8802c77cfcab64940aa1c91768037157, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d177ed86e9559b4198566dbee13f680, type: 3}
 --- !u!4 &7581488827633245925 stripped
@@ -29030,6 +29041,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Charger_DXB
       objectReference: {fileID: 0}
+    - target: {fileID: 6017670800579730377, guid: ceae4da00081849488aab2efc4b799f9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017670800579730377, guid: ceae4da00081849488aab2efc4b799f9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8802c77cfcab64940aa1c91768037157, type: 2}
     - target: {fileID: 6017670799699193210, guid: ceae4da00081849488aab2efc4b799f9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29083,11 +29104,6 @@ PrefabInstance:
     - target: {fileID: 6017670799699193210, guid: ceae4da00081849488aab2efc4b799f9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017670800579730377, guid: ceae4da00081849488aab2efc4b799f9,
-        type: 3}
-      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -29336,6 +29352,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4339804931455170578, guid: fe8aa8bc56b6f9b4cac47886a91fa0c7,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8802c77cfcab64940aa1c91768037157, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe8aa8bc56b6f9b4cac47886a91fa0c7, type: 3}
 --- !u!212 &8202237194493799160 stripped

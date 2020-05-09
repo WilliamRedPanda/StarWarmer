@@ -16,23 +16,24 @@ public class SoundManager : MonoBehaviour
         if (instance != null)
         {
             Destroy(gameObject);
+            return;
         }
         else
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
-        }
 
-        l = instance.sounds.Length;
-        for (int i = 0; i < l; i++)
-        {
-            Sound s = instance.sounds[i];
-            GameObject go = new GameObject(s.name);
-            go.transform.SetParent(this.transform);
-            s.source = go.AddComponent<AudioSource>();
-            s.source.clip = s.clip;
-            s.source.loop = s.loop;
-            s.source.playOnAwake = false;
+            l = instance.sounds.Length;
+            for (int i = 0; i < l; i++)
+            {
+                Sound s = instance.sounds[i];
+                //GameObject go = new GameObject(s.name);
+                //go.transform.SetParent(this.transform);
+                s.source = gameObject.AddComponent<AudioSource>();
+                s.source.clip = s.clip;
+                s.source.loop = s.loop;
+                s.source.playOnAwake = false;
+            }
         }
     }
 

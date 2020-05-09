@@ -20,6 +20,7 @@ public class GenericEnemy : CharacterBase , IShooter
     [SerializeField] SpriteRenderer dxfR, dxbR, sxfR, sxbR;
 
     Animator[] animators;
+    SpriteRenderer[] spritesR;
     CommandSequence lastHitCommand;
 
     Transform targetTransform;
@@ -55,6 +56,7 @@ public class GenericEnemy : CharacterBase , IShooter
         OnDeath += Death;
         stunObject.SetActive(false);
         animators = new Animator[] { dxbSM, sxbSM, dxfSM, sxfSM };
+        spritesR = new SpriteRenderer[] { dxfR, dxbR, sxfR, sxbR };
         SetRendererActive(AnimDirection.dxf);
         OnPreAttack += Attack;
     }
@@ -79,14 +81,32 @@ public class GenericEnemy : CharacterBase , IShooter
             stunTimerCorutine = StunTimerCorutine(_duration);
         StopCoroutine(stunTimerCorutine);
         StartCoroutine(stunTimerCorutine);
+        foreach (var s in spritesR)
+        {
+            s.material.SetFloat("_StunValue", 1);
+        }
     }
     IEnumerator StunTimerCorutine(float _timer)
     {
-        stunObject.SetActive(true);
+        //stunObject.SetActive(true);
         yield return new WaitForSeconds(_timer);
-        stunObject.SetActive(false);
+        StartCoroutine(StunViewReset());
+        //stunObject.SetActive(false);
         OnStopStun?.Invoke();
         ChangeStateLogicSM("Aggro");
+    }
+    IEnumerator StunViewReset()
+    {
+        float stunValue = 1;
+        while(stunValue >= 0)
+        {
+            stunValue -= 0.05f;
+            foreach (var s in spritesR)
+            {
+                s.material.SetFloat("_StunValue", stunValue);
+            }
+            yield return new WaitForFixedUpdate();
+        }
     }
 
     public void PatrolTick()
