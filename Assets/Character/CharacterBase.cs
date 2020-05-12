@@ -51,18 +51,22 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     {
         if (!invulnerable)
         {
+            if (currentHealth <= 0)
+                return;
+
             currentHealth -= _damage;
+            onDamageUE?.Invoke();
+            OnTakeDamage?.Invoke(_damage, _command, _shooter);
             
             if (renderer && damageMaterial)
             {
-                onDamageUE?.Invoke();
                 if (damageFeedbackCorutine != null)
                     StopCoroutine(damageFeedbackCorutine);
                 damageFeedbackCorutine = DamageFeedbackCorutine();
                 StartCoroutine(damageFeedbackCorutine);
             }
-            OnTakeDamage?.Invoke(_damage, _command, _shooter);
-            if (_currentHealth <= 0)
+
+            if (currentHealth <= 0)
             {
                 OnDeath?.Invoke(this);
                 onDeathUE?.Invoke();
@@ -113,6 +117,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     public virtual void Stun(float _duration)
     {
         OnStun?.Invoke();
+        Stop(_duration);
     }
 
     IEnumerator knockbackCorutine;

@@ -13,7 +13,17 @@ public class Gameplay_Lose_State : Gameplay_Base_State
     public override void Enter()
     {
         base.Enter();
+        context.playerController.ResetVelocity();
         loseUI = Instantiate(loseUIPrefab);
+    }
+
+    public override void Tick()
+    {
+        base.Tick();
+        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        {
+            context.Exit("Gameplay");
+        }
     }
 
     public override void Exit()

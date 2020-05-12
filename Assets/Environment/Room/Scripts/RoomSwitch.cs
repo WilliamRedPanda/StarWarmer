@@ -70,6 +70,15 @@ public class RoomSwitch : MonoBehaviour
         }
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        PlayerData player = other.gameObject.GetComponentInParent<PlayerData>();
+        if (player)
+        {
+            SetEnemy(false);
+        }
+    }
+
     void CheckEnemies(IDamageable damageable)
     {
         enemies.Remove(damageable as GenericEnemy);

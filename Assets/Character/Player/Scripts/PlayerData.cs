@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StateMachine.Gameplay;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,6 +24,7 @@ public class PlayerData : CharacterBase
     [Header("Sequence")]
     public float timeForSequence;
     public SetSequencesData[] sequences;
+    [SerializeField] GameplaySM gameplaySM;
     #endregion
 
     float _slowMoRemainTime;
@@ -43,7 +45,7 @@ public class PlayerData : CharacterBase
     protected override void Awake()
     {
         base.Awake();
-        OnDeath += (ctx) => Restart();
+        base.OnDeath += OnDeath;
     }
 
     public void ChangeSkill(List<SetSequencesData> datas)
@@ -53,10 +55,15 @@ public class PlayerData : CharacterBase
         OnChangeSequences?.Invoke();
     }
 
-    //TODO: TEMP
-    private void Restart()
+    private void OnDeath(IDamageable _damageable)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        StartCoroutine(OnDeathLate());
     }
-    //
+
+    IEnumerator OnDeathLate()
+    {
+        Stop(1.5f);
+        yield return new WaitForSeconds(1.5f);
+        gameplaySM.Go("Lose");
+    }
 }

@@ -283,6 +283,12 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     Vector3 direction;
     Vector3 transformVelocity;
     AnimDirection dir;
+
+    public void ResetVelocity()
+    {
+        transformVelocity = Vector3.zero;
+    }
+
     void Movement()
     {
 
