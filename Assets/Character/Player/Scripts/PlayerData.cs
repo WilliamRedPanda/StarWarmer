@@ -11,6 +11,8 @@ public class PlayerData : CharacterBase
     [Header("Movement")]
     public float speed;
     public float friction;
+    [Header("Aim")]
+    public bool autoAim;
     [Header("Dash")]
     public KeyCode dodgeKeyboard;
     public float dodgeDuration;

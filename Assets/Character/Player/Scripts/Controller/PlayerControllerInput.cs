@@ -394,29 +394,70 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     {
         mouseVelocity = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
 
-        if ((stickAxis.x < -0.1f || stickAxis.x > 0.1f) || (stickAxis.z < -0.1f || stickAxis.z > 0.1f))
+        if (playerData.autoAim == false)
         {
-            aimDirection = stickDirection;
-            usingJoypad = true;
-        }
-
-        if ((mouseVelocity.x < -0.1f || mouseVelocity.x > 0.1f || mouseVelocity.y < -0.1f || mouseVelocity.y > 0.1f ||
-            keyAxis.x < -0.1f || keyAxis.x > 0.1f || keyAxis.y < -0.1f || keyAxis.y > 0.1f || Input.GetKeyDown(KeyCode.Mouse0)) && usingJoypad == true)
-        {
-            usingJoypad = false;
-        }
-
-        if (usingJoypad == false)
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit raycastHit;
-            if (Physics.Raycast(ray, out raycastHit, Mathf.Infinity))
+            if ((stickAxis.x < -0.1f || stickAxis.x > 0.1f) || (stickAxis.z < -0.1f || stickAxis.z > 0.1f))
             {
-                Vector3 raycastPoint = raycastHit.point;
-                Vector3 pointOnPlayerHight = new Vector3(raycastPoint.x, transform.position.y, raycastPoint.z);
-                Vector3 _direction = pointOnPlayerHight - transform.position;
-                aimDirection = _direction.normalized;
+                aimDirection = stickDirection;
+                usingJoypad = true;
             }
+
+            if ((mouseVelocity.x < -0.1f || mouseVelocity.x > 0.1f || mouseVelocity.y < -0.1f || mouseVelocity.y > 0.1f ||
+                keyAxis.x < -0.1f || keyAxis.x > 0.1f || keyAxis.y < -0.1f || keyAxis.y > 0.1f || Input.GetKeyDown(KeyCode.Mouse0)) && usingJoypad == true)
+            {
+                usingJoypad = false;
+            }
+
+            if (usingJoypad == false)
+            {
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit raycastHit;
+                if (Physics.Raycast(ray, out raycastHit, Mathf.Infinity))
+                {
+                    Vector3 raycastPoint = raycastHit.point;
+                    Vector3 pointOnPlayerHight = new Vector3(raycastPoint.x, transform.position.y, raycastPoint.z);
+                    Vector3 _direction = pointOnPlayerHight - transform.position;
+                    aimDirection = _direction.normalized;
+                }
+            }
+        }
+        else
+        {
+            Vector3 shooterPosition = transform.position;
+            Collider[] colliders = Physics.OverlapSphere(shooterPosition, 10f);
+
+            Transform characterToAim = null;
+            Vector3 target = Vector3.zero;
+
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                CharacterBase enemyTemp = colliders[i].GetComponentInParent<CharacterBase>();
+
+                if (enemyTemp == null) continue;
+
+                if (enemyTemp.gameObject.GetComponent<PlayerData>()) continue;
+
+                if (characterToAim == null)
+                {
+                    characterToAim = enemyTemp.transform;
+                    target = characterToAim.position;
+                    continue;
+                }
+
+                if (Vector3.Distance(enemyTemp.transform.position, shooterPosition) < Vector3.Distance(target, shooterPosition))
+                {
+                    characterToAim = enemyTemp.transform;
+                    target = characterToAim.position;
+                    continue;
+                }
+            }
+
+            if (characterToAim == null)
+            {
+                target = shooterPosition + Vector3.up;
+            }
+
+            aimDirection = (target - shooterPosition).normalized;
         }
 
         if (pointer)
