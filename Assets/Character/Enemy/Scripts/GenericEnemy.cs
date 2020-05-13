@@ -109,6 +109,20 @@ public class GenericEnemy : CharacterBase , IShooter
         }
     }
 
+    protected override IEnumerator DamageFeedbackCorutine()
+    {
+        base.DamageFeedbackCorutine();
+        foreach (var s in spritesR)
+        {
+            s.material.SetColor("_Color", Color.red);
+        }
+        yield return new WaitForSeconds(durationDamageFeedback);
+        foreach (var s in spritesR)
+        {
+            s.material.SetColor("_Color", Color.white);
+        }
+    }
+
     public void PatrolTick()
     {
         OnPatrol?.Invoke();

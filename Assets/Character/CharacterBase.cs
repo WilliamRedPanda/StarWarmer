@@ -11,7 +11,7 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     [Header("Health")]
     [SerializeField] int _currentHealth;
     [SerializeField] int _maxHealth;
-    [SerializeField] Material damageMaterial;
+    [SerializeField] protected float durationDamageFeedback = 0.5f;
     [SerializeField] UnityEvent onDamageUE;
     [SerializeField] UnityEvent onDeathUE;
     #endregion
@@ -58,13 +58,10 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
             onDamageUE?.Invoke();
             OnTakeDamage?.Invoke(_damage, _command, _shooter);
             
-            if (renderer && damageMaterial)
-            {
-                if (damageFeedbackCorutine != null)
-                    StopCoroutine(damageFeedbackCorutine);
-                damageFeedbackCorutine = DamageFeedbackCorutine();
-                StartCoroutine(damageFeedbackCorutine);
-            }
+            if (damageFeedbackCorutine != null)
+                StopCoroutine(damageFeedbackCorutine);
+            damageFeedbackCorutine = DamageFeedbackCorutine();
+            StartCoroutine(damageFeedbackCorutine);
 
             if (currentHealth <= 0)
             {
@@ -107,11 +104,12 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
     }
 
     IEnumerator damageFeedbackCorutine;
-    IEnumerator DamageFeedbackCorutine()
+    protected virtual IEnumerator DamageFeedbackCorutine()
     {
-        renderer.material = damageMaterial;
-        yield return new WaitForSeconds(0.5f);
-        renderer.material = originalMaterial;
+        //renderer.material = damageMaterial;
+        //yield return new WaitForSeconds(0.5f);
+        //renderer.material = originalMaterial;
+        yield return null;
     }
 
     public virtual void Stun(float _duration)
