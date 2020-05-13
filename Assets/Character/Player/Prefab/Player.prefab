@@ -1357,6 +1357,36 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -804.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 309
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 268.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1155946761104560060, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 217.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077877391855537469, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077877391855537469, guid: cbc09eed30542944b955ae0e537d692b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4664279729897607684, guid: cbc09eed30542944b955ae0e537d692b,
         type: 3}
       propertyPath: controller
@@ -2382,6 +2412,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 453915585178577469}
+    - target: {fileID: 8945593498914932735, guid: 9f684d82edde4e347954403d485c7ba2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9f684d82edde4e347954403d485c7ba2, type: 3}
 --- !u!224 &2149477157041706456 stripped
