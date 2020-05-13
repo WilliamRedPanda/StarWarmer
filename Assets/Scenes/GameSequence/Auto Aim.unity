@@ -1993,6 +1993,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5ed462d61e036a24298fda5979eca990,
         type: 2}
+    - target: {fileID: 453915585178577469, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: autoAim
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2149477157041706456, guid: 1126c1704778fb342a7b63660afe6b44,
         type: 3}
       propertyPath: m_LocalPosition.z
