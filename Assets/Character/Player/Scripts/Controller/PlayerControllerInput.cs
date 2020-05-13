@@ -424,7 +424,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         else
         {
             Vector3 shooterPosition = transform.position;
-            Collider[] colliders = Physics.OverlapSphere(shooterPosition, 10f);
+            Collider[] colliders = Physics.OverlapSphere(shooterPosition, playerData.autoAimRange);
 
             Transform characterToAim = null;
             Vector3 target = Vector3.zero;
