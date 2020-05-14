@@ -16,10 +16,10 @@ MonoBehaviour:
   - comboSection: {fileID: 11400000, guid: 6c4d67184968dee419613330abbe92b5, type: 2}
     NecessaryExp: 0
   - comboSection: {fileID: 11400000, guid: 4b7cf757dcfe8b641b664e9ddd259ee8, type: 2}
-    NecessaryExp: 30
+    NecessaryExp: 450
   - comboSection: {fileID: 11400000, guid: 3ba6fff1557f707469de9a320d581b33, type: 2}
-    NecessaryExp: 60
-  startingExp: 60
+    NecessaryExp: 800
+  startingExp: 0
   cooldown: 3.5
   icon: {fileID: 21300000, guid: 387434e75de907848a8e00289d512345, type: 3}
   comboName: Crater
