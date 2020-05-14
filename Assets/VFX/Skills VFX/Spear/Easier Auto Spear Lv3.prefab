@@ -56,7 +56,7 @@ MonoBehaviour:
   ID: 50352
   vfx: {fileID: 0}
   _duration: 5
-  damage: 80
+  damage: 90
   friendlyFire: 0
   rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a2c045da4b24f54795e59eb4ec1a7a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 18
+  speed: 17
 --- !u!114 &4750417248488890851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9683,11 +9683,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8811046716101798826}
     m_Modifications:
-    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
-        type: 3}
-      propertyPath: m_Name
-      value: circle_dusty
-      objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138368, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9743,10 +9738,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2296530853822138382, guid: 36a7a4013feddac469141d525e220b35,
+    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
-      propertyPath: m_RenderAlignment
-      value: 2
+      propertyPath: m_Name
+      value: circle_dusty
       objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138369, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
@@ -9818,6 +9813,11 @@ PrefabInstance:
       propertyPath: VelocityModule.z.scalar
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2296530853822138382, guid: 36a7a4013feddac469141d525e220b35,
+        type: 3}
+      propertyPath: m_RenderAlignment
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a7a4013feddac469141d525e220b35, type: 3}
 --- !u!4 &2080602672788047237 stripped
@@ -9833,11 +9833,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2612540266385235759}
     m_Modifications:
-    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
-        type: 3}
-      propertyPath: m_Name
-      value: projectile
-      objectReference: {fileID: 0}
     - target: {fileID: 4096116737560424336, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9893,6 +9888,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
+        type: 3}
+      propertyPath: m_Name
+      value: projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 4096116737560424342, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -9943,11 +9943,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883294978301443104}
     m_Modifications:
-    - target: {fileID: 1279983722598675812, guid: 57af37016944bc844b076c31c29a5fb9,
-        type: 3}
-      propertyPath: m_Name
-      value: SpearRemakePrefab
-      objectReference: {fileID: 0}
     - target: {fileID: 2853087199515133815, guid: 57af37016944bc844b076c31c29a5fb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10002,6 +9997,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 1279983722598675812, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_Name
+      value: SpearRemakePrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57af37016944bc844b076c31c29a5fb9, type: 3}
