@@ -4822,7 +4822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd9853f51c696934195d4318a9db9cec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  knockbackForce: 20
+  knockbackForce: 10
   knockbackRadius: 5
 --- !u!54 &4040864435789948219
 Rigidbody:
@@ -4857,4 +4857,5 @@ MonoBehaviour:
   _duration: 0.5
   damage: 0
   friendlyFire: 0
+  rb: {fileID: 0}
   target: {x: 0, y: 0, z: 0}
