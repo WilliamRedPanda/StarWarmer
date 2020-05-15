@@ -1980,7 +1980,7 @@ PrefabInstance:
         type: 3}
       propertyPath: bullet
       value: 
-      objectReference: {fileID: 8547002616551474225, guid: 0f573542252b1e04799e137e5a8a6883,
+      objectReference: {fileID: 8873545885507065425, guid: a275a5b783f562f4f9016b278f6d0596,
         type: 3}
     - target: {fileID: 453915585178577469, guid: 1126c1704778fb342a7b63660afe6b44,
         type: 3}
