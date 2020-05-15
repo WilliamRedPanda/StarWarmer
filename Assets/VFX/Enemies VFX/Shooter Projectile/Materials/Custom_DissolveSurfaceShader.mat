@@ -29,7 +29,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _DissolveBand: 0.25
-    - _DissolveScale: 0.609
+    - _DissolveScale: 0.604
     - _GlowColFac: 0.989
     - _GlowIntensity: 1.21
     - _GlowScale: 1.12

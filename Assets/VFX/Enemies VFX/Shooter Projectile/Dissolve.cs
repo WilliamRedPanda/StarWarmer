@@ -5,28 +5,29 @@ using UnityEngine;
 public class Dissolve : MonoBehaviour
 {
     Renderer render;
-    private float dissolveProgress = 1;
+    private float dissolveValue = 1;
     public float dissolveVelocityMultiplier = 1;
+    public float dissolveLimit = 0.6f;
     void Start()
     {
         //render = GetComponent<Renderer>();
         //render.material.SetFloat("_DissolveScale", 1f);
-        //dissolveProgress = 1;
+        //dissolveValue = 1;
     }
 
     private void OnEnable()
     {
         render = GetComponent<Renderer>();
         render.material.SetFloat("_DissolveScale", 1f);
-        dissolveProgress = 1;
+        dissolveValue = 1;
     }
 
     void Update()
     {
-        if (render.material.GetFloat("_DissolveScale") > 0)
+        if (render.material.GetFloat("_DissolveScale") > dissolveLimit)
         {
-            dissolveProgress -= Time.deltaTime * dissolveVelocityMultiplier;
-            render.material.SetFloat("_DissolveScale", dissolveProgress);
+            dissolveValue -= Time.deltaTime * dissolveVelocityMultiplier;
+            render.material.SetFloat("_DissolveScale", dissolveValue);
         }
     }
 }
