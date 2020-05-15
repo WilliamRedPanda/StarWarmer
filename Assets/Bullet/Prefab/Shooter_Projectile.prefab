@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 1114335957702887809}
   - component: {fileID: -1655113387078351121}
   - component: {fileID: -4527314336442884593}
+  - component: {fileID: 7862777935051265729}
   m_Layer: 0
   m_Name: Shooter_Projectile
   m_TagString: Untagged
@@ -154,6 +155,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9dac3712d35c7b04da3840bbe4496975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7862777935051265729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6636763792544498978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94f1a7b45f4846e4383ef58353550614, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vfxPrefab: {fileID: 5736187293864626772, guid: da5ed9bc38b2084418a7f7c24a657c35,
+    type: 3}
 --- !u!1001 &8185128259866228272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -161,6 +176,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1850486846370112356}
     m_Modifications:
+    - target: {fileID: 761672875941248228, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: m_Name
+      value: projectile_shooter
+      objectReference: {fileID: 0}
     - target: {fileID: 761672875941248225, guid: dcd1571decdaff7409ef1635c600b434,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -216,20 +236,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 761672875941248228, guid: dcd1571decdaff7409ef1635c600b434,
-        type: 3}
-      propertyPath: m_Name
-      value: projectile_shooter
-      objectReference: {fileID: 0}
     - target: {fileID: 761672875941248226, guid: dcd1571decdaff7409ef1635c600b434,
         type: 3}
-      propertyPath: looping
-      value: 1
+      propertyPath: EmissionModule.enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 761672875941248226, guid: dcd1571decdaff7409ef1635c600b434,
+    - target: {fileID: 761672875941248227, guid: dcd1571decdaff7409ef1635c600b434,
         type: 3}
-      propertyPath: prewarm
-      value: 1
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549241386534743708, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2549241386534743708, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773409615146108211, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dcd1571decdaff7409ef1635c600b434, type: 3}
