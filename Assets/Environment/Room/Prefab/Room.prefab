@@ -5424,11 +5424,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1066906283703491431}
     m_Modifications:
-    - target: {fileID: 8834330934525321070, guid: a1ed09b22220b39429faf211d780de9a,
-        type: 3}
-      propertyPath: m_Name
-      value: SnowVFX
-      objectReference: {fileID: 0}
     - target: {fileID: 6462633420889434780, guid: a1ed09b22220b39429faf211d780de9a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5482,6 +5477,16 @@ PrefabInstance:
     - target: {fileID: 6462633420889434780, guid: a1ed09b22220b39429faf211d780de9a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834330934525321070, guid: a1ed09b22220b39429faf211d780de9a,
+        type: 3}
+      propertyPath: m_Name
+      value: SnowVFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8834330934525321070, guid: a1ed09b22220b39429faf211d780de9a,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
