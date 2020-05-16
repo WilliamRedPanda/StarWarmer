@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 711134022508132280}
   - component: {fileID: 2723055080598513360}
   - component: {fileID: -5274792520005267379}
-  - component: {fileID: 6975277947800157078}
-  - component: {fileID: 4750417248488890851}
   - component: {fileID: 8820888502999752118}
+  - component: {fileID: -4730440382464865587}
   m_Layer: 0
   m_Name: Easier Auto Spear Lv1
   m_TagString: Untagged
@@ -130,32 +129,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6975277947800157078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883294978301443110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2c045da4b24f54795e59eb4ec1a7a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 10
---- !u!114 &4750417248488890851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883294978301443110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d676135e027fe344783f25e4c16d1a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 5
 --- !u!65 &8820888502999752118
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169,6 +142,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-4730440382464865587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883294978301443110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ce2e854ae3f794587bfb2a8ae25e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!1 &4218839498710987594
 GameObject:
   m_ObjectHideFlags: 0

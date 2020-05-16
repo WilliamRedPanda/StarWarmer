@@ -15,9 +15,8 @@ GameObject:
   - component: {fileID: 711134022508132280}
   - component: {fileID: 2723055080598513360}
   - component: {fileID: -5274792520005267379}
-  - component: {fileID: 6975277947800157078}
-  - component: {fileID: 4750417248488890851}
   - component: {fileID: 7453381719799959486}
+  - component: {fileID: -2659392428759717221}
   m_Layer: 0
   m_Name: Easier Auto Spear Lv3
   m_TagString: Untagged
@@ -130,32 +129,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6975277947800157078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883294978301443110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a2c045da4b24f54795e59eb4ec1a7a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 17
---- !u!114 &4750417248488890851
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883294978301443110}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d676135e027fe344783f25e4c16d1a36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  range: 5
 --- !u!65 &7453381719799959486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -169,6 +142,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1, z: 2.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-2659392428759717221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883294978301443110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3ce2e854ae3f794587bfb2a8ae25e59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 17
 --- !u!1 &974484692973489159
 GameObject:
   m_ObjectHideFlags: 0
@@ -9683,6 +9669,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8811046716101798826}
     m_Modifications:
+    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
+        type: 3}
+      propertyPath: m_Name
+      value: circle_dusty
+      objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138368, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9738,10 +9729,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2296530853822138383, guid: 36a7a4013feddac469141d525e220b35,
+    - target: {fileID: 2296530853822138382, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
-      propertyPath: m_Name
-      value: circle_dusty
+      propertyPath: m_RenderAlignment
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2296530853822138369, guid: 36a7a4013feddac469141d525e220b35,
         type: 3}
@@ -9813,11 +9804,6 @@ PrefabInstance:
       propertyPath: VelocityModule.z.scalar
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2296530853822138382, guid: 36a7a4013feddac469141d525e220b35,
-        type: 3}
-      propertyPath: m_RenderAlignment
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36a7a4013feddac469141d525e220b35, type: 3}
 --- !u!4 &2080602672788047237 stripped
@@ -9833,6 +9819,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2612540266385235759}
     m_Modifications:
+    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
+        type: 3}
+      propertyPath: m_Name
+      value: projectile
+      objectReference: {fileID: 0}
     - target: {fileID: 4096116737560424336, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9888,11 +9879,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4096116737560424339, guid: 00f51ffed32f3a44c9ff173e4b314f16,
-        type: 3}
-      propertyPath: m_Name
-      value: projectile
-      objectReference: {fileID: 0}
     - target: {fileID: 4096116737560424342, guid: 00f51ffed32f3a44c9ff173e4b314f16,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.r
@@ -9943,6 +9929,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 883294978301443104}
     m_Modifications:
+    - target: {fileID: 1279983722598675812, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_Name
+      value: SpearRemakePrefab
+      objectReference: {fileID: 0}
     - target: {fileID: 2853087199515133815, guid: 57af37016944bc844b076c31c29a5fb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9997,11 +9988,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 1279983722598675812, guid: 57af37016944bc844b076c31c29a5fb9,
-        type: 3}
-      propertyPath: m_Name
-      value: SpearRemakePrefab
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57af37016944bc844b076c31c29a5fb9, type: 3}
