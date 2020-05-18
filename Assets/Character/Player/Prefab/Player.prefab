@@ -937,7 +937,7 @@ MonoBehaviour:
   onDeathUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 993904743170008859}
         m_MethodName: Play
         m_Mode: 1
         m_Arguments:
@@ -1148,6 +1148,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f44353bf00013044cb87e58bf3acac9a, type: 3}
+--- !u!212 &5735379507648207118 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6578011268816697255, guid: f44353bf00013044cb87e58bf3acac9a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1500229894435040937}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8694120718794291274 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7815534916122187491, guid: f44353bf00013044cb87e58bf3acac9a,
@@ -1157,12 +1163,6 @@ Transform:
 --- !u!1 &3800230319008678221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2336456113493798884, guid: f44353bf00013044cb87e58bf3acac9a,
-    type: 3}
-  m_PrefabInstance: {fileID: 1500229894435040937}
-  m_PrefabAsset: {fileID: 0}
---- !u!212 &5735379507648207118 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6578011268816697255, guid: f44353bf00013044cb87e58bf3acac9a,
     type: 3}
   m_PrefabInstance: {fileID: 1500229894435040937}
   m_PrefabAsset: {fileID: 0}
@@ -1572,15 +1572,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5164819609895632481, guid: 7d1995f210f7208429a23d7969e7b56f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5164819609913664253, guid: 7d1995f210f7208429a23d7969e7b56f,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164819609895632481, guid: 7d1995f210f7208429a23d7969e7b56f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5237797625766891221, guid: 7d1995f210f7208429a23d7969e7b56f,
         type: 3}
@@ -1594,6 +1594,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d1995f210f7208429a23d7969e7b56f, type: 3}
+--- !u!198 &993904743170008859 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5164819609895694355, guid: 7d1995f210f7208429a23d7969e7b56f,
+    type: 3}
+  m_PrefabInstance: {fileID: 5361024131627521800}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &993904743150641453 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5164819609914013221, guid: 7d1995f210f7208429a23d7969e7b56f,
