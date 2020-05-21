@@ -30,4 +30,4 @@ Material:
     m_Floats:
     - _Emission: 0.4
     m_Colors:
-    - _node_987: {r: 1, g: 1, b: 0, a: 1}
+    - _node_987: {r: 1, g: 0.6041667, b: 0, a: 1}
