@@ -19,7 +19,7 @@ MonoBehaviour:
     NecessaryExp: 450
   - comboSection: {fileID: 11400000, guid: 3ba6fff1557f707469de9a320d581b33, type: 2}
     NecessaryExp: 800
-  startingExp: 0
+  startingExp: 500
   cooldown: 3.5
   icon: {fileID: 21300000, guid: 387434e75de907848a8e00289d512345, type: 3}
   comboName: Crater

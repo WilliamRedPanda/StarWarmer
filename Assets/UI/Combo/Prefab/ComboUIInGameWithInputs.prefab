@@ -98,6 +98,12 @@ PrefabInstance:
       propertyPath: comboListTransform
       value: 
       objectReference: {fileID: 5454326321787660}
+    - target: {fileID: 3706712463918814842, guid: 34964b2e590ee4643866f9fb98bf8539,
+        type: 3}
+      propertyPath: divisorImagePrefab
+      value: 
+      objectReference: {fileID: 5556639372563878158, guid: c3eb7a0cf40ef8e44a03e2e4dc892c48,
+        type: 3}
     - target: {fileID: 1617171045831378056, guid: 34964b2e590ee4643866f9fb98bf8539,
         type: 3}
       propertyPath: m_LocalPosition.x

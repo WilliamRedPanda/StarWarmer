@@ -15,12 +15,15 @@ public class ComboUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI descriptionText;
     [SerializeField] Image[] levelIcon;
     [SerializeField] ButtonSpriteControl iconPrefab;
+    [SerializeField] Image divisorImagePrefab;
 
     [HideInInspector] public SetSequences combo;
     float deltaCooldown, deltaExp;
 
     List<ButtonSpriteControl> inputIcons = new List<ButtonSpriteControl>();
     int currentInputIndex;
+
+    List<Image> divisorImages = new List<Image>();
 
     float timer;
 
@@ -87,6 +90,15 @@ public class ComboUI : MonoBehaviour
                     else if (controllerManager.currentController == inputDevice.xBox) inputImage.SetSprite(input.XboxSprite);
                     else if (controllerManager.currentController == inputDevice.playStation) inputImage.SetSprite(input.PSSprite);
                 }
+
+                if (divisorImagePrefab)
+                {
+                    if (i < _combo.level - 1)
+                    {
+                        Image divisor = Instantiate(divisorImagePrefab, comboListTransform);
+                        divisorImages.Add(divisor);
+                    }
+                }
             }
         }
 
@@ -127,6 +139,17 @@ public class ComboUI : MonoBehaviour
             {
                 _image = inputIcons[i];
                 inputIcons.RemoveAt(i);
+                Destroy(_image.gameObject);
+            }
+        }
+
+        if (divisorImages.Count > 0)
+        {
+            Image _image;
+            for (int i = divisorImages.Count - 1; i >= 0; i--)
+            {
+                _image = divisorImages[i];
+                divisorImages.RemoveAt(i);
                 Destroy(_image.gameObject);
             }
         }
