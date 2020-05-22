@@ -78,6 +78,6 @@ public class CurrentControllerManager : ScriptableObject
     void ChangeController(inputDevice _controllerType)
     {
         currentController = _controllerType;
-        OnChangeController.Invoke(currentController);
+        OnChangeController?.Invoke(currentController);
     }
 }
