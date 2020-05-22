@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Pause : MonoBehaviour
 {
@@ -11,9 +12,20 @@ public class Pause : MonoBehaviour
 
     public void HandleInput()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton7))
+        if (Keyboard.current != null)
         {
-            PauseAndResume();
+            if (Keyboard.current.escapeKey.wasPressedThisFrame)
+            {
+                PauseAndResume();
+            }
+        }
+
+        if (Gamepad.current != null)
+        {
+            if(Gamepad.current.startButton.wasPressedThisFrame)
+            {
+                PauseAndResume();
+            }
         }
     }
 

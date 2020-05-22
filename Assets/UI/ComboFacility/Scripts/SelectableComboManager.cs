@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class SelectableComboManager : MonoBehaviour
 {
@@ -22,26 +23,47 @@ public class SelectableComboManager : MonoBehaviour
 
     private void Update()
     {
-        if ((Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.W) || Input.GetAxis("HorizontalStick") < -0.1f) && pushed == false)
+        if (Keyboard.current != null)
         {
-            pushed = true;
-            Rotate(false);
-        }
-        else if ((Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.S) || Input.GetAxis("HorizontalStick") > 0.1f) && pushed == false)
-        {
-            pushed = true;
-            Rotate(true);
+            if ((Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame) && pushed == false)
+            {
+                pushed = true;
+                Rotate(false);
+            }
+            else if ((Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame) && pushed == false)
+            {
+                pushed = true;
+                Rotate(true);
+            }
+
+            if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.aKey.wasPressedThisFrame || Keyboard.current.leftArrowKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame)
+            {
+                pushed = false;
+            }
+
+            if (Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                currentCombo.ChangeSkill();
+            }
         }
 
-        if (Input.GetKeyUp(KeyCode.LeftArrow) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.W) ||
-            Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.S))
+        if (Gamepad.current != null)
         {
-            pushed = false;
-        }
+            if (Gamepad.current.leftStick.x.ReadValue() < -0.1f && pushed == false)
+            {
+                pushed = true;
+                Rotate(false);
+            }
+            else if (Gamepad.current.leftStick.x.ReadValue() > 0.1f && pushed == false)
+            {
+                pushed = true;
+                Rotate(true);
+            }
 
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
-        {
-            currentCombo.ChangeSkill();
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                currentCombo.ChangeSkill();
+            }
         }
     }
 

@@ -956,6 +956,7 @@ MonoBehaviour:
   autoAim: 0
   autoAimRange: 20
   dodgeKeyboard: 304
+  dodgeKey: 51
   dodgeDuration: 0.3
   dodgeSpeed: 8
   dodgeCooldown: 0.8
@@ -1572,15 +1573,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5164819609895632481, guid: 7d1995f210f7208429a23d7969e7b56f,
-        type: 3}
-      propertyPath: m_SortingOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 5164819609913664253, guid: 7d1995f210f7208429a23d7969e7b56f,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5164819609895632481, guid: 7d1995f210f7208429a23d7969e7b56f,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5237797625766891221, guid: 7d1995f210f7208429a23d7969e7b56f,
         type: 3}

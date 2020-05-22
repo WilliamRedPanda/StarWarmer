@@ -3,6 +3,7 @@ using StateMachine.Gameplay;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Gameplay_Win_State : Gameplay_Base_State
@@ -20,9 +21,20 @@ public class Gameplay_Win_State : Gameplay_Base_State
     public override void Tick()
     {
         base.Tick();
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space))
+        if (Keyboard.current != null)
         {
-            context.Exit("Gameplay");
+            if (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.spaceKey.wasPressedThisFrame)
+            {
+                context.Exit("Gameplay");
+            }
+        }
+
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame || Gamepad.current.startButton.wasPressedThisFrame)
+            {
+                context.Exit("Gameplay");
+            }
         }
     }
 

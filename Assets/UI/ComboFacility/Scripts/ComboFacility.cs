@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class ComboFacility : MonoBehaviour
 {
@@ -32,19 +33,37 @@ public class ComboFacility : MonoBehaviour
 
     public void HandleInput()
     {
-        if (open)
+        if (Keyboard.current != null)
         {
-            if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.JoystickButton7) || Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton1))
+            if (open)
             {
-                Confirmed();
-                Close();
+                if (Keyboard.current.enterKey.wasPressedThisFrame || Keyboard.current.escapeKey.wasPressedThisFrame)
+                {
+                    Confirmed();
+                    Close();
+                }
+            }
+            else
+            {
+                if (Keyboard.current.spaceKey.wasPressedThisFrame)
+                    Open();
             }
         }
-        else
+
+        if (Gamepad.current != null)
         {
-            if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.JoystickButton0))
+            if (open)
             {
-                Open();
+                if (Gamepad.current.startButton.wasPressedThisFrame || Gamepad.current.buttonEast.wasPressedThisFrame)
+                {
+                    Confirmed();
+                    Close();
+                }
+            }
+            else
+            {
+                if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+                    Open();
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerData))]
 public class SlowMotionController : MonoBehaviour
@@ -71,50 +72,68 @@ public class SlowMotionController : MonoBehaviour
 
     void HandleSlowMo()
     {
-        if (Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.Joystick1Button5))
+        if (Mouse.current != null)
         {
-            if (fakedHold == false)
-            {
-                if (canSlow == true)
-                {
-                    fakedHold = true;
-                    Time.timeScale = playerData.slowMoPercent;
-                    timeSlowed = true;
-                    StartCoroutine(buttonCorutine);
-                    StartCoroutine(slowMoCourutine);
-                    StopCoroutine(refillSlowMoCorutine);
-                    refillSlowMoCorutine = RefillSlowMo();
-                }
-            }
-            else
-            {
-                fakedHold = false;
-                if (timeSlowed)
-                {
-                    StopCoroutine(slowMoCourutine);
-                    slowMoCourutine = SlowMo();
-                    StartCoroutine(refillSlowMoCorutine);
-                }
-            }
+            if (Mouse.current.rightButton.wasPressedThisFrame)
+                StartSlowMo();
+
+            if (Mouse.current.rightButton.wasReleasedThisFrame)
+                HoldHandler();
         }
 
-        if (Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.Joystick1Button4) || Input.GetKeyUp(KeyCode.Joystick1Button5))
+        if (Gamepad.current != null)
         {
-            if (fakedHold == true)
-            {
-                StopCoroutine(buttonCorutine);
-            }
-            else
-            {
-                if (timeSlowed)
-                {
-                    StopCoroutine(slowMoCourutine);
-                    slowMoCourutine = SlowMo();
-                    StartCoroutine(refillSlowMoCorutine);
-                }
-            }
-            buttonCorutine = HoldButtonCorutine();
+            if (Gamepad.current.rightShoulder.wasPressedThisFrame)
+                StartSlowMo();
+
+            if (Gamepad.current.rightShoulder.wasReleasedThisFrame)
+                HoldHandler();
         }
+    }
+
+    void StartSlowMo()
+    {
+        if (fakedHold == false)
+        {
+            if (canSlow == true)
+            {
+                fakedHold = true;
+                Time.timeScale = playerData.slowMoPercent;
+                timeSlowed = true;
+                StartCoroutine(buttonCorutine);
+                StartCoroutine(slowMoCourutine);
+                StopCoroutine(refillSlowMoCorutine);
+                refillSlowMoCorutine = RefillSlowMo();
+            }
+        }
+        else
+        {
+            fakedHold = false;
+            if (timeSlowed)
+            {
+                StopCoroutine(slowMoCourutine);
+                slowMoCourutine = SlowMo();
+                StartCoroutine(refillSlowMoCorutine);
+            }
+        }
+    }
+
+    void HoldHandler()
+    {
+        if (fakedHold == true)
+        {
+            StopCoroutine(buttonCorutine);
+        }
+        else
+        {
+            if (timeSlowed)
+            {
+                StopCoroutine(slowMoCourutine);
+                slowMoCourutine = SlowMo();
+                StartCoroutine(refillSlowMoCorutine);
+            }
+        }
+        buttonCorutine = HoldButtonCorutine();
     }
 
     #region Corutine

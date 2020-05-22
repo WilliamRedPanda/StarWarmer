@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class InputListUI : MonoBehaviour
 {
@@ -17,9 +18,20 @@ public class InputListUI : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) || Input.GetKeyDown(KeyCode.JoystickButton4))
+        if (Keyboard.current != null)
         {
-            OpenClose();
+            if (Keyboard.current.tabKey.wasPressedThisFrame)
+            {
+                OpenClose();
+            }
+        }
+
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.leftShoulder.wasPressedThisFrame)
+            {
+                OpenClose();
+            }
         }
     }
 
