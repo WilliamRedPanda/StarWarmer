@@ -4,6 +4,8 @@ using UnityEngine;
 using Cinemachine;
 using DG.Tweening;
 using StateMachine.Gameplay;
+using UnityEngine.Events;
+using System;
 
 [RequireComponent(typeof(BoxCollider))]
 public class RoomSwitch : MonoBehaviour
@@ -20,12 +22,15 @@ public class RoomSwitch : MonoBehaviour
     [Space]
     [SerializeField] bool finalRoom;
     [Space]
+    [SerializeField] UnityEvent OncompletedRoomUE;
+    [Space]
     [SerializeField] GameObject doorNorth;
     [SerializeField] GameObject doorSouth;
     //[SerializeField] GameObject doorEst;
     //[SerializeField] GameObject doorWest; 
     #endregion
 
+    public Action OncompletedRoom;
 
     [HideInInspector] public List<GenericEnemy> enemies;
 
@@ -99,6 +104,9 @@ public class RoomSwitch : MonoBehaviour
         //    doorEst.SetActive(false);
         //if (doorWest)
         //    doorWest.SetActive(false);
+
+        OncompletedRoomUE?.Invoke();
+        OncompletedRoom?.Invoke();
     }
 
     void CloseRoom()
