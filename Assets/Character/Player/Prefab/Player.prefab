@@ -956,6 +956,7 @@ MonoBehaviour:
   autoAim: 0
   autoAimRange: 20
   dodgeKeyboard: 304
+  dodgeKey: 51
   dodgeDuration: 0.3
   dodgeSpeed: 8
   dodgeCooldown: 0.8

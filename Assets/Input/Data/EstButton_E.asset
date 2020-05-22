@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 101
   XBoxKey: 331
+  keyboardKey: 19
+  gamepadButton: 5
   keySprite: {fileID: 21300000, guid: 233db2e568af49b459afe59ce3920674, type: 3}
   XboxSprite: {fileID: 21300000, guid: 395f75d2821ad744c874e9b40e1ee00e, type: 3}
   PSSprite: {fileID: 21300000, guid: c7eecc8d86dc1e14db840de4621a003a, type: 3}

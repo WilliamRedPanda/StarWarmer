@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerControllerInput : MonoBehaviour , IShooter
 {
@@ -52,10 +53,10 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         set 
         {
             _usingJoypad = value;
-            if (_usingJoypad == false)
-                controllerManager.ChangeController(inputDevice.keyboard);
-            else
-                controllerManager.ChangeController(inputDevice.xBox);
+            //if (_usingJoypad == false)
+            //    controllerManager.ChangeController(inputDevice.keyboard);
+            //else
+            //    controllerManager.ChangeController(inputDevice.xBox);
         }
     }
 
@@ -71,6 +72,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         rb = GetComponentInChildren<Rigidbody>();
         collider = GetComponentsInChildren<Collider>();
 
+        controllerManager.OnChangeController += CheckUsingJoypad;
+
         instance.SetInstance(this);
         playerData.OnChangeSequences += ChangeSequences;
 
@@ -79,6 +82,24 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         animators = new Animator[] { dxb, dxf, sxb, sxf };
 
         SetRendererActive(AnimDirection.sxf);
+    }
+
+    void CheckUsingJoypad(inputDevice _inputDevice)
+    {
+        switch (_inputDevice)
+        {
+            case inputDevice.keyboard:
+                usingJoypad = false;
+                break;
+            case inputDevice.playStation:
+                usingJoypad = true;
+                break;
+            case inputDevice.xBox:
+                usingJoypad = true;
+                break;
+            default:
+                break;
+        }
     }
 
     private void Start()
@@ -90,6 +111,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 BulletPoolManager.instance.TakeBullet(command.data.skillPrefab);
             }
         }
+        if (Mouse.current != null)
+            oldMousePosition = Mouse.current.position.ReadValue();
     }
 
     private void OnDisable()
@@ -142,6 +165,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 section.onCorrectInput -= OnCorrectInput;
             }
         }
+        controllerManager.OnChangeController -= CheckUsingJoypad;
     }
 
     #endregion
@@ -224,11 +248,29 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     IEnumerator dodgeCorutine;
     private void HandleDodge()
     {
-        if ((Input.GetKeyDown(playerData.dodgeKeyboard) || Input.GetAxis("Fire1") < 0) && canDash && canMove)
+        if (Keyboard.current != null)
         {
-            dodgeCorutine = Dodge();
-            StartCoroutine(dodgeCorutine);
+            if (Keyboard.current[playerData.dodgeKey].wasPressedThisFrame)
+            {
+                StartDodge();
+                return;
+            }
         }
+
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.leftTrigger.wasPressedThisFrame)
+            {
+                StartDodge();
+                return;
+            }
+        }
+    }
+
+    void StartDodge()
+    {
+        dodgeCorutine = Dodge();
+        StartCoroutine(dodgeCorutine);
     }
 
     float dodgeTimer = 0;
@@ -279,6 +321,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     Vector3 stickAxis;
     Vector3 keyAxis;
+    float h;
+    float v;
     Vector3 stickDirection;
     Vector3 direction;
     Vector3 transformVelocity;
@@ -291,9 +335,17 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     void Movement()
     {
+        if (Gamepad.current != null)
+        {
+            stickAxis = new Vector3(Gamepad.current.leftStick.x.ReadValue(), 0, Gamepad.current.leftStick.y.ReadValue());
+        }
 
-        stickAxis = new Vector3(Input.GetAxis("HorizontalStick"), 0, Input.GetAxis("VerticalStick"));
-        keyAxis = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        if (Keyboard.current != null)
+        {
+            float h = (Keyboard.current.aKey.ReadValue() * -1) + Keyboard.current.dKey.ReadValue();
+            float v = (Keyboard.current.sKey.ReadValue() * -1) + Keyboard.current.wKey.ReadValue();
+            keyAxis = new Vector3(h, 0, v);
+        }
 
         if (usingJoypad)
             direction = stickAxis.normalized * playerData.speed;
@@ -389,28 +441,34 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     }
 
     Vector3 pointerDirection;
-    Vector2 mouseVelocity;
+    Vector2 mouseVelocity = Vector2.zero;
+    Vector2 oldMousePosition;
     void Aim()
     {
-        mouseVelocity = new Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        if (Mouse.current != null)
+        {
+            mouseVelocity = Mouse.current.position.ReadValue() - oldMousePosition;
+            oldMousePosition = Mouse.current.position.ReadValue();
+
+            if ((mouseVelocity.x < -0.1f || mouseVelocity.x > 0.1f || mouseVelocity.y < -0.1f || mouseVelocity.y > 0.1f ||
+                keyAxis.x < -0.1f || keyAxis.x > 0.1f || keyAxis.y < -0.1f || keyAxis.y > 0.1f || Mouse.current.IsPressed()) && usingJoypad == true)
+            {
+                //usingJoypad = false;
+            }
+        }
 
         if (playerData.autoAim == false)
         {
             if ((stickAxis.x < -0.1f || stickAxis.x > 0.1f) || (stickAxis.z < -0.1f || stickAxis.z > 0.1f))
             {
                 aimDirection = stickDirection;
-                usingJoypad = true;
+                //usingJoypad = true;
             }
 
-            if ((mouseVelocity.x < -0.1f || mouseVelocity.x > 0.1f || mouseVelocity.y < -0.1f || mouseVelocity.y > 0.1f ||
-                keyAxis.x < -0.1f || keyAxis.x > 0.1f || keyAxis.y < -0.1f || keyAxis.y > 0.1f || Input.GetKeyDown(KeyCode.Mouse0)) && usingJoypad == true)
-            {
-                usingJoypad = false;
-            }
 
             if (usingJoypad == false)
             {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
                 RaycastHit raycastHit;
                 if (Physics.Raycast(ray, out raycastHit, Mathf.Infinity))
                 {
@@ -474,21 +532,27 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         {
             if (BulletPoolManager.instance != null)
             {
-                if (Input.GetAxis("Fire1") > 0 && shooted == false)
+                if (Gamepad.current != null)
                 {
-                    shooted = true;
-                    BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
-                    Attack();
-                }
-                else if (Input.GetAxis("Fire1") <= 0 && shooted == true)
-                {
-                    shooted = false;
+                    if (Gamepad.current.rightTrigger.wasPressedThisFrame && shooted == false)
+                    {
+                        shooted = true;
+                        BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                        Attack();
+                    }
+                    else if (Gamepad.current.rightTrigger.wasReleasedThisFrame && shooted == true)
+                    {
+                        shooted = false;
+                    }
                 }
 
-                if (Input.GetButtonDown("Fire2"))
+                if (Mouse.current != null)
                 {
-                    BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
-                    Attack();
+                    if (Mouse.current.leftButton.wasPressedThisFrame)
+                    {
+                        BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                        Attack();
+                    }
                 }
             }
         }
@@ -538,24 +602,41 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     void HandleInput()
     {
-        if (Input.anyKeyDown)
+        if (Keyboard.current != null)
         {
-            foreach (var input in inputsData.inputs)
+            if (Keyboard.current.anyKey.wasPressedThisFrame)
             {
-                if (input.CheckInputPressed())
-                {
-                    if (sequenceStarted == false)
-                    {
-                        sequenceStarted = true;
-                    }
-                    currentInputSequence.Add(input);
-                    OnInputPressed?.Invoke(input);
-                    buttonJustPressed = true;
-                    sequenceRemainTime = Time.time + playerData.timeForSequence;
-                    break;
-                }
+                CheckAllComboInput();
             }
         }
+
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.IsPressed())
+            {
+                CheckAllComboInput();
+            }
+        }
+    }
+
+    bool CheckAllComboInput()
+    {
+        foreach (var input in inputsData.inputs)
+        {
+            if (input.CheckInputPressed())
+            {
+                if (sequenceStarted == false)
+                {
+                    sequenceStarted = true;
+                }
+                currentInputSequence.Add(input);
+                OnInputPressed?.Invoke(input);
+                buttonJustPressed = true;
+                sequenceRemainTime = Time.time + playerData.timeForSequence;
+                return true;
+            }
+        }
+        return false;
     }
 
     void StartSequence(SetSequences s)

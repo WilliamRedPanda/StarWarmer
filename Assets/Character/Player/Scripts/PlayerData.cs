@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class PlayerData : CharacterBase
@@ -16,6 +17,7 @@ public class PlayerData : CharacterBase
     public float autoAimRange;
     [Header("Dash")]
     public KeyCode dodgeKeyboard;
+    public Key dodgeKey;
     public float dodgeDuration;
     public float dodgeSpeed;
     public float dodgeCooldown;
