@@ -9690,7 +9690,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 15346
-  vfx: {fileID: 3657446066151590348}
+  vfx: {fileID: 7807103360879594879}
+  useVFXDuration: 0
   _duration: 1
   damage: 80
   friendlyFire: 0
@@ -24213,6 +24214,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2597842606615926676, guid: 968bd3a82f6050e4db2712abac4cc80f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 157958858564756339, guid: 968bd3a82f6050e4db2712abac4cc80f,
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
@@ -24222,11 +24228,6 @@ PrefabInstance:
         type: 3}
       propertyPath: InitialModule.startColor.maxColor.a
       value: 0.8039216
-      objectReference: {fileID: 0}
-    - target: {fileID: 2597842606615926676, guid: 968bd3a82f6050e4db2712abac4cc80f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9066008110725397610, guid: 968bd3a82f6050e4db2712abac4cc80f,
         type: 3}
@@ -24413,6 +24414,12 @@ PrefabInstance:
 --- !u!4 &7807103360879594876 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 157958858248733879, guid: 968bd3a82f6050e4db2712abac4cc80f,
+    type: 3}
+  m_PrefabInstance: {fileID: 7955971143422593483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &7807103360879594879 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 157958858248733876, guid: 968bd3a82f6050e4db2712abac4cc80f,
     type: 3}
   m_PrefabInstance: {fileID: 7955971143422593483}
   m_PrefabAsset: {fileID: 0}

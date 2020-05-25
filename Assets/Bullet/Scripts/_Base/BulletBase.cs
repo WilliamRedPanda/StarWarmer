@@ -7,7 +7,8 @@ public class BulletBase : MonoBehaviour
 {
     public int ID;
     [SerializeField] protected ParticleSystem vfx;
-    [SerializeField] float _duration;
+    [SerializeField] bool useVFXDuration;
+    [SerializeField] [Tooltip("se useVFXDuration è falso la durata di vita della skill è quella assegnata in questa variabile")] float _duration;
     //TODO: Da considerare temporaneo fino ulteriori informazioni
     [SerializeField] int damage;
     //
@@ -82,7 +83,14 @@ public class BulletBase : MonoBehaviour
         gameObject.SetActive(true);
         state = State.Shooted;
         command = _command;
-        returnTime = Time.time + _duration;
+        if (useVFXDuration)
+        {
+            returnTime = Time.time + vfx.duration;
+        }
+        else
+        {
+            returnTime = Time.time + duration;
+        }
         OnPreShoot?.Invoke();
         OnMiddleShoot?.Invoke();
         OnShoot?.Invoke();
