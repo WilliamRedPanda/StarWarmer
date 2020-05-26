@@ -953,7 +953,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   canMove: 0
   speed: 0.9
-  friction: 7
+  friction: 6
   autoAim: 0
   autoAimRange: 20
   dodgeKeyboard: 304
