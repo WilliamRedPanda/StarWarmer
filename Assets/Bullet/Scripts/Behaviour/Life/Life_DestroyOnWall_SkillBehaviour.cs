@@ -5,7 +5,7 @@ using UnityEngine;
 public class Life_DestroyOnWall_SkillBehaviour : BaseSkillBehaviour
 {
     Collider[] colliders;
-    bool b;
+    //bool b;
 
     //protected override void OnShoot()
     //{

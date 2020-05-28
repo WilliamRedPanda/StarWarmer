@@ -575,7 +575,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
             HandleInput();
             foreach (var sequence in sequences)
             {
-                if (sequence.canExecute)
+                //if (sequence.canExecute)
                     sequence.HandleSetSequences();
             }
         }
@@ -683,11 +683,18 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         {
             if (currentSequencesSet.Contains(executedSequence))
             {
-                executedSequence.Execute();
-                StopCoroutine(executedSequence.cooldownCorutine);
-                executedSequence.RestartCooldownCorutine();
-                StartCoroutine(executedSequence.cooldownCorutine);
-                executedSequence = null;
+                if (executedSequence.canExecute)
+                {
+                    executedSequence.Execute();
+                    StopCoroutine(executedSequence.cooldownCorutine);
+                    executedSequence.RestartCooldownCorutine();
+                    StartCoroutine(executedSequence.cooldownCorutine);
+                    executedSequence = null;
+                }
+                else
+                {
+                    SoundManager.instance.Play("ComboFailed");
+                }
             }
         }
         else
