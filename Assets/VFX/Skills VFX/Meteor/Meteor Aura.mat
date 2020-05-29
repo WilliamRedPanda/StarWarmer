@@ -44,13 +44,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _FresnelPower: 1
+    - _FresnelPower: 0.5
     - _NoisePOWER: 2
-    - _NoiseSpeed: 2
+    - _NoiseSpeed: 5
     - _node_2049: 1
     m_Colors:
     - _FresnelColor: {r: 0.9811321, g: 0.8474479, b: 0.43965825, a: 1}
-    - _GalaxyColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GalaxyColor: {r: 0.9245283, g: 0.523535, b: 0.16135636, a: 1}
     - _StarColor: {r: 1, g: 1, b: 1, a: 1}
     - _node_5062: {r: 1, g: 1, b: 1, a: 1}
     - _node_5062_copy: {r: 1, g: 1, b: 1, a: 1}
