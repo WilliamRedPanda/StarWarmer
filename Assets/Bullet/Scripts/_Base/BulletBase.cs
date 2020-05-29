@@ -174,9 +174,10 @@ public class BulletBase : MonoBehaviour
                 {
                     // Nothing
                 }
-                else if (damageable.gameObject != shooter.gameObject && damageable.invulnerable == false)
+                else if (shooter != null)
                 {
-                    OnDamageableCollide(damageable);
+                    if (damageable.gameObject != shooter.gameObject && damageable.invulnerable == false)
+                        OnDamageableCollide(damageable);
                 }
             }
             OnEnterCollider?.Invoke(other);

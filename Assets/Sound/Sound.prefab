@@ -84,7 +84,7 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 0
     source: {fileID: 0}
-  - name: Spearsfx
+  - name: SpearSfx
     clip: {fileID: 8300000, guid: 6cf9a2e7d27d7de4b832a06196e8a465, type: 3}
     volume: 1
     volumeVariance: 0
@@ -140,9 +140,65 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 0
     source: {fileID: 0}
+  - name: Crater1/2
+    clip: {fileID: 8300000, guid: a55ebeafbc06ff9488c2bdc676521ab8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: Crater2/2
+    clip: {fileID: 8300000, guid: f03c9e6195c271e4fa5920cf9d4a7c1c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
   - name: MenuScrolling
     clip: {fileID: 8300000, guid: eff3dc51a045c2a4096eb1d2a6fbf9ae, type: 3}
     volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHitted
+    clip: {fileID: 8300000, guid: e6ec795bec55ef44ca452dd418bb7f27, type: 3}
+    volume: 0.8
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyDeath
+    clip: {fileID: 8300000, guid: 7aa6ec8cb2d0faa4d8b433fa4fd4fb3b, type: 3}
+    volume: 0.8
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerDeath
+    clip: {fileID: 8300000, guid: 09f6aeb05f46af541b30029acc67189d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: PlayerHitted
+    clip: {fileID: 8300000, guid: 336bd9f97a8b1a0409a1af492d6a91a3, type: 3}
+    volume: 0.5
+    volumeVariance: 0
+    pitch: 1.25
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: EnemyHitted
+    clip: {fileID: 8300000, guid: e6ec795bec55ef44ca452dd418bb7f27, type: 3}
+    volume: 0.8
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
