@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.29411766}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.19607843}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1240,11 +1240,11 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 1}
+        key0: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 0.6862745}
         key1: {r: 0.9725491, g: 0.8509804, b: 0.5411765, a: 1}
-        key2: {r: 0.18039216, g: 0.08627451, b: 0.46666667, a: 1}
-        key3: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 0}
-        key4: {r: 0.9725491, g: 0.85098046, b: 0.5411765, a: 0}
+        key2: {r: 0.18039216, g: 0.08627451, b: 0.46666667, a: 0.6862745}
+        key3: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 1}
+        key4: {r: 0.9725491, g: 0.85098046, b: 0.5411765, a: 0.6862745}
         key5: {r: 0.18039216, g: 0.08627451, b: 0.4666667, a: 0}
         key6: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 0}
         key7: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 0}
@@ -1257,16 +1257,16 @@ ParticleSystem:
         ctime6: 65535
         ctime7: 65535
         atime0: 301
-        atime1: 43515
-        atime2: 65535
-        atime3: 0
-        atime4: 0
+        atime1: 16384
+        atime2: 32768
+        atime3: 49151
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 7
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4645,7 +4645,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bbfb22a379dc51c468796ee45024114c, type: 2}
+  - {fileID: 2100000, guid: c246e57bf8a27514880ee6a264a7128a, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -4912,7 +4912,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 0.13725491}
+      maxColor: {r: 1, g: 1, b: 1, a: 0.078431375}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -5912,11 +5912,11 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 1}
+        key0: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 0.78431374}
         key1: {r: 0.9725491, g: 0.8509804, b: 0.5411765, a: 1}
-        key2: {r: 0.18039216, g: 0.08627451, b: 0.46666667, a: 1}
-        key3: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 0}
-        key4: {r: 0.9725491, g: 0.85098046, b: 0.5411765, a: 0}
+        key2: {r: 0.18039216, g: 0.08627451, b: 0.46666667, a: 0.78431374}
+        key3: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 1}
+        key4: {r: 0.9725491, g: 0.85098046, b: 0.5411765, a: 0.78431374}
         key5: {r: 0.18039216, g: 0.08627451, b: 0.4666667, a: 0}
         key6: {r: 0.56078434, g: 0.27450982, b: 0.7137255, a: 0}
         key7: {r: 0.56078434, g: 0.34509805, b: 0.7137255, a: 0}
@@ -5929,16 +5929,16 @@ ParticleSystem:
         ctime6: 65535
         ctime7: 65535
         atime0: 301
-        atime1: 43515
-        atime2: 65535
-        atime3: 0
-        atime4: 0
+        atime1: 16384
+        atime2: 32768
+        atime3: 49151
+        atime4: 65535
         atime5: 0
         atime6: 0
         atime7: 0
         m_Mode: 0
         m_NumColorKeys: 7
-        m_NumAlphaKeys: 3
+        m_NumAlphaKeys: 5
       minGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 0}
@@ -9317,7 +9317,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9d5f3d715091cd34e97ba2941c6fb73f, type: 2}
+  - {fileID: 2100000, guid: b3cdd3e5ef5734e4e9a2c028d557c95f, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
