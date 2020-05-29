@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4253291897977204292}
   m_Layer: 0
-  m_Name: Shield_Level_03
+  m_Name: Shield_level_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,6 +43,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DM_Shield_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760209613827557262, guid: b67367d4730708c4c8f85d0fdaec8abc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16386354
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760209613827557262, guid: b67367d4730708c4c8f85d0fdaec8abc,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06073785
+      objectReference: {fileID: 0}
+    - target: {fileID: 3760209613827557262, guid: b67367d4730708c4c8f85d0fdaec8abc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.023351789
       objectReference: {fileID: 0}
     - target: {fileID: 3760209613827557262, guid: b67367d4730708c4c8f85d0fdaec8abc,
         type: 3}
@@ -157,21 +172,6 @@ PrefabInstance:
     - target: {fileID: 7734927327081299938, guid: 41a9817c22440d746bd82595420fae0f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8695457414417284641, guid: 41a9817c22440d746bd82595420fae0f,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8695457414417284641, guid: 41a9817c22440d746bd82595420fae0f,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8695457414417284641, guid: 41a9817c22440d746bd82595420fae0f,
-        type: 3}
-      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

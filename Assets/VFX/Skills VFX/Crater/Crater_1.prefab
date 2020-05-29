@@ -9654,6 +9654,7 @@ GameObject:
   - component: {fileID: 4679626778742336476}
   - component: {fileID: 4790763463842409847}
   - component: {fileID: -229989938227315835}
+  - component: {fileID: 9003336704471156466}
   m_Layer: 0
   m_Name: Crater_1
   m_TagString: Untagged
@@ -9750,6 +9751,52 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knockbackForce: 2
   knockbackRadius: 1
+--- !u!114 &9003336704471156466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5592742864684555745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b41c96d91059a94b945d087aa982d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Crater1/2
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Crater2/2
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideCharacter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &5641418147405883060
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2742880900517043139}
   - component: {fileID: 3009590347095624282}
   - component: {fileID: 7844455836535940688}
+  - component: {fileID: 26902424352997273}
   m_Layer: 0
   m_Name: Meteor
   m_TagString: Untagged
@@ -112,6 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 789456124
   vfx: {fileID: 0}
+  useVFXDuration: 0
   _duration: 7
   damage: 100
   friendlyFire: 0
@@ -170,6 +172,40 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   offsetPositionOnShoot: {x: 0, y: 2, z: 5}
+--- !u!114 &26902424352997273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4713170339200267104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b41c96d91059a94b945d087aa982d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Meteorsfx
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideCharacter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &2976607472925152347
 PrefabInstance:
   m_ObjectHideFlags: 0

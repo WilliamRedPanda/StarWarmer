@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7734927327081299938}
   m_Layer: 0
-  m_Name: Shield_Level_02
+  m_Name: Shield_level_02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,17 +47,17 @@ PrefabInstance:
     - target: {fileID: 8115877244176215059, guid: fad80dd3401cb5c47abb865663b54ffb,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.16386354
       objectReference: {fileID: 0}
     - target: {fileID: 8115877244176215059, guid: fad80dd3401cb5c47abb865663b54ffb,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.06073785
       objectReference: {fileID: 0}
     - target: {fileID: 8115877244176215059, guid: fad80dd3401cb5c47abb865663b54ffb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.023351789
       objectReference: {fileID: 0}
     - target: {fileID: 8115877244176215059, guid: fad80dd3401cb5c47abb865663b54ffb,
         type: 3}
@@ -118,6 +118,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DM_Shield_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842585623706496933, guid: 80c50d2fddf7c7e469cabe805dbb0e82,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.16386354
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842585623706496933, guid: 80c50d2fddf7c7e469cabe805dbb0e82,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.06073785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5842585623706496933, guid: 80c50d2fddf7c7e469cabe805dbb0e82,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.045351744
       objectReference: {fileID: 0}
     - target: {fileID: 5842585623706496933, guid: 80c50d2fddf7c7e469cabe805dbb0e82,
         type: 3}

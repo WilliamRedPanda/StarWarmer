@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 711911409330098372}
   - component: {fileID: 1969470727245114824}
   - component: {fileID: 2664737483029808824}
+  - component: {fileID: 2838704909345581200}
   m_Layer: 0
   m_Name: Barrier
   m_TagString: Untagged
@@ -107,6 +108,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd7e72290da7cf04d8686a8c934830f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2838704909345581200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 711911409330098395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b41c96d91059a94b945d087aa982d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onShoot:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Barriersfx
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideCharacter:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1 &711911410711789943
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,8 +185,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.4294355, y: 0.44133848, z: 0.85369706}
-  m_Center: {x: 0, y: 0, z: 0.42684853}
+  m_Size: {x: 0.4294355, y: 0.44133848, z: 1.1183642}
+  m_Center: {x: 0.17334121, y: 0.0071657347, z: 0.75712055}
 --- !u!114 &5033229049115882807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,6 +210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shield_Level_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 875135561767147930, guid: 9b92c7d38651f4640a224d0d7f278ead,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4253291897977204292, guid: 9b92c7d38651f4640a224d0d7f278ead,
         type: 3}
@@ -245,11 +285,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 875135561767147930, guid: 9b92c7d38651f4640a224d0d7f278ead,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b92c7d38651f4640a224d0d7f278ead, type: 3}
