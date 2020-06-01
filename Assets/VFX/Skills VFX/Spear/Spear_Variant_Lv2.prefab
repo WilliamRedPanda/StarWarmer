@@ -4930,10 +4930,20 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 1406472622125403356, guid: f04edaafe138d66439de9dae31621a58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 493290873302546724, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6905369566809564108, guid: f04edaafe138d66439de9dae31621a58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1098245295813903060, guid: f04edaafe138d66439de9dae31621a58,
         type: 3}
