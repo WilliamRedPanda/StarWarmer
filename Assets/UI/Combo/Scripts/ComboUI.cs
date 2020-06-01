@@ -29,6 +29,7 @@ public class ComboUI : MonoBehaviour
 
     void SubscribeEvent()
     {
+        combo.onLevelUp += SetCombo;
         if (expBarImage) combo.onAddExp += SetExpBar;
         if (cooldownBarImage) combo.onCooldownChange += SetCooldownBar;
         if (highlighted)
@@ -40,6 +41,7 @@ public class ComboUI : MonoBehaviour
 
     void UnsubscribeEvent()
     {
+        combo.onLevelUp -= SetCombo;
         if (expBarImage) combo.onAddExp -= SetExpBar;
         if (cooldownBarImage) combo.onCooldownChange -= SetCooldownBar;
         if (highlighted)

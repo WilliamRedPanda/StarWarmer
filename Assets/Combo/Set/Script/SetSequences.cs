@@ -22,6 +22,7 @@ public class SetSequences
     public System.Action<SetSequences> onWrongInput;
     public System.Action<SetSequences> onExecute;
     public System.Action onAddExp;
+    public System.Action<SetSequences> onLevelUp;
     public System.Action<float> onCooldownChange;
 
     public bool canExecute { get; private set; }
@@ -158,14 +159,20 @@ public class SetSequences
 
     public void AddExp(int _exp)
     {
-        exp += _exp;
-        if (exp < 0)
-            exp = 0;
-        if (data.combosData[level - 1].NecessaryExp >= exp)
+        int maxExp = data.combosData[data.combosData.Length - 1].NecessaryExp;
+        if (levelMaxed == false)
         {
-            LevelUp();
+            exp += _exp;
+            if (exp < 0)
+                exp = 0;
+            else if (exp > maxExp)
+                exp = maxExp;
+            if (data.combosData[level].NecessaryExp <= exp)
+            {
+                LevelUp();
+            }
+            onAddExp?.Invoke();
         }
-        onAddExp?.Invoke();
     }
 
     void LevelUp()
@@ -174,5 +181,6 @@ public class SetSequences
         if (level == data.combosData.Length)
             levelMaxed = true;
         SoundManager.instance.Play("SkillLvlUp");
+        onLevelUp?.Invoke(this);
     }
 }
