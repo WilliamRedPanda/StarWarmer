@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Cinemachine;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +22,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [Header("Audio")]
     [SerializeField] AudioClip dodgeClip;
     [SerializeField] AudioClip playerAtkClip;
+    [Space]
+    public CinemachineBrain mainCamera;
     [Space]
     [SerializeField] Animator dxf;
     [SerializeField] Animator dxb, sxf, sxb;

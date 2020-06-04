@@ -34,6 +34,8 @@ public class RoomSwitch : MonoBehaviour
 
     [HideInInspector] public List<GenericEnemy> enemies;
 
+    float stopTimer;
+
     private void Awake()
     {
         enemies = new List<GenericEnemy>();
@@ -64,8 +66,14 @@ public class RoomSwitch : MonoBehaviour
         PlayerData player = other.gameObject.GetComponentInParent<PlayerData>();
         if (player)
         {
+            PlayerControllerInput playerController = player.GetComponent<PlayerControllerInput>();
+            stopTimer = playerController.mainCamera.m_DefaultBlend.m_Time;
             //objectToActive.SetActive(true);
             SetEnemy(true);
+            for (int i = 0; i < enemies.Count; i++)
+            {
+                enemies[i].Stop(stopTimer);
+            }
             cameraShake.SetPlayer(player);
             CameraManager.ChangeCamera(this);
             if (finalRoom && enemies.Count == 0)
@@ -121,7 +129,7 @@ public class RoomSwitch : MonoBehaviour
         //    doorWest.SetActive(true);
     }
 
-    public void ChangeRoom(PlayerData player, DoorTrigger.DoorDirection door)
+    public void ChangeRoom(PlayerControllerInput player, DoorTrigger.DoorDirection door)
     {
         switch (door)
         {
@@ -149,9 +157,10 @@ public class RoomSwitch : MonoBehaviour
         SetEnemy(false);
     }
 
-    void MovePlayer(Vector3 direction, PlayerData player)
+    void MovePlayer(Vector3 direction, PlayerControllerInput player)
     {
         player.transform.position += direction * PLAYER_MOVEMENT_OFFSET;
+        player.playerData.Stop(stopTimer);
     }
 
     void SetEnemy(bool _active)

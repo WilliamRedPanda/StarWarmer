@@ -10,7 +10,7 @@ public class DoorTrigger : MonoBehaviour
     {
         if (room.roomFinished)
         {
-            PlayerData player = other.GetComponentInParent<PlayerData>();
+            PlayerControllerInput player = other.GetComponentInParent<PlayerControllerInput>();
             if (player)
             {
                 room.ChangeRoom(player, doorDirection);

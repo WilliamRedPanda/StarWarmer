@@ -92,7 +92,7 @@ Camera:
   field of view: 40
   orthographic: 1
   orthographic size: 5.85
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1019,6 +1019,7 @@ MonoBehaviour:
   comboFacility: {fileID: 3767889007977817839}
   dodgeClip: {fileID: 0}
   playerAtkClip: {fileID: 0}
+  mainCamera: {fileID: 8239057446657767409}
   dxf: {fileID: 1234924385947331621}
   dxb: {fileID: 6065060623101696810}
   sxf: {fileID: 1322458827372104186}
