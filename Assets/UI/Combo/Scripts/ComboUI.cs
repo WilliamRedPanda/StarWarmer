@@ -65,60 +65,63 @@ public class ComboUI : MonoBehaviour
             UnsubscribeEvent();
         currentInputIndex = 0;
         combo = _combo;
-        timer = combo.data.cooldown;
-        if (comboIconImage) comboIconImage.sprite = combo.data.icon;
-        deltaCooldown = 1f / (float)combo.data.cooldown;
-        if (combo.levelMaxed)
-            deltaExp = 1;
-        else
-            deltaExp = 1f / (float)combo.data.combosData[combo.level].NecessaryExp;
-        if (expBarImage)
-            SetExpBar();
-
-        if (comboListTransform)
+        if (combo != null)
         {
-            RemoveInputs();
+            timer = combo.data.cooldown;
+            if (comboIconImage) comboIconImage.sprite = combo.data.icon;
+            deltaCooldown = 1f / (float)combo.data.cooldown;
+            if (combo.levelMaxed)
+                deltaExp = 1;
+            else
+                deltaExp = 1f / (float)combo.data.combosData[combo.level].NecessaryExp;
+            if (expBarImage)
+                SetExpBar();
 
-            for (int i = 0; i < _combo.level; i++)
+            if (comboListTransform)
             {
-                if (highlighted)
-                    _combo.commands[i].onCorrectInput += Highlight;
-                foreach (var input in _combo.commands[i].data.inputDatas)
-                {
-                    ButtonSpriteControl inputImage = Instantiate(iconPrefab, comboListTransform);
-                    inputImage.Set(input);
-                    inputIcons.Add(inputImage);
-                    if (controllerManager.currentController == inputDevice.keyboard) inputImage.SetSprite(input.keySprite);
-                    else if (controllerManager.currentController == inputDevice.xBox) inputImage.SetSprite(input.XboxSprite);
-                    else if (controllerManager.currentController == inputDevice.playStation) inputImage.SetSprite(input.PSSprite);
-                }
+                RemoveInputs();
 
-                if (divisorImagePrefab)
+                for (int i = 0; i < _combo.level; i++)
                 {
-                    if (i < _combo.level - 1)
+                    if (highlighted)
+                        _combo.commands[i].onCorrectInput += Highlight;
+                    foreach (var input in _combo.commands[i].data.inputDatas)
                     {
-                        Image divisor = Instantiate(divisorImagePrefab, comboListTransform);
-                        divisorImages.Add(divisor);
+                        ButtonSpriteControl inputImage = Instantiate(iconPrefab, comboListTransform);
+                        inputImage.Set(input);
+                        inputIcons.Add(inputImage);
+                        if (controllerManager.currentController == inputDevice.keyboard) inputImage.SetSprite(input.keySprite);
+                        else if (controllerManager.currentController == inputDevice.xBox) inputImage.SetSprite(input.XboxSprite);
+                        else if (controllerManager.currentController == inputDevice.playStation) inputImage.SetSprite(input.PSSprite);
+                    }
+
+                    if (divisorImagePrefab)
+                    {
+                        if (i < _combo.level - 1)
+                        {
+                            Image divisor = Instantiate(divisorImagePrefab, comboListTransform);
+                            divisorImages.Add(divisor);
+                        }
                     }
                 }
             }
+
+            if (nameText)
+                nameText.text = combo.data.name;
+
+            if (descriptionText)
+                descriptionText.text = combo.data.description;
+
+            for (int i = 0; i < levelIcon.Length; i++)
+            {
+                if (combo.level > i)
+                    levelIcon[i].gameObject.SetActive(true);
+                else
+                    levelIcon[i].gameObject.SetActive(false);
+            }
+
+            SubscribeEvent();
         }
-
-        if (nameText)
-            nameText.text = combo.data.name;
-
-        if (descriptionText)
-            descriptionText.text = combo.data.description;
-
-        for (int i = 0; i < levelIcon.Length; i++)
-        {
-            if (combo.level > i)
-                levelIcon[i].gameObject.SetActive(true);
-            else
-                levelIcon[i].gameObject.SetActive(false);
-        }
-
-        SubscribeEvent();
     }
 
     void ChangeSprite(inputDevice inputDevice)

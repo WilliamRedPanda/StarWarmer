@@ -20,13 +20,37 @@ public class CommandSequence
     int currentInputIndex = 0;
     bool complated = false;
 
-    public CommandSequence(CommandSequenceData data, PlayerControllerInput playerController, IShooter controller, SetSequences set)
+    public CommandSequence(CommandSequenceData data, PlayerControllerInput playerController, SetSequences set)
     {
         this.data = data;
         this.playerController = playerController;
-        this.controller = controller;
+        this.controller = playerController;
         this.set = set;
 
+        SubscribeEvent();
+    }
+
+    public CommandSequence(CommandSequenceData data, SetSequences set)
+    {
+        this.data = data;
+        this.set = set;
+    }
+
+    public void Equip(PlayerControllerInput playerController)
+    {
+        if (this.playerController != null)
+        {
+            UnsubscribeEvent();
+        }
+
+        this.playerController = playerController;
+        this.controller = playerController;
+
+        SubscribeEvent();
+    }
+
+    void SubscribeEvent()
+    {
         //this.playerController.OnInputPressed += CheckPressedInput;
         this.controller.OnDestroy += UnsubscribeEvent;
     }

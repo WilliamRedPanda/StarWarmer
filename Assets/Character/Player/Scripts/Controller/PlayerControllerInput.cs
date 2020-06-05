@@ -142,7 +142,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         sequencesToRemove = new List<SetSequences>();
         foreach (var sequenceData in playerData.sequences)
         {
-            SetSequences sequence = new SetSequences(sequenceData, this, this);
+            SetSequences sequence = new SetSequences(sequenceData, this);
             sequence.onStartSequence += StartSequence;
             sequence.onCompletedSection += OnCorrectSequence;
             sequence.onExecute += Attack;

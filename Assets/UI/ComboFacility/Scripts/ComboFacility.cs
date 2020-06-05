@@ -122,6 +122,7 @@ public class ComboFacility : MonoBehaviour
     
     public void ChangeEquipSkill(int slotIndex, SetSequencesData set)
     {
+        set.Instance.Equip(playerInput.instance);
         equippedSkills[slotIndex] = set;
         slotComboManager.ChangeSlotView(slotIndex, set.Instance);
         ChangeEquipSkillConfirmed();

@@ -12,6 +12,10 @@ public class SelectableCombo : MonoBehaviour
 
     private void Start()
     {
+        if (dataCombo.Instance == null)
+        {
+            dataCombo.SetupInstance(new SetSequences(dataCombo));
+        }
         comboUI.SetCombo(dataCombo.Instance);
         button = GetComponent<Button>();
     }

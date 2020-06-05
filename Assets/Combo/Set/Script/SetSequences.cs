@@ -31,39 +31,94 @@ public class SetSequences
     int currentSectionIndex = 0;
     bool completed = false;
 
-    public SetSequences(SetSequencesData data, PlayerControllerInput playerController, IShooter controller)
+    public SetSequences(SetSequencesData data, PlayerControllerInput playerController)
     {
-        this.data = data;
-        this.playerController = playerController;
-        this.controller = controller;
-
-        exp = data.startingExp;
-        level = 0;
-        commands = new List<CommandSequence>();
-        foreach (CommandDataList sequences in data.combosData)
+        if (data.Instance == null)
         {
-            CommandSequence command = new CommandSequence(sequences.comboSection, this.playerController, this.controller, this);
-            command.onCompletedSequence += NextSection;
-            command.onWrongInput += RemoveSequence;
-            if (exp >= sequences.NecessaryExp)
+
+        }
+            this.data = data;
+            this.playerController = playerController;
+            this.controller = playerController;
+
+            exp = data.startingExp;
+            level = 0;
+            commands = new List<CommandSequence>();
+            foreach (CommandDataList sequences in data.combosData)
             {
-                level++;
-                if (level == data.combosData.Length)
-                    levelMaxed = true;
+                CommandSequence command = new CommandSequence(sequences.comboSection, this.playerController, this);
+                command.onCompletedSequence += NextSection;
+                command.onWrongInput += RemoveSequence;
+                if (exp >= sequences.NecessaryExp)
+                {
+                    level++;
+                    if (level == data.combosData.Length)
+                        levelMaxed = true;
+                }
+                commands.Add(command);
             }
-            commands.Add(command);
+
+            commands[0].onStartSequence += StartSection;
+
+            this.playerController.OnInputPressed += CheckPressedInput;
+            this.controller.OnDestroy += UnsubscribeEvent;
+
+            currentSection = commands[0];
+            canExecute = true;
+
+            cooldownCorutine = CooldownCorutine();
+            this.data.SetupInstance(this);
+    }
+
+    public SetSequences(SetSequencesData data)
+    {
+        if (data.Instance == null)
+        {
+            this.data = data;
+
+            exp = data.startingExp;
+            level = 0;
+            commands = new List<CommandSequence>();
+            foreach (CommandDataList sequences in data.combosData)
+            {
+                CommandSequence command = new CommandSequence(sequences.comboSection, this);
+                command.onCompletedSequence += NextSection;
+                command.onWrongInput += RemoveSequence;
+                if (exp >= sequences.NecessaryExp)
+                {
+                    level++;
+                    if (level == data.combosData.Length)
+                        levelMaxed = true;
+                }
+                commands.Add(command);
+            }
+
+            commands[0].onStartSequence += StartSection;
+
+            currentSection = commands[0];
+            canExecute = true;
+
+            cooldownCorutine = CooldownCorutine();
+            this.data.SetupInstance(this);
+        }
+    }
+
+    public void Equip(PlayerControllerInput _playerControllerInput)
+    {
+        if (playerController != null)
+        {
+            UnsubscribeEvent();
         }
 
-        commands[0].onStartSequence += StartSection;
+        playerController = _playerControllerInput;
+        controller = playerController;
 
-        this.playerController.OnInputPressed += CheckPressedInput;
-        this.controller.OnDestroy += UnsubscribeEvent;
+        foreach (CommandSequence comm in commands)
+        {
+            comm.Equip(playerController);
+        }
 
-        currentSection = commands[0];
-        canExecute = true;
-
-        cooldownCorutine = CooldownCorutine();
-        this.data.SetupInstance(this);
+        SubscribePlayerEvent();
     }
 
     void CheckPressedInput(InputData input)
@@ -76,6 +131,12 @@ public class SetSequences
     {
         ResetSequence();
         playerController.sequencesToRemove.Add(this);
+    }
+
+    void SubscribePlayerEvent()
+    {
+        playerController.OnInputPressed += CheckPressedInput;
+        controller.OnDestroy += UnsubscribeEvent;
     }
 
     void UnsubscribeEvent()
