@@ -20,7 +20,7 @@ public class UIappear_timer : MonoBehaviour
     }
     IEnumerator WaitForSec()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(15);
       Destroy(uiObject);
       Destroy(gameObject);
     }
