@@ -334,6 +334,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6358016235570111660, guid: 53b69f5dfa4cd17479baef53843bae63,
+        type: 3}
+      propertyPath: OnStartAttack.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: BossProjectile
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53b69f5dfa4cd17479baef53843bae63, type: 3}
 --- !u!4 &8568406949538474100 stripped
@@ -1038,11 +1043,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1175736852437095545, guid: 0d070ffc65daa714aa0c4f456978691f,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2177746736741348410, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}
       propertyPath: m_Enabled
@@ -1062,6 +1062,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1175736852437095545, guid: 0d070ffc65daa714aa0c4f456978691f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 851542442073107580, guid: 0d070ffc65daa714aa0c4f456978691f,
         type: 3}

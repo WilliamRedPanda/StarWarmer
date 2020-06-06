@@ -133,7 +133,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: ShooterProjectileImpact
-    clip: {fileID: 8300000, guid: 91fa28c19b7d3aa438aa3f93cbe72d44, type: 3}
+    clip: {fileID: 8300000, guid: 7aa6ec8cb2d0faa4d8b433fa4fd4fb3b, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
@@ -173,7 +173,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: EnemyDeath
-    clip: {fileID: 8300000, guid: 7aa6ec8cb2d0faa4d8b433fa4fd4fb3b, type: 3}
+    clip: {fileID: 8300000, guid: 91fa28c19b7d3aa438aa3f93cbe72d44, type: 3}
     volume: 0.8
     volumeVariance: 0
     pitch: 1
@@ -196,9 +196,49 @@ MonoBehaviour:
     pitchVariance: 0
     loop: 0
     source: {fileID: 0}
-  - name: EnemyHitted
-    clip: {fileID: 8300000, guid: e6ec795bec55ef44ca452dd418bb7f27, type: 3}
+  - name: HubBGM
+    clip: {fileID: 8300000, guid: e58bde29318bc114f98cd5f7ed30d61a, type: 3}
     volume: 0.8
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: f1f50232057b52c42ae2f84cecfa356b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: MenuBack
+    clip: {fileID: 8300000, guid: ad3a91a77d44d1945ae86d26061b0991, type: 3}
+    volume: 0.8
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: BossProjectile
+    clip: {fileID: 8300000, guid: 12ea398cd182270429b15ea51a6af952, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1.5
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: FacilityBGM
+    clip: {fileID: 8300000, guid: c33b54168e814e44d9de4ac6cf783ab2, type: 3}
+    volume: 0.8
+    volumeVariance: 0
+    pitch: 1.5
+    pitchVariance: 0
+    loop: 1
+    source: {fileID: 0}
+  - name: WallHitted
+    clip: {fileID: 8300000, guid: 95d44d22101db4a4e92989249d802453, type: 3}
+    volume: 0.5
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
