@@ -1212,7 +1212,7 @@ MonoBehaviour:
   player: {fileID: 8412846717692124059}
   keyButton: 50
   altKeyButton: 84
-  expToAdd: 1
+  expToAdd: 40
   allSkill: 1
   slot: 1
 --- !u!95 &1322458827372104186
