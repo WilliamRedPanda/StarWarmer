@@ -272,13 +272,18 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
     void StartDodge()
     {
+        if (dodgeCorutine != null)
+            StopCoroutine(dodgeCorutine);
         dodgeCorutine = Dodge();
         StartCoroutine(dodgeCorutine);
     }
 
+    bool collideDodge = false;
     float dodgeTimer = 0;
     IEnumerator Dodge()
     {
+        ResetVelocity();
+        collideDodge = false;
         canDash = false;
         canMove = false;
         playerData.myRigidbody.useGravity = false;
@@ -287,26 +292,36 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         playerData.TempInvulnerability(playerData.dodgeDuration);
         Vector3 dodgeVelocity;
         if (usingJoypad)
-            dodgeVelocity = stickAxis.normalized * playerData.dodgeSpeed * Time.deltaTime;
+            dodgeVelocity = stickAxis.normalized * playerData.dodgeSpeed * Time.fixedDeltaTime;
         else
-            dodgeVelocity = keyAxis.normalized * playerData.dodgeSpeed * Time.deltaTime;
+            dodgeVelocity = keyAxis.normalized * playerData.dodgeSpeed * Time.fixedDeltaTime;
 
         SoundManager.instance.Play(dodgeClip);
 
         RaycastHit hit;
         while (dodgeTimer < playerData.dodgeDuration)
         {
-            dodgeTimer += Time.deltaTime;
-            if (Physics.Raycast(transform.position, dodgeVelocity.normalized, out hit, 0.8f))
+            dodgeTimer += Time.fixedDeltaTime;
+            if (collideDodge == false)
             {
-                if (hit.transform.gameObject.tag == "Wall")
+                if (Physics.Raycast(transform.position, dodgeVelocity, out hit, dodgeVelocity.magnitude))
                 {
-                    yield return null;
-                    continue;
+                    if (hit.transform.gameObject.tag == "Wall")
+                    {
+                        //transform.Translate((hit.point - transform.position) * 0.1f);
+                        SetTrigger(true);
+                        ResetVelocity();
+                        collideDodge = true;
+                        yield return new WaitForFixedUpdate();
+                        break;
+                    }
+                    else
+                        transform.Translate(dodgeVelocity, Space.World);
                 }
+                else
+                    transform.Translate(dodgeVelocity, Space.World);
             }
-            transform.Translate(dodgeVelocity, Space.World);
-            yield return null;
+            yield return new WaitForFixedUpdate();
         }
         dodgeTimer = 0;
 
@@ -316,6 +331,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
         yield return new WaitForSeconds(playerData.dodgeCooldown - playerData.dodgeDuration);
         canDash = true;
+        collideDodge = false;
         yield return null;
     }
 

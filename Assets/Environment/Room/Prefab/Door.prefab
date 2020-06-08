@@ -72,7 +72,7 @@ GameObject:
   - component: {fileID: 8289170637892810123}
   m_Layer: 0
   m_Name: doors
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,6 +121,17 @@ PrefabInstance:
     - target: {fileID: 8578966874044897801, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 69727d6cc556d854ea707e29b4fae541,
+        type: 3}
+    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540471565303158061, guid: 8b95c872155647c4883d48585deed612,
@@ -178,17 +189,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 69727d6cc556d854ea707e29b4fae541,
-        type: 3}
-    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b95c872155647c4883d48585deed612, type: 3}
 --- !u!4 &2365760156859111398 stripped
@@ -212,6 +212,17 @@ PrefabInstance:
     - target: {fileID: 8578966874044897801, guid: 8b95c872155647c4883d48585deed612,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f8f326b8205974d499e7612b62e57071,
+        type: 3}
+    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2540471565303158061, guid: 8b95c872155647c4883d48585deed612,
@@ -268,17 +279,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: f8f326b8205974d499e7612b62e57071,
-        type: 3}
-    - target: {fileID: 4038092237390475300, guid: 8b95c872155647c4883d48585deed612,
-        type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b95c872155647c4883d48585deed612, type: 3}
