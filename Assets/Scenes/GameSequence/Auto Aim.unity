@@ -145,7 +145,7 @@ PrefabInstance:
     - target: {fileID: 2037013728809309008, guid: ba0a0aaddffca8f40b7da324320e4015,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 33
+      value: 33.42
       objectReference: {fileID: 0}
     - target: {fileID: 2037013728809309008, guid: ba0a0aaddffca8f40b7da324320e4015,
         type: 3}
@@ -420,7 +420,7 @@ PrefabInstance:
     - target: {fileID: 6750082135097487327, guid: c1db41a55cc1e154ab39b54d8335a077,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 22
+      value: 22.419998
       objectReference: {fileID: 0}
     - target: {fileID: 6750082135097487327, guid: c1db41a55cc1e154ab39b54d8335a077,
         type: 3}
@@ -494,32 +494,6 @@ MonoBehaviour:
   m_Script: {fileID: 1360306167}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MoveRepeatDelay: 0.5
-  m_MoveRepeatRate: 0.1
-  m_ActionsAsset: {fileID: -944628639613478452, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_PointAction: {fileID: 4615970947851679123, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_MoveAction: {fileID: 6687388918355982465, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_SubmitAction: {fileID: 6767530808626544039, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_CancelAction: {fileID: -425597708685966536, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_LeftClickAction: {fileID: -6608364814840929996, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_MiddleClickAction: {fileID: -6156230802246328676, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_RightClickAction: {fileID: -1884475483500431909, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_ScrollWheelAction: {fileID: -3453794730302557172, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_TrackedDevicePositionAction: {fileID: 7961626475961111657, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_TrackedDeviceOrientationAction: {fileID: -776785299607027154, guid: f3df94f57b3fedf46aef69f90b96165d,
-    type: 3}
-  m_DeselectOnBackgroundClick: 1
-  m_PointerBehavior: 0
 --- !u!114 &762919966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -722,7 +696,7 @@ PrefabInstance:
     - target: {fileID: 6609530507975400837, guid: 8a58fe16c71c2b143b1520833dfa5528,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 55
+      value: 55.42
       objectReference: {fileID: 0}
     - target: {fileID: 6609530507975400837, guid: 8a58fe16c71c2b143b1520833dfa5528,
         type: 3}
@@ -1264,7 +1238,7 @@ PrefabInstance:
     - target: {fileID: 1686067031164470420, guid: 5402c2f38e904224c8649ea2461891f0,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 44
+      value: 44.42
       objectReference: {fileID: 0}
     - target: {fileID: 1686067031164470420, guid: 5402c2f38e904224c8649ea2461891f0,
         type: 3}
@@ -1424,7 +1398,7 @@ PrefabInstance:
     - target: {fileID: 8757204454646767115, guid: b63dd0224a3276e48ae1a517d7f9091d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 88.39
+      value: 88.74
       objectReference: {fileID: 0}
     - target: {fileID: 8757204454646767115, guid: b63dd0224a3276e48ae1a517d7f9091d,
         type: 3}
@@ -1493,7 +1467,7 @@ PrefabInstance:
     - target: {fileID: 1706948702492999584, guid: 504fd6845e541094892844fdb6d0d6a9,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 77.39
+      value: 77.74
       objectReference: {fileID: 0}
     - target: {fileID: 1706948702492999584, guid: 504fd6845e541094892844fdb6d0d6a9,
         type: 3}
@@ -1562,7 +1536,7 @@ PrefabInstance:
     - target: {fileID: 371666019554290680, guid: d259eda512c005e438d592be740031eb,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 66.39
+      value: 66.74
       objectReference: {fileID: 0}
     - target: {fileID: 371666019554290680, guid: d259eda512c005e438d592be740031eb,
         type: 3}
@@ -2031,6 +2005,17 @@ PrefabInstance:
       propertyPath: autoAim
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 453915585178577469, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: onDeathUE.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: PlayerDeath
+      objectReference: {fileID: 0}
+    - target: {fileID: 453915585178577469, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: sequences.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: fa1ce74351bb7a54fad8960ca5074957,
+        type: 2}
     - target: {fileID: 2149477157041706456, guid: 1126c1704778fb342a7b63660afe6b44,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -2322,6 +2307,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5ed462d61e036a24298fda5979eca990,
         type: 2}
+    - target: {fileID: 3375946409296657827, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 230764516152319060, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1126c1704778fb342a7b63660afe6b44, type: 3}
 --- !u!1001 &2077657627
@@ -2423,7 +2418,7 @@ PrefabInstance:
     - target: {fileID: 6742164919409803998, guid: b237464f1c3163745b18da6e7b020048,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 10.76
+      value: 11.179998
       objectReference: {fileID: 0}
     - target: {fileID: 6742164919409803998, guid: b237464f1c3163745b18da6e7b020048,
         type: 3}
@@ -2492,7 +2487,7 @@ PrefabInstance:
     - target: {fileID: 8774662965205803221, guid: 92a23b60c54338c4fa78fc08483f2493,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 99.39
+      value: 99.74
       objectReference: {fileID: 0}
     - target: {fileID: 8774662965205803221, guid: 92a23b60c54338c4fa78fc08483f2493,
         type: 3}
