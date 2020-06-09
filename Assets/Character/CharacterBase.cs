@@ -57,11 +57,14 @@ public abstract class CharacterBase : MonoBehaviour, IDamageable
             currentHealth -= _damage;
             onDamageUE?.Invoke();
             OnTakeDamage?.Invoke(_damage, _command, _shooter);
-            
-            if (damageFeedbackCorutine != null)
-                StopCoroutine(damageFeedbackCorutine);
-            damageFeedbackCorutine = DamageFeedbackCorutine();
-            StartCoroutine(damageFeedbackCorutine);
+
+            if (_damage > 0)
+            {
+                if (damageFeedbackCorutine != null)
+                    StopCoroutine(damageFeedbackCorutine);
+                damageFeedbackCorutine = DamageFeedbackCorutine();
+                StartCoroutine(damageFeedbackCorutine);
+            }
 
             if (currentHealth <= 0)
             {
