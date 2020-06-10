@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(PlayerData))]
 public class SlowMotionController : MonoBehaviour
 {
     [SerializeField] bool EnableOnCoolDown;
+    [SerializeField] UnityEvent onSlowMotion;
+    [SerializeField] UnityEvent onEndSlowMotion;
 
     PlayerData playerData;
 
@@ -97,6 +100,7 @@ public class SlowMotionController : MonoBehaviour
         {
             if (canSlow == true)
             {
+                onSlowMotion?.Invoke();
                 fakedHold = true;
                 Time.timeScale = playerData.slowMoPercent;
                 timeSlowed = true;

@@ -8,6 +8,8 @@ public class Hp_Depleter : MonoBehaviour
     public Image hp_current; //hp mostrati
     public Image hp_damaged; //barra rossa per mostrare il danno causato/subito nel tempo
 
+    [SerializeField] AudioClip lowHpAudioClip;
+
     public GameObject eyes;
     public GameObject eyes_low_hp;
     public GameObject eyes_50;
@@ -53,6 +55,7 @@ public class Hp_Depleter : MonoBehaviour
             activeEyes = eyes_low_hp;
             disableEyes();
             setActiveEyes();
+            SoundManager.instance.Play(lowHpAudioClip);
         }
         // PER ORA NON NE ABBIAMO BISOGNO, SE IL GIOCATORE RECUPERA VITA VA IMPLEMENTATO
         //else if(hp_current.fillAmount > 0.25f)

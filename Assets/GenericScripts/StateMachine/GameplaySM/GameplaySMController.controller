@@ -626,7 +626,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FacilityAccessClip: {fileID: 8300000, guid: 995836716b89f0a46a6290749e221d72, type: 3}
-  FacilityBGMClip: {fileID: 0}
+  FacilityBGMClip: {fileID: 8300000, guid: c33b54168e814e44d9de4ac6cf783ab2, type: 3}
 --- !u!1102 &5674819334445171616
 AnimatorState:
   serializedVersion: 5

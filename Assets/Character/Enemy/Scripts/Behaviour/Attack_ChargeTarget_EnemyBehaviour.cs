@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
 {
@@ -8,6 +9,9 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
     [SerializeField] float rangeAttack;
     [SerializeField] int damage;
     [SerializeField] float knockbackForce = 5f;
+    [SerializeField] UnityEvent onHitPlayer;
+    [SerializeField] UnityEvent onHitWall;
+    [SerializeField] UnityEvent onNoHit;
 
     Vector3 endPosition;
     Vector3 direction;
@@ -34,7 +38,10 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
             if (enemy)
             {
                 if (tempEnemy == enemy)
+                {
+                    onNoHit?.Invoke();
                     enemy.ChangeStateLogicSM("Rest");
+                }
             }
         }
 
@@ -43,6 +50,7 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
             PlayerData playerData = attackColliders[i].GetComponentInParent<PlayerData>();
             if (playerData)
             {
+                onHitPlayer?.Invoke();
                 playerData.TakeDamage(damage, null, enemy);
                 playerData.KnockBack(knockbackForce, enemy.transform.position, 0);
                 enemy.ChangeStateLogicSM("Rest");
@@ -57,6 +65,7 @@ public class Attack_ChargeTarget_EnemyBehaviour : BaseEnemyBehaviour
         base.OnCollide(_collision);
         if (_collision.gameObject.tag == "Wall")
         {
+            onHitWall?.Invoke();
             enemy.ChangeStateLogicSM("Rest");
         }
     }

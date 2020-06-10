@@ -22,6 +22,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [Header("Audio")]
     [SerializeField] AudioClip dodgeClip;
     [SerializeField] AudioClip playerAtkClip;
+    [SerializeField] AudioClip collideWallClip;
     [Space]
     public CinemachineBrain mainCamera;
     [Space]
@@ -131,6 +132,14 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         {
             playerData.myRigidbody.MovePosition(transform.position + transformVelocity);
             //transform.Translate(transformVelocity, Space.World);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Wall")
+        {
+            SoundManager.instance.Play(collideWallClip);
         }
     }
 
@@ -309,6 +318,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                     if (hit.transform.gameObject.tag == "Wall")
                     {
                         //transform.Translate((hit.point - transform.position) * 0.1f);
+                        SoundManager.instance.Play(collideWallClip);
                         SetTrigger(true);
                         ResetVelocity();
                         collideDodge = true;

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.Events;
 
 public class ComboFacility : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class ComboFacility : MonoBehaviour
     [SerializeField] Button defaultComboSlot;
     [SerializeField] SlotComboManager slotComboManager;
     [SerializeField] SelectableComboManager selectableComboManager;
+
+    [SerializeField] UnityEvent onOpen;
+    [SerializeField] UnityEvent onClose;
 
     [HideInInspector] public int currentSlot;
 

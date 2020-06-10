@@ -23,6 +23,8 @@ public class RoomSwitch : MonoBehaviour
     [SerializeField] bool finalRoom;
     [Space]
     [SerializeField] UnityEvent OncompletedRoomUE;
+    [SerializeField] UnityEvent OnEnterRoom;
+    [SerializeField] UnityEvent OnExitRoom;
     [Space]
     [SerializeField] GameObject doorNorth;
     [SerializeField] GameObject doorSouth;
