@@ -10,12 +10,16 @@ public class Gameplay_Lose_State : Gameplay_Base_State
 {
     [SerializeField] GameObject loseUIPrefab;
 
+    PlayerControllerInput playerController;
+
     GameObject loseUI;
     public override void Enter()
     {
         base.Enter();
         context.playerController.ResetVelocity();
+        playerController = FindObjectOfType<PlayerControllerInput>();
         loseUI = Instantiate(loseUIPrefab);
+        loseUI.GetComponent<Canvas>().worldCamera = playerController.mainCamera.OutputCamera;
     }
 
     public override void Tick()
