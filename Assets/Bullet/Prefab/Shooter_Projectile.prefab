@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -1655113387078351121}
   - component: {fileID: -4527314336442884593}
   - component: {fileID: 7862777935051265729}
+  - component: {fileID: 4252602881926298609}
   m_Layer: 0
   m_Name: Shooter_Projectile
   m_TagString: Untagged
@@ -67,6 +68,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 555
   vfx: {fileID: 0}
+  useVFXDuration: 0
   _duration: 4
   damage: 10
   friendlyFire: 0
@@ -169,6 +171,62 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vfxPrefab: {fileID: 5736187293864626772, guid: da5ed9bc38b2084418a7f7c24a657c35,
     type: 3}
+--- !u!114 &4252602881926298609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6636763792544498978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b41c96d91059a94b945d087aa982d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onShoot:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideCharacter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShooterProjectileImpact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideWall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3340736172849335650, guid: 76866cf5be5cd664ab6b305dd952a28d,
+          type: 3}
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: ShooterProjectileImpact
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDisable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!1001 &8185128259866228272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -236,16 +294,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -90
       objectReference: {fileID: 0}
-    - target: {fileID: 761672875941248226, guid: dcd1571decdaff7409ef1635c600b434,
-        type: 3}
-      propertyPath: EmissionModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 761672875941248227, guid: dcd1571decdaff7409ef1635c600b434,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2549241386534743708, guid: dcd1571decdaff7409ef1635c600b434,
         type: 3}
       propertyPath: m_LocalScale.y
@@ -259,6 +307,16 @@ PrefabInstance:
     - target: {fileID: 2773409615146108211, guid: dcd1571decdaff7409ef1635c600b434,
         type: 3}
       propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761672875941248226, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: EmissionModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 761672875941248227, guid: dcd1571decdaff7409ef1635c600b434,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

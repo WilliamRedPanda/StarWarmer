@@ -166,7 +166,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyHitted
     clip: {fileID: 8300000, guid: e6ec795bec55ef44ca452dd418bb7f27, type: 3}
-    volume: 0.8
+    volume: 0.6
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: EnemyDeath
     clip: {fileID: 8300000, guid: 91fa28c19b7d3aa438aa3f93cbe72d44, type: 3}
-    volume: 0.8
+    volume: 0.6
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
@@ -197,7 +197,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: HubBGM
-    clip: {fileID: 8300000, guid: e58bde29318bc114f98cd5f7ed30d61a, type: 3}
+    clip: {fileID: 8300000, guid: 17539cd5198eda64fa44514c485dd949, type: 3}
     volume: 0.8
     volumeVariance: 0
     pitch: 1
@@ -229,16 +229,40 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: FacilityBGM
-    clip: {fileID: 8300000, guid: c33b54168e814e44d9de4ac6cf783ab2, type: 3}
-    volume: 0.8
+    clip: {fileID: 8300000, guid: 7388c58fb5e21244fa3ada5b1042c220, type: 3}
+    volume: 1
     volumeVariance: 0
-    pitch: 1.5
+    pitch: 1
     pitchVariance: 0
     loop: 1
     source: {fileID: 0}
   - name: WallHitted
     clip: {fileID: 8300000, guid: 95d44d22101db4a4e92989249d802453, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 2
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: ChargerCooling
+    clip: {fileID: 8300000, guid: a21bfdfa0a0270f479e8250837093e59, type: 3}
     volume: 0.5
+    volumeVariance: 0
+    pitch: 1.5
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SlowMotion
+    clip: {fileID: 8300000, guid: 0b640141669b3b148bac55f33144f2ad, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 0.5
+    pitchVariance: 0
+    loop: 0
+    source: {fileID: 0}
+  - name: SparklyWalls
+    clip: {fileID: 8300000, guid: a7ea6b6c40bab2c4597b5aafbd2416fc, type: 3}
+    volume: 1
     volumeVariance: 0
     pitch: 1
     pitchVariance: 0
