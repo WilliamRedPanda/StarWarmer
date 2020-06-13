@@ -66,6 +66,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 50349
   vfx: {fileID: 8877704500566876275}
+  useVFXDuration: 0
   _duration: 2
   damage: 75
   friendlyFire: 0
@@ -110,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f1a7b45f4846e4383ef58353550614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 5466793212985150807, guid: 2ed092130a858894ebabeea9d730ee46,
+  vfxPrefab: {fileID: 1027691226723063029, guid: 0222546729cf6674b946b9f104a25fd4,
     type: 3}
 --- !u!114 &711134022508132280
 MonoBehaviour:
@@ -5058,6 +5059,36 @@ PrefabInstance:
     - target: {fileID: 2853087199515133815, guid: 57af37016944bc844b076c31c29a5fb9,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6925204995289942639, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531066566902365778, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644416048757801771, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_Name
+      value: Rotating Spears
+      objectReference: {fileID: 0}
+    - target: {fileID: 7644416048757801771, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8029955299609137474, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5364311207762499823, guid: 57af37016944bc844b076c31c29a5fb9,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
