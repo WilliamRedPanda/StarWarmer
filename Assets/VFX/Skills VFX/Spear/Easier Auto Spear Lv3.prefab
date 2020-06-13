@@ -87,7 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94f1a7b45f4846e4383ef58353550614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vfxPrefab: {fileID: 5466793212985150807, guid: 2ed092130a858894ebabeea9d730ee46,
+  vfxPrefab: {fileID: 1027691226723063029, guid: 0222546729cf6674b946b9f104a25fd4,
     type: 3}
 --- !u!114 &711134022508132280
 MonoBehaviour:
@@ -201,6 +201,16 @@ MonoBehaviour:
           m_StringArgument: Spearsfx
           m_BoolArgument: 0
         m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onCollideWall:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onDisable:
+    m_PersistentCalls:
+      m_Calls: []
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &974484692973489159

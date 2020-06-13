@@ -25,6 +25,6 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
-    - _TextureSpeed: 0
+    - _TextureSpeed: -1
     m_Colors:
-    - _TextureColo: {r: 1, g: 1, b: 1, a: 1}
+    - _TextureColo: {r: 0, g: 1, b: 1, a: 1}
