@@ -11,26 +11,50 @@ public class ComboSlot : MonoBehaviour
     [SerializeField] ComboUI comboUI;
     [SerializeField] ComboFacility comboFacility;
     [SerializeField] bool instanced = false;
+    public Image imageHighlight;
 
-    private void Start()
+    Button button;
+
+    private void OnEnable()
     {
+        button = GetComponent<Button>();
+
         comboFacility = FindObjectOfType<ComboFacility>();
         if (instanced)
             comboUI.SetCombo(player.instance.playerData.sequences[slotIndex].Instance);
         if (slotIndex == 0)
-            GetComponent<Button>().Select();
+            button.Select();
     }
 
-    IEnumerator PostStart()
+    //private void Start()
+    //{
+    //    comboFacility = FindObjectOfType<ComboFacility>();
+    //    if (instanced)
+    //        comboUI.SetCombo(player.instance.playerData.sequences[slotIndex].Instance);
+    //    if (slotIndex == 0)
+    //        GetComponent<Button>().Select();
+    //}
+
+    void Start()
     {
-        yield return new WaitForSeconds(0.5f);
+        //yield return new WaitForSeconds(0.22f);
         if (slotIndex == 0)
-            GetComponent<Button>().Select();
+        {
+            button.Select();
+            imageHighlight.enabled = true;
+            button.Select();
+        }
     }
 
     public void ChangeSkill(SetSequences set)
     {
         comboUI.SetCombo(set);
+    }
+
+    public void Highlight()
+    {
+        imageHighlight.enabled = true;
+        button.Select();
     }
 
     public void SelectSlot()

@@ -1860,11 +1860,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7227611624087834828, guid: 6ad14bb6eddc1244cb7bbd3ab9b2c2c6,
         type: 3}
-      propertyPath: m_RenderMode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7227611624087834828, guid: 6ad14bb6eddc1244cb7bbd3ab9b2c2c6,
-        type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 7378913921760777461}

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class SlotComboManager : MonoBehaviour
@@ -9,6 +10,72 @@ public class SlotComboManager : MonoBehaviour
     [SerializeField] ComboFacility comboFacility;
     [SerializeField] Button[] SlotButtons;
     [SerializeField] ComboSlot[] slots;
+    [SerializeField] Sprite spriteHighlight;
+
+    int index;
+
+    private void Start()
+    {
+        foreach (var slot in slots)
+        {
+            slot.imageHighlight.sprite = spriteHighlight;
+            //slot.imageHighlight.enabled = false;
+        }
+    }
+
+    private void Update()
+    {
+        if (Gamepad.current != null)
+        {
+            if (Gamepad.current.dpad.down.wasPressedThisFrame || Gamepad.current.leftStick.down.wasPressedThisFrame)
+            {
+                Next();
+            }
+            else if (Gamepad.current.dpad.up.wasPressedThisFrame || Gamepad.current.leftStick.up.wasPressedThisFrame)
+            {
+                Prev();
+            }
+        }
+
+        if (Keyboard.current != null)
+        {
+            if (Keyboard.current.downArrowKey.wasPressedThisFrame)
+            {
+                Next();
+            }
+            else if (Keyboard.current.upArrowKey.wasPressedThisFrame)
+            {
+                Prev();
+            }
+        }
+    }
+
+    void Next()
+    {
+        //slots[index].imageHighlight.enabled = false;
+        index++;
+        if (index > 2)
+        {
+            index = 0;
+        }
+        Highlight(index);
+    }
+
+    void Prev()
+    {
+        //slots[index].imageHighlight.enabled = false;
+        index--;
+        if (index < 0)
+        {
+            index = 2;
+        }
+        Highlight(index);
+    }
+
+    void Highlight(int i)
+    {
+        slots[i].Highlight();
+    }
 
     public void Select(int slotIndex)
     {
