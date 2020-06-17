@@ -1067,6 +1067,7 @@ MonoBehaviour:
   slowMoPercent: 0.5
   timeForSlowMo: 5
   bullet: {fileID: 8873545885507065425, guid: a275a5b783f562f4f9016b278f6d0596, type: 3}
+  cooldown: 0
   timeForSequence: 0.4
   sequences:
   - {fileID: 11400000, guid: 23170a661e8124c4897d2e42b6595f51, type: 2}
@@ -1155,6 +1156,7 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+  postProcessVolume: {fileID: 2725783965337479532}
 --- !u!95 &6532683086712044569
 Animator:
   serializedVersion: 3

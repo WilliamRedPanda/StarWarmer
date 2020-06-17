@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Rendering.PostProcessing;
 
 [RequireComponent(typeof(PlayerData))]
 public class SlowMotionController : MonoBehaviour
@@ -10,6 +11,7 @@ public class SlowMotionController : MonoBehaviour
     [SerializeField] bool EnableOnCoolDown;
     [SerializeField] UnityEvent onSlowMotion;
     [SerializeField] UnityEvent onEndSlowMotion;
+    [SerializeField] PostProcessVolume postProcessVolume;
 
     PlayerData playerData;
 
@@ -140,10 +142,16 @@ public class SlowMotionController : MonoBehaviour
         buttonCorutine = HoldButtonCorutine();
     }
 
+    ColorGrading colorGrading;
     #region Corutine
     IEnumerator SlowMo()
     {
         playerData.OnSlowMoStarted?.Invoke();
+        if (postProcessVolume.profile.TryGetSettings(out colorGrading))
+        {
+            colorGrading.saturation.value = -61f;
+        }
+
         while (playerData.slowMoRemainTime > 0)
         {
             if (timeSlowed == true)
@@ -165,6 +173,10 @@ public class SlowMotionController : MonoBehaviour
     {
         Time.timeScale = 1;
         timeSlowed = false;
+        if (postProcessVolume.profile.TryGetSettings(out colorGrading))
+        {
+            colorGrading.saturation.value = 0f;
+        }
         while (playerData.slowMoRemainTime < playerData.timeForSlowMo * playerData.slowMoPercent)
         {
             if (timeSlowed == false)
