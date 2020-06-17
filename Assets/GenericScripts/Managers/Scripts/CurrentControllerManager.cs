@@ -27,8 +27,6 @@ public class CurrentControllerManager : ScriptableObject
         gamepad = Gamepad.current;
         keyboard = Keyboard.current;
 
-
-
         if (currentController != inputDevice.keyboard)
         {
             if (keyboard != null)

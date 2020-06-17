@@ -376,12 +376,14 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
             keyAxis = new Vector3(h, 0, v);
         }
 
-        if (usingJoypad)
-            direction = stickAxis.normalized * playerData.speed;
-        else
+        if (controllerManager.currentController == inputDevice.keyboard)
             direction = keyAxis.normalized * playerData.speed;
+        else
+            direction = stickAxis.normalized * playerData.speed;
 
         transformVelocity += (direction - transformVelocity * playerData.friction) * Time.fixedDeltaTime;
+        if (transformVelocity.magnitude < 0.01f && playerData.knockbackState == false)
+            rb.velocity = Vector3.zero;
 
         //if (canMove)
         //{
