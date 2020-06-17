@@ -26,6 +26,7 @@ public class PlayerData : CharacterBase
     public float timeForSlowMo;
     [Header("StandardSkill")]
     public BulletBase bullet;
+    public float cooldown;
     [Header("Sequence")]
     public float timeForSequence;
     public SetSequencesData[] sequences;

@@ -4776,7 +4776,7 @@ GameObject:
   - component: {fileID: 4040864435789948219}
   - component: {fileID: 8873545885507065425}
   m_Layer: 0
-  m_Name: Panic Knockback
+  m_Name: Repulse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4854,6 +4854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 9999
   vfx: {fileID: 1187600377088566365}
+  useVFXDuration: 0
   _duration: 0.5
   damage: 0
   friendlyFire: 0

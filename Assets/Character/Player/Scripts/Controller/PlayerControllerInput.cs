@@ -555,6 +555,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     }
 
     bool shooted;
+    bool onCooldown;
+
     void HandleFire()
     {
         if (playerData.bullet != null)
@@ -563,7 +565,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
             {
                 if (Gamepad.current != null)
                 {
-                    if (Gamepad.current.rightTrigger.wasPressedThisFrame && shooted == false)
+                    if (Gamepad.current.rightTrigger.wasPressedThisFrame && shooted == false && onCooldown == false)
                     {
                         shooted = true;
                         BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
@@ -577,7 +579,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
                 if (Mouse.current != null)
                 {
-                    if (Mouse.current.leftButton.wasPressedThisFrame)
+                    if (Mouse.current.leftButton.wasPressedThisFrame && onCooldown == false)
                     {
                         BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
                         Attack();
@@ -585,10 +587,19 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 }
             }
         }
-    } 
+    }
+
+    IEnumerator Cooldown()
+    {
+        onCooldown = true;
+        float _cool = playerData.cooldown;
+        yield return new WaitForSeconds(_cool);
+        onCooldown = false;
+    }
 
     void Attack(SetSequences set = null)
     {
+        StartCoroutine(Cooldown());
         SoundManager.instance.Play(playerAtkClip);
         SetAnim("Attack");
     }
