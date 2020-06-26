@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class PlayerControllerInput : MonoBehaviour , IShooter
@@ -18,6 +19,9 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [Space]
     [SerializeField] public Pause pause;
     [SerializeField] public ComboFacility comboFacility;
+    [Space]
+    [SerializeField] UnityEvent OnShootSkill;
+    [SerializeField] UnityEvent OnShootRepulse;
     [Space]
     [Header("Audio")]
     [SerializeField] AudioClip dodgeClip;
@@ -571,6 +575,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                     {
                         shooted = true;
                         BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                        OnShootRepulse?.Invoke();
                         Attack();
                     }
                     else if (Gamepad.current.rightTrigger.wasReleasedThisFrame && shooted == true)
@@ -584,6 +589,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                     if (Mouse.current.leftButton.wasPressedThisFrame && onCooldown == false)
                     {
                         BulletPoolManager.instance.Shoot(playerData.bullet, _shootPosition.position, aimDirection, this, null);
+                        OnShootRepulse?.Invoke();
                         Attack();
                     }
                 }
@@ -727,6 +733,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
             {
                 if (executedSequence.canExecute)
                 {
+                    OnShootSkill?.Invoke();
                     executedSequence.Execute();
                     StopCoroutine(executedSequence.cooldownCorutine);
                     executedSequence.RestartCooldownCorutine();
