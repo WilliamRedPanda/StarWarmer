@@ -1840,8 +1840,9 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: Start New Game-Auto Aim
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 24cc5e1147810674eb0e1c4ab5ff057f, type: 2}
+  m_sharedMaterial: {fileID: -3037469529373816299, guid: 24cc5e1147810674eb0e1c4ab5ff057f,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1872,7 +1873,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 16
+  m_fontStyle: 17
   m_textAlignment: 514
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -1968,6 +1969,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_ActionsAsset: {fileID: -944628639613478452, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_PointAction: {fileID: 4615970947851679123, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_MoveAction: {fileID: 6687388918355982465, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_SubmitAction: {fileID: 6767530808626544039, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_CancelAction: {fileID: -425597708685966536, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_LeftClickAction: {fileID: -6608364814840929996, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_MiddleClickAction: {fileID: -6156230802246328676, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_RightClickAction: {fileID: -1884475483500431909, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_ScrollWheelAction: {fileID: -3453794730302557172, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_TrackedDevicePositionAction: {fileID: 7961626475961111657, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: -776785299607027154, guid: f3df94f57b3fedf46aef69f90b96165d,
+    type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
 --- !u!114 &970277982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3816,6 +3843,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 515460656957965209, guid: 056c76edf35dd7f48922a57f75e10818,
+        type: 3}
+      propertyPath: m_Name
+      value: GameplaySM
+      objectReference: {fileID: 0}
+    - target: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
+        type: 3}
+      propertyPath: currentScene
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1342683119552596031, guid: 056c76edf35dd7f48922a57f75e10818,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3869,16 +3906,6 @@ PrefabInstance:
     - target: {fileID: 1342683119552596031, guid: 056c76edf35dd7f48922a57f75e10818,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 515460656957965209, guid: 056c76edf35dd7f48922a57f75e10818,
-        type: 3}
-      propertyPath: m_Name
-      value: GameplaySM
-      objectReference: {fileID: 0}
-    - target: {fileID: 2277654261220516039, guid: 056c76edf35dd7f48922a57f75e10818,
-        type: 3}
-      propertyPath: currentScene
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
