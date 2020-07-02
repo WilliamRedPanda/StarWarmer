@@ -880,9 +880,9 @@ MonoBehaviour:
   OnPointerEnterUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1050306079}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -896,9 +896,20 @@ MonoBehaviour:
   OnPointerExitUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1050306079}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -922,9 +933,9 @@ MonoBehaviour:
   OnSelectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1050306079}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -938,9 +949,20 @@ MonoBehaviour:
   OnDeselectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1050306079}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1050306081}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1004,7 +1026,7 @@ PrefabInstance:
     - target: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6910201597753517614, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
@@ -1039,9 +1061,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 254835934}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &254835936 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
+--- !u!198 &254835938 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8575670581756409659, guid: 56fb5de33bf411345b593d3605741a4f,
     type: 3}
   m_PrefabInstance: {fileID: 254835934}
   m_PrefabAsset: {fileID: 0}
@@ -2543,7 +2565,7 @@ PrefabInstance:
     - target: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6910201597753517614, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
@@ -2573,9 +2595,9 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1050306077}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1050306079 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
+--- !u!198 &1050306081 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8575670581756409659, guid: 56fb5de33bf411345b593d3605741a4f,
     type: 3}
   m_PrefabInstance: {fileID: 1050306077}
   m_PrefabAsset: {fileID: 0}
@@ -2691,9 +2713,9 @@ MonoBehaviour:
   OnPointerEnterUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1516320082}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2707,9 +2729,20 @@ MonoBehaviour:
   OnPointerExitUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1516320082}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2733,9 +2766,9 @@ MonoBehaviour:
   OnSelectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1516320082}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2749,9 +2782,20 @@ MonoBehaviour:
   OnDeselectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1516320082}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1516320084}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2900,9 +2944,9 @@ MonoBehaviour:
   OnPointerEnterUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 254835936}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2916,9 +2960,20 @@ MonoBehaviour:
   OnPointerExitUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 254835936}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2942,9 +2997,9 @@ MonoBehaviour:
   OnSelectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 254835936}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2958,9 +3013,20 @@ MonoBehaviour:
   OnDeselectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 254835936}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 254835938}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3437,9 +3503,9 @@ MonoBehaviour:
   OnPointerEnterUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555892670}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3453,9 +3519,20 @@ MonoBehaviour:
   OnPointerExitUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555892670}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3479,9 +3556,9 @@ MonoBehaviour:
   OnSelectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555892670}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3495,9 +3572,20 @@ MonoBehaviour:
   OnDeselectUE:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1555892670}
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1555892672}
+        m_MethodName: Clear
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4112,7 +4200,7 @@ PrefabInstance:
     - target: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6910201597753517614, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
@@ -4147,15 +4235,15 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1516320080}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1516320082 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
+--- !u!198 &1516320084 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8575670581756409659, guid: 56fb5de33bf411345b593d3605741a4f,
     type: 3}
   m_PrefabInstance: {fileID: 1516320080}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1555892670 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
+--- !u!198 &1555892672 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8575670581756409659, guid: 56fb5de33bf411345b593d3605741a4f,
     type: 3}
   m_PrefabInstance: {fileID: 2101928133}
   m_PrefabAsset: {fileID: 0}
@@ -4783,7 +4871,7 @@ PrefabInstance:
     - target: {fileID: 5202100878207166490, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6910201597753517614, guid: 56fb5de33bf411345b593d3605741a4f,
         type: 3}

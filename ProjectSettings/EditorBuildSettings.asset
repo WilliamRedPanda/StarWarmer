@@ -33,17 +33,17 @@ EditorBuildSettings:
     path: Assets/Scenes/GameSequence/Auto Aim.unity
     guid: b1d545607b1ff7d47a80a395460575fa
   - enabled: 1
-    path: Assets/Scenes/GameSequence/Knockback Sequence.unity
+    path: Assets/Scenes/GameSequence/Old/Knockback Sequence.unity
     guid: 2cdc596abf2a3c642830b530a1d73d68
   - enabled: 1
-    path: Assets/Scenes/GameSequence/No Auto Attack.unity
+    path: Assets/Scenes/GameSequence/Old/No Auto Attack.unity
     guid: 13499d1a833b12047b8db6de7ffcc570
   - enabled: 1
-    path: Assets/Scenes/GameSequence/No SlowTime - Completamente da rifare con i prefab
-      variant.unity
+    path: Assets/Scenes/GameSequence/Old/No SlowTime - Completamente da rifare con
+      i prefab variant.unity
     guid: 247f314aef186e743a68809e0e680d38
   - enabled: 1
-    path: Assets/Scenes/GameSequence/Skill Variant.unity
+    path: Assets/Scenes/GameSequence/Old/Skill Variant.unity
     guid: bf9a3e0522710d843bf0f3188b28fc44
   - enabled: 1
     path: Assets/Scenes/GameSequence/Tutorial_Xbox.unity

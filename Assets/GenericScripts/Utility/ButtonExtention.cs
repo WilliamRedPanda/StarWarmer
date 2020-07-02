@@ -15,7 +15,7 @@ public class ButtonExtention : Selectable , IPointerClickHandler
     [SerializeField] UnityEvent OnSelectUE;
     [SerializeField] UnityEvent OnDeselectUE;
 
-
+    bool onSelect;
 
     #region Override
     public override void OnPointerEnter(PointerEventData eventData)
@@ -45,12 +45,14 @@ public class ButtonExtention : Selectable , IPointerClickHandler
     public override void OnSelect(BaseEventData eventData)
     {
         base.OnSelect(eventData);
+        onSelect = true;
         OnSelectUE?.Invoke();
     }
 
     public override void OnDeselect(BaseEventData eventData)
     {
         base.OnDeselect(eventData);
+        onSelect = false;
         OnDeselectUE?.Invoke();
     }
     #endregion
