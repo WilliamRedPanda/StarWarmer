@@ -2,12 +2,14 @@
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System;
 
 public class ComboUI : MonoBehaviour
 {
     [SerializeField] CurrentControllerManager controllerManager;
     [SerializeField] Image comboIconImage;
     [SerializeField] Image cooldownBarImage;
+    [SerializeField] TextMeshProUGUI cooldownText;
     [SerializeField] Image expBarImage;
     [SerializeField] Transform comboListTransform;
     [SerializeField] bool highlighted;
@@ -31,7 +33,7 @@ public class ComboUI : MonoBehaviour
     {
         combo.onLevelUp += SetCombo;
         if (expBarImage) combo.onAddExp += SetExpBar;
-        if (cooldownBarImage) combo.onCooldownChange += SetCooldownBar;
+        if (cooldownBarImage || cooldownText) combo.onCooldownChange += SetTimer;
         if (highlighted)
         {
             if (comboListTransform) combo.playerController.OnInputReset += RemoveHighlight;
@@ -43,7 +45,7 @@ public class ComboUI : MonoBehaviour
     {
         combo.onLevelUp -= SetCombo;
         if (expBarImage) combo.onAddExp -= SetExpBar;
-        if (cooldownBarImage) combo.onCooldownChange -= SetCooldownBar;
+        if (cooldownBarImage || cooldownText) combo.onCooldownChange -= SetTimer;
         if (highlighted)
         {
             if (comboListTransform)
@@ -175,17 +177,34 @@ public class ComboUI : MonoBehaviour
         currentInputIndex = 0;
     }
 
-    
-    public void SetCooldownBar(float _time)
+    void SetTimer(float _time)
     {
-        cooldownBarImage.fillAmount = 1 - (deltaCooldown * _time);
-        
-        timer -= _time;
-        if (timer == 0)
+        if (cooldownBarImage) SetCooldownBar(_time);
+
+        timer = _time;
+        if (timer <= 0)
             timer = combo.data.cooldown;
+
+        if (cooldownText) SetCooldownText(_time);
     }
 
-    public void SetExpBar()
+    void SetCooldownBar(float _time)
+    {
+        cooldownBarImage.fillAmount = (deltaCooldown * _time);
+    }
+
+    void SetCooldownText(float _time)
+    {
+        if (timer < combo.data.cooldown)
+            cooldownText.gameObject.SetActive(true);
+        else
+            cooldownText.gameObject.SetActive(false);
+
+        int t = (int)timer + 1;
+        cooldownText.text = t.ToString();
+    }
+
+    void SetExpBar()
     {
         expBarImage.fillAmount = deltaExp * (float)combo.exp;
     }
