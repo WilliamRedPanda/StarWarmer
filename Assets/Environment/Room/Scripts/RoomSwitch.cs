@@ -21,6 +21,7 @@ public class RoomSwitch : MonoBehaviour
     //[SerializeField] GameObject objectToActive;
     [Space]
     [SerializeField] bool finalRoom;
+    [SerializeField] bool disableEnemyOnExit = true;
     [Space]
     [SerializeField] UnityEvent OncompletedRoomUE;
     [SerializeField] UnityEvent OnEnterRoom;
@@ -90,7 +91,8 @@ public class RoomSwitch : MonoBehaviour
         PlayerData player = other.gameObject.GetComponentInParent<PlayerData>();
         if (player)
         {
-            SetEnemy(false);
+            if (disableEnemyOnExit)
+                SetEnemy(false);
         }
     }
 
