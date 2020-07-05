@@ -77,7 +77,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Meteorsfx
-    clip: {fileID: 8300000, guid: 5ff5c28e3c7a239458f66406e622d1e5, type: 3}
+    clip: {fileID: 8300000, guid: d5c8d4f00cab18d44b64dd7fd58b6579, type: 3}
     volume: 1
     volumeVariance: 0
     pitch: 1
