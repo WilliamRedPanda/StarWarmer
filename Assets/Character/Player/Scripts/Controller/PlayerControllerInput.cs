@@ -501,7 +501,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
             }
 
 
-            if (usingJoypad == false)
+            if (controllerManager.currentController == inputDevice.keyboard)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Mouse.current.position.ReadValue());
                 RaycastHit raycastHit;

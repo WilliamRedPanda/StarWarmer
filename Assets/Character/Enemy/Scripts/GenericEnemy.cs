@@ -54,7 +54,8 @@ public class GenericEnemy : CharacterBase , IShooter
         base.Awake();
         OnTakeDamage += Damage;
         OnDeath += Death;
-        stunObject.SetActive(false);
+        if (stunObject)
+            stunObject.SetActive(false);
         animators = new Animator[] { dxbSM, sxbSM, dxfSM, sxfSM };
         spritesR = new SpriteRenderer[] { dxfR, dxbR, sxfR, sxbR };
         SetRendererActive(AnimDirection.dxf);
