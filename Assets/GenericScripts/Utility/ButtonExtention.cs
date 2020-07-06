@@ -25,6 +25,12 @@ public class ButtonExtention : Selectable , IPointerClickHandler
             if (k.spaceKey.wasPressedThisFrame)
                 if (onSelect)
                     OnClickUE?.Invoke();
+
+        Gamepad g = Gamepad.current;
+        if (g != null)
+            if (g.buttonSouth.wasPressedThisFrame)
+                if (onSelect)
+                    OnClickUE?.Invoke();
     }
 
     #region Interface
