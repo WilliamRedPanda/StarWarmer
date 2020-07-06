@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class ButtonExtention : Selectable , IPointerClickHandler
@@ -16,6 +17,22 @@ public class ButtonExtention : Selectable , IPointerClickHandler
     [SerializeField] UnityEvent OnDeselectUE;
 
     bool onSelect;
+
+    private void Update()
+    {
+        Keyboard k = Keyboard.current;
+        if (k != null)
+            if (k.spaceKey.wasPressedThisFrame)
+                if (onSelect)
+                    OnClickUE?.Invoke();
+    }
+
+    #region Interface
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OnClickUE?.Invoke();
+    }
+    #endregion
 
     #region Override
     public override void OnPointerEnter(PointerEventData eventData)
@@ -56,10 +73,4 @@ public class ButtonExtention : Selectable , IPointerClickHandler
         OnDeselectUE?.Invoke();
     }
     #endregion
-
-
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        OnClickUE?.Invoke();
-    }
 }

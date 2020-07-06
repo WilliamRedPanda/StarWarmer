@@ -121,6 +121,29 @@ public class SelectableComboManager : MonoBehaviour
         }
     }
 
+    public void Rotate(bool _right, int _nLoop)
+    {
+        for (int i = 0; i < _nLoop; i++)
+        {
+            Rotate(_right);
+        }
+    }
+
+    public void RotateOrSelect(int _index)
+    {
+        int i = Mathf.Abs(index - _index);
+
+        if (_index == index)
+            currentCombo.ChangeSkill();
+        else
+        {
+            if (index > _index)
+                Rotate(true, i);
+            else
+                Rotate(false, i);
+        }
+    }
+
     IEnumerator RotateCorutine(bool _right)
     {
         float f = 0;
