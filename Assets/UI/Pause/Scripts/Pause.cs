@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class Pause : MonoBehaviour
 {
     [SerializeField] Transform panel;
+    [SerializeField] Button firstButton;
     
     bool pause;
     float currentTimeScale;
@@ -36,6 +38,7 @@ public class Pause : MonoBehaviour
         if (pause)
         {
             StateMachine.Gameplay.GameplaySM.instance.Go("Pause");
+            if (firstButton) firstButton.Select();
         }
         else
         {
