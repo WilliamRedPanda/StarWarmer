@@ -84,7 +84,7 @@ public class SelectableComboManager : MonoBehaviour
         pushed = false;
     }
 
-    public void Reposition()
+    public void Reposition(bool _select)
     {
         center.rotation = Quaternion.identity;
         if (b == false)
@@ -101,7 +101,7 @@ public class SelectableComboManager : MonoBehaviour
             Vector3 newPos = ((Quaternion.Euler(0, 0, (delta * (float)i)) * (combos[0].transform.position - center.position)) + center.position);
             combos[i].transform.SetPositionAndRotation(newPos, (Quaternion.Euler(0, 0, (delta * (float)i))));
         }
-        combos[index].button.Select();
+        if (_select) combos[index].button.Select();
         currentCombo = combos[0];
         currentCombo.ChangeCurrentView();
     }
@@ -196,6 +196,6 @@ public class SelectableComboManager : MonoBehaviour
 
     public void ResetSet()
     {
-        Reposition();
+        Reposition(false);
     }
 }

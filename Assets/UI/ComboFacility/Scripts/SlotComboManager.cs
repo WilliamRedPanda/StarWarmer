@@ -92,10 +92,12 @@ public class SlotComboManager : MonoBehaviour
 
     public void InteractiveButtons(bool _interactive)
     {
-        for (int i = 0; i < SlotButtons.Length; i++)
-        {
-            SlotButtons[i].interactable = _interactive;
-        }
+        if (_interactive == true)
+            SlotButtons[0].Select();
+        //for (int i = 0; i < SlotButtons.Length; i++)
+        //{
+        //    SlotButtons[i].interactable = _interactive;
+        //}
     }
 
     public void ChangeSlotView(int index, SetSequences set)

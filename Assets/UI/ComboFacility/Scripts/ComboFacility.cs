@@ -99,15 +99,16 @@ public class ComboFacility : MonoBehaviour
         slotComboManager.gameObject.SetActive(true);
         selectableComboManager.gameObject.SetActive(false);
         StateMachine.Gameplay.GameplaySM.instance.Go("ComboFacility");
-        StartCoroutine(ActiveButton());
+        slotComboManager.InteractiveButtons(true);
+        //StartCoroutine(ActiveButton());
     }
 
     IEnumerator ActiveButton()
     {
         yield return new WaitForSecondsRealtime(1f);
-        defaultComboSelection.interactable = true;
+        //defaultComboSelection.interactable = true;
         slotComboManager.InteractiveButtons(true);
-        defaultComboSelection.Select();
+        //defaultComboSelection.Select();
     }
 
     public void Close()
@@ -154,6 +155,7 @@ public class ComboFacility : MonoBehaviour
         selectableComboManager.ResetSet();
         selectableComboManager.gameObject.SetActive(false);
         slotComboManager.gameObject.SetActive(true);
+        defaultComboSlot.Select();
     }
 
     public void Confirmed()
@@ -165,7 +167,7 @@ public class ComboFacility : MonoBehaviour
     public void OpenSelectable()
     {
         selectableComboManager.gameObject.SetActive(true);
-        selectableComboManager.Reposition();
+        selectableComboManager.Reposition(true);
         defaultComboSelection.Select();
     }
 }

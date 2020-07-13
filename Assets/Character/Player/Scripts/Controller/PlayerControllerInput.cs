@@ -22,6 +22,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [Space]
     [SerializeField] UnityEvent OnShootSkill;
     [SerializeField] UnityEvent OnShootRepulse;
+    [SerializeField] UnityEvent OnInputPressedUE;
     [Space]
     [Header("Audio")]
     [SerializeField] AudioClip dodgeClip;
@@ -84,6 +85,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
 
         instance.SetInstance(this);
         playerData.OnChangeSequences += ChangeSequences;
+        OnInputPressed += ctx => OnInputPressedUE?.Invoke();
 
         SetupSequences();
 

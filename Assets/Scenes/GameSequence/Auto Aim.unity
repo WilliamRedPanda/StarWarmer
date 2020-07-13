@@ -342,7 +342,7 @@ MonoBehaviour:
     type: 3}
   m_TrackedDeviceOrientationAction: {fileID: -776785299607027154, guid: f3df94f57b3fedf46aef69f90b96165d,
     type: 3}
-  m_DeselectOnBackgroundClick: 1
+  m_DeselectOnBackgroundClick: 0
   m_PointerBehavior: 0
 --- !u!114 &762919966
 MonoBehaviour:
@@ -1457,11 +1457,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 5ed462d61e036a24298fda5979eca990,
         type: 2}
-    - target: {fileID: 3375946409296657827, guid: 1126c1704778fb342a7b63660afe6b44,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 230764516152319060, guid: 1126c1704778fb342a7b63660afe6b44,
         type: 3}
       propertyPath: m_RootOrder
@@ -1476,6 +1471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -23.76587
+      objectReference: {fileID: 0}
+    - target: {fileID: 3375946409296657827, guid: 1126c1704778fb342a7b63660afe6b44,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1126c1704778fb342a7b63660afe6b44, type: 3}
