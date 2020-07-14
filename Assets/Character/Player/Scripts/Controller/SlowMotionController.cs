@@ -54,7 +54,7 @@ public class SlowMotionController : MonoBehaviour
 
     private void Update()
     {
-        HandleSlowMo();
+        //HandleSlowMo();
     }
 
     void ResetSlowMo()
@@ -75,7 +75,7 @@ public class SlowMotionController : MonoBehaviour
         canSlow = false;
     }
 
-    void HandleSlowMo()
+    public void HandleSlowMo()
     {
         if (Mouse.current != null)
         {

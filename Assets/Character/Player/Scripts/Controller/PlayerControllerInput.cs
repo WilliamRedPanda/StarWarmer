@@ -9,6 +9,7 @@ using UnityEngine.InputSystem;
 public class PlayerControllerInput : MonoBehaviour , IShooter
 {
     [SerializeField] PlayerInputInstance instance;
+    [SerializeField] SlowMotionController slowMotionController;
     [SerializeField] InputContainer inputsData;
     [SerializeField] CurrentControllerManager controllerManager;
     public PlayerData playerData;
@@ -194,6 +195,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         HandleSequence();
         Aim();
         HandleFire();
+        slowMotionController.HandleSlowMo();
         if (playerData.canMove)
         {
             HandleDodge();
