@@ -24,6 +24,7 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
     [SerializeField] UnityEvent OnShootSkill;
     [SerializeField] UnityEvent OnShootRepulse;
     [SerializeField] UnityEvent OnInputPressedUE;
+    [SerializeField] ParticleSystem onSequenceVfx;
     [Space]
     [Header("Audio")]
     [SerializeField] AudioClip dodgeClip;
@@ -683,6 +684,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
                 }
                 currentInputSequence.Add(input);
                 OnInputPressed?.Invoke(input);
+                if (onSequenceVfx.isStopped)
+                    onSequenceVfx.Play();
                 buttonJustPressed = true;
                 sequenceRemainTime = Time.time + playerData.timeForSequence;
                 return true;
@@ -727,6 +730,8 @@ public class PlayerControllerInput : MonoBehaviour , IShooter
         currentInputSequence.Clear();
         OnInputReset?.Invoke();
         sequenceStarted = false;
+        onSequenceVfx.Stop();
+        onSequenceVfx.Clear();
     }
 
     void ExecuteSequence()
