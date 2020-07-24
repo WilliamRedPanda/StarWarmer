@@ -23,4 +23,4 @@ MonoBehaviour:
   cooldown: 3
   icon: {fileID: 21300000, guid: 4d4c180efc5c8094ea8c78eaba93c79b, type: 3}
   comboName: Barrier
-  description: Great Shield
+  description: Use the Great Shield to defend yourself and bash enemies.
